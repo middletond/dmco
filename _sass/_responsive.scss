@@ -1,0 +1,34 @@
+// RESPONSIVE
+
+$break-tiny: 360px;
+$break-small: 480px;
+$break-ninjaforms: 600px; // built-in breakpoint for ninjaforms
+$break-medium: 720px;
+$break-large: 1024px;
+$break-x-large: 1285px;  
+$break-xx-large: 1700px;  
+
+@mixin below($breakpoint) {
+     @media screen and (max-width: $breakpoint) { @content; }
+}
+@mixin above($breakpoint) {
+     @media screen and (min-width: $breakpoint) { @content; }
+}
+@mixin between($min-breakpoint, $max-breakpoint) {
+     @media screen and (min-width: $min-breakpoint) and (max-width: $max-breakpoint) { @content; }
+}
+
+@mixin full_width_below($breakpoint, $width) {
+    width: $width;
+    @include below($breakpoint) { width: 100%; }
+}
+
+$side-margin-large: 100px;
+$side-margin-medium: 12%;
+$side-margin-small: 8%;
+$side-margin-tiny: 5%;
+
+$header-height-large: 65px;
+$header-height-small: 50px;
+
+$palette-bar-height: 5px;

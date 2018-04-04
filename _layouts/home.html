@@ -1,0 +1,42 @@
+---
+layout: base
+---
+
+<section class="dark-section">
+
+</section>
+
+<section class="light-section">
+    
+    <h1 class="dark">Latest&middot;Posts</h1>
+    {% if site.posts.size > 0 %}
+    <div class="posts">
+    {% for post in site.posts %}
+        
+        <article class="post {% if forloop.first %}feature{% endif %}">
+            <div class="post-image">
+                <a href="{{ post.url | relative_url }}">
+                    <img src="{{ post.image_url }}" />
+                </a>
+                <div class="post-category">{{ post.category }}</div>
+            </div>
+            <div class="post-content">
+                <div class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</div>
+                <h2 class="post-title">
+                    <a href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
+                    </a>
+                </h2>
+                <p class="post-excerpt">{{ post.excerpt }}...</p>
+            </div>
+        </article>
+
+        {% unless forloop.last %}
+        <div class="post-divider">&nbsp;</div>
+        {% endunless %}
+
+    {% endfor %}
+    </div>
+    {% endif %}
+
+</section>

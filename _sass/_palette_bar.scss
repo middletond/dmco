@@ -1,0 +1,19 @@
+.palette-bar {
+	@include flex_display();
+	width: 100%;
+	height: $palette-bar-height;
+	margin: 0;
+	padding: 0;
+	.segment {
+		display: block;
+		width: 20%;
+		height: inherit;
+		padding: 0;
+		margin: 0;
+		&.magenta { background-color: $magenta; }
+		&.white { background-color: $white; }
+		&.sand { background-color: $sand; }
+		&.steelblue { background-color: $steelblue; }
+		&.navy { background-color: $navy; }
+	}
+}

@@ -1,0 +1,40 @@
+// NAV STYLES
+
+nav.primary {
+	padding: 0;
+	margin: 0;
+	height: inherit;
+	ul {
+		margin: 0;
+		padding: 0;
+		height: inherit;
+		@include flex_display();
+		@include flex_justify_content(flex-start);
+		li {
+			@include flex_display();
+            @include flex_align_items(center);
+            position: relative;
+            list-style: none;
+            margin: 0px 40px 0px 20px; 
+            padding: 0;
+            height: inherit;
+            top: 0px;
+            a.nav-item {
+            	display: block;
+            	padding: 8px 15px;
+            	line-height: 1em;
+            	color: $black;
+            	font-size: 14px;
+            	font-weight: 600;
+                  font-family: "Source Code Pro", sans-serif;
+            	text-transform: uppercase;
+            	border: transparent solid 3px;
+            	&.emphasized {
+            		color: $blue;
+            		border-color: $blue;
+            		font-weight: 700;
+            	}
+            }
+		}
+	}
+}

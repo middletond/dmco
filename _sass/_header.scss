@@ -1,0 +1,32 @@
+// HEADER STYLES
+
+header {
+	@include flex_display();
+	position: fixed;
+	top: $palette-bar-height;
+	width: 100%;
+	height: $header-height-large;
+	background-color: $cream;
+	box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
+	.palette-bar {
+		position: absolute;
+		top: -$palette-bar-height;
+		width: 100%;
+	}
+	nav {
+		width: 70%;
+	}
+	.logo {
+		width: 30%;
+		@include flex_display();
+		@include flex_justify_content(flex-end); // right
+		@include flex_align_items(center);
+		a {
+			display: block;
+			margin: 0px 20px;
+			color: $black;
+			font-family: "Montserrat", sans-serif;
+			font-weight: 900;
+		}
+	}
+}
