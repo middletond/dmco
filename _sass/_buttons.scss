@@ -1,0 +1,29 @@
+// BUTTON STYLES
+
+.button-block {
+    text-align: center; // center inline-block buttons
+    margin: 60px auto;
+}
+.button {
+    display: inline-block;
+    @include below($break-small) { display: block; }
+    min-width: 165px;
+    padding: 15px 0px;
+    border-radius: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center !important;
+    font-family: "Source Code Pro", monospace, sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    color: $white;
+    background-color: $magenta;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+    box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.5);
+    &:hover {
+    	background-color: $hypermagenta;
+        box-shadow: 4px 4px 20px 0px rgba(0,0,0,0.6);
+    }
+}

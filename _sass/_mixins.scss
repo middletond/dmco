@@ -28,5 +28,5 @@
 }
 
 @function hover_color($color) {
-	@return saturate(lighten($color, 2), 7);
+	@return saturate(lighten($color, 2), 10);
 }

@@ -1,0 +1,139 @@
+// LIGHT + DARK SECTIONS
+// Default styles are for light sections. Dark sections cascade from there
+
+// LIGHT
+h1 {
+	position: relative;
+	text-align: center;
+	font-size: 75px;
+	font-family: "Source Code Pro", sans-serif;
+	font-weight: 500;
+	letter-spacing: -0.01em;
+	margin: 0px;
+	&:before { // hr line
+		display: block;
+		content: "";
+		background-color: $black;
+		width: 340px;
+		height: 1px;
+		margin: 40px auto;
+	}
+	&.dark { // header that transitions from dark to light
+		padding: 200px 0px;
+		margin-top: -200px;
+		margin-bottom: -200px;
+		background-color: $navy;
+		color: $cream;
+		&:before {
+			background-color: $cream;
+		}
+		&:after {
+			position: absolute;
+			left: 0px;
+			bottom: -292px;
+			content: "";
+			background-image: url("../img/navy_paint_border.png");
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 292px;
+		}
+	}
+}
+h2 {
+	letter-spacing: 0em;
+	font-size: 30px;
+	margin: 10px 0px;
+	padding: 0;
+}
+
+// DARK
+.dark-section {
+	position: relative;
+	z-index: 2;
+	color: $cream;
+	background: $navy;
+	background: linear-gradient(15deg, $navy 0%, $navy 65%, lighten($navylit, 3) 100%);
+	&.hero {
+		margin-top: -$header-height-large;
+		padding-top: $header-height-large;
+		.content {
+			margin-top: 100px;
+		}
+	}
+	.lantern {
+		top: -20px;
+		right: 5%;
+		width: 336px;
+		height: 447px;
+		position: absolute;
+		background-size: 100%;
+		background-image: url("../img/lantern.png");
+		background-repeat: no-repeat;
+	}
+	.content {
+		margin: 0px 100px;
+		h1 {
+			color: $cream;
+			&:before {
+				background-color: $cream;
+			}
+		}
+		h2 {
+			max-width: 950px;
+			margin: 80px 0px;
+			line-height: 130%;
+			text-transform: none;
+			font-family: "Montserrat", sans-serif;
+			font-weight: 800;
+			font-size: 36px;
+			color: $blue;
+			b {
+				font-weight: 800;
+				color: $cornflower;
+			}
+		}
+		p {
+			text-align: justify;
+			max-width: 850px;
+			font-size: 22px;
+			.lead {
+				font-family: "Source Code Pro", monospace, sans-serif;
+				font-weight: 700;
+				font-size: 23px;
+				text-transform: uppercase;
+			}
+		}
+		.heading-block {
+			margin: 40px 0px;
+			padding: 0px 40px;
+			border-left: $magenta solid 26px;
+			h1 {
+				text-align: left;
+				line-height: 1em;
+				&:before { content: none }
+			}
+			.meta {
+				font-family: "Merriweather", serif;
+				font-weight: 300;
+				font-style: italic;
+				font-size: 24px;
+				text-transform: lowercase;
+				letter-spacing: -0.01em;
+				margin-left: 5px; // compensate for font glyphs
+			}
+			.definitions {
+				font-family: "Source Code Pro", monospace, sans-serif;
+				font-weight: 600;
+				font-size: 24px;
+				text-transform: uppercase;
+				li {
+					padding: 5px 0px;
+					margin-left: 10px; // compensate for font glyphs
+				}
+			}
+		}
+		.button { // should this go here?
+			margin-top: 60px;
+		}
+	}
+}
