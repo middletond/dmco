@@ -3,23 +3,25 @@
 .button-block {
     text-align: center; // center inline-block buttons
     margin: 60px auto;
+    &.right { text-align: right; }
+    &.left { text-align: left; }
 }
-.button {
+.button, input[type="submit"]  {
     display: inline-block;
     @include below($break-small) { display: block; }
-    min-width: 165px;
-    padding: 15px 0px;
+    width: 150px;
+    padding: 13px 17px;
     border-radius: 1px;
     cursor: pointer;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center !important;
     font-family: "Source Code Pro", monospace, sans-serif;
-    font-weight: 600;
-    font-size: 19px;
+    font-weight: 700;
+    font-size: 18px;
     color: $white;
     background-color: $magenta;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.01em;
     transition: 0.3s;
     box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.5);
     &:hover {

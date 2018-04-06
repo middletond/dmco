@@ -17,10 +17,16 @@ a {
 	color: $black;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 { // heading styles depend on section so in sections.scss
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 	line-height: 110%;
+}
+h4 {
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 140%;
+	letter-spacing: 0.03em;
 }
 p {
 	font-family: "Merriweather", serif;

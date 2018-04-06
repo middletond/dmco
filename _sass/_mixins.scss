@@ -13,13 +13,13 @@
 	-webkit-align-items: $val;
 }
 
-// @mixin placeholder() {
-// 	color: white; 
-//     padding-left: 5px; 
-//     font-size: 15px; 
-//     text-transform: uppercase; 
-//     letter-spacing: 0.05em;
-// }
+@mixin placeholder() {
+	color: $white; 
+    padding-left: 5px; 
+    font-size: 20px; 
+    text-transform: uppercase; 
+    letter-spacing: 0.05em;
+}
 @mixin no_shadow() {
 	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
 	&:hover {
