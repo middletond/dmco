@@ -15,3 +15,11 @@ main {
 footer {
 
 }
+
+.grid {
+	@include flex_display();
+	@include flex_justify_content(flex-start);
+	.grid-item {
+
+	}
+}

@@ -3,12 +3,14 @@
 footer.dark-section { // styles are similar to dark sections, saving some typing
 	background: $navylit !important;
 	position: relative;
-	&:before {
+	z-index: 0;
+	overflow: hidden;
+	&:before { // paint spatter
 		content: "";
 		width: 397px;
 		height: 446px;
 		position: absolute;
-		top: 20px;
+		top: 40px;
 		right: -10px;
 		background-image: url("../img/paint.png");
 		background-repeat: no-repeat;
@@ -21,6 +23,54 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 		}
 		.button {
 			margin: 30px 0px;
+		}
+	}
+	.footer-actions {
+		margin: 30px 0px;
+		.hello-form {
+			width: 650px;
+			h4 { margin-top: 0px; } // no margins on top / bottom elems so we can align w .social
+			form { margin-bottom: 0px; }
+
+		}
+		.social {
+			@include flex_display();
+			@include flex_justify_content(space-between);
+			@include flex_direction(column);
+			width: 68px;
+			margin-left: 100px;
+			text-align: center;
+			padding: 35px 0px;
+			position: relative;
+			top: 2px; // nudge this to appear more aligned w .hello-form
+			&:before {	// center vertical line
+				content: "";
+				position: absolute;
+				z-index: 0;
+				top: 0px;
+				left: 33px;
+				width: 2px;
+				height: 100%;
+				background-color: $blue;
+			}
+			.social-item {
+				display: block;
+				position: relative;
+				z-index: 1;
+				margin: 0;
+				width: 64px;
+				height: 64px;
+				border: $blue solid 2px;
+				border-radius: 50%;
+				background-color: $steelbluedark;
+				i.fa { // icons
+					font-size: 28px;
+					color: $blue;
+					position: relative; // use flex?
+					top: 18px;
+					&.fa-linkedin { font-size: 25px; } // outlier, fkn shit up
+				}
+			}
 		}
 	}
 } 
