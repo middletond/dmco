@@ -10,9 +10,9 @@ date:   2018-04-03 19:55:46 -0700
 image_url: "/assets/posts/beauty.jpg"
 ---
 
-In my 20s, I was a professional musician. Half of my life was spent touring the country, and the other half was spent in California recording studios producing records.
+<p class="big"><span class="lead">In my twenties,</span> my day job was being a musician. Half of my life was spent touring the country, and the other half was spent in California recording studios producing records. I had no idea I would one day write code. </p>
 
-I had no idea I would one day write code. My conception of “programming" at the time was something akin to data entry, but maybe in a basement with a large bottle of Mountain Dew; it sounded mostly like carpal tunnel syndrome to me and my instrumentalist’s brain. I had no idea that for each hour it was 58 minutes of pacing and thinking, followed by type-type-typing in three lines. I had no idea it was as creative as any fine art form.
+My conception of “programming" at the time was something akin to data entry, but maybe in a basement with a large bottle of Mountain Dew; it sounded mostly like carpal tunnel syndrome to me and my instrumentalist's brain. It made my forearms hurt just thinking about it. I had no idea that for each hour it was 58 minutes of pacing and thinking, followed by type-type-typing in three lines. I had no idea it was as creative as any fine art form.
 
 In hindsight, it is easy to see how music producers and coders share the same challenge. We take scattered gobs of complex technical stuff and somehow jam them together in a way that appears simple, natural, and magically human to the outside world. It is also easy to see similarities of process. Both tend to have lengthy timelines of several months or more, with discrete brainstorming, planning, execution, and deployment phases. Both require persistent problem solving and committed decision-making in the face of uncertainty, at both micro and macro levels. Both are about leveraging technical things to achieve a non-technical human experience. 
 

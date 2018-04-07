@@ -1,33 +1,36 @@
 // POST-SPECIFIC STYLES
 
 .post {
-	.post-header {
+	.post-header { // landscape header styles (default)
 		position: relative;
+		overflow: hidden;
+		max-height: $post-header-height-landscape; // controls where header ends and content starts
 		.post-header-image {
 			position: relative;
 			top: 0px;
 			width: 100%;
 			height: 100%;
-			overflow: hidden;
-			max-height: 800px;
 			img {
 				width: 100%;
+				display: block; // remove unintentional padding from line-height
+				position: relative;
+				z-index: 0;
 			}
 		}
 		.post-header-content {
 			position: absolute;
-			padding-top: 0px;
+			padding-top: 50px;
 			bottom: 0px;
 			left: 0px;
 			width: 100%;
-			height: 80%;
-			overflow: hidden;
 			z-index: 1;
-			background: rgb(251,251,247); // cream
-			background: linear-gradient(0deg, rgba(251,251,247,1) 0%, rgba(251,251,247,0) 70%, rgba(251,251,247,0) 100%);
+			background: linear-gradient(0deg, rgba(251,251,247,1) 0%, rgba(251,251,247,0.5) 50%, rgba(251,251,247,0) 100%);
+			.inner-wrap {
+				position: relative;
+			}
 			.post-category {
 				width: 180px;
-				margin: 150px auto 35px auto;
+				margin: 30px auto;
 				padding: 10px 0px;
 				background-color: $magenta;
 				font-family: "Source Code Pro", sans-serif;
@@ -58,7 +61,7 @@
 				letter-spacing: 0.01em;
 			}
 			.post-meta {
-				max-width: 720px;
+				max-width: $post-text-width;
 				position: relative;
 				line-height: 1em;
 				margin: 60px auto 20px auto;
@@ -85,10 +88,83 @@
 				}
 			}
 		}
+		&.portrait { // portrait header styles
+			@include flex_display();
+			@include flex_justify_content(space-between);
+			max-height: $post-header-height-portrait;
+			margin-bottom: 40px;
+			&:after { // bottom blur border, across whole header but only shows against image
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				width: 100%;
+				height: 3%;
+				content: "";
+				z-index: 1;
+				background: linear-gradient(0deg, 
+					rgba(251,251,247,1) 0%, 
+					rgba(251,251,247,0.2) 50%, 
+					rgba(251,251,247,0) 100%);
+			}
+			.post-header-image {
+				width: 50%;
+				&:before { // right blur border
+					position: absolute;
+					top: 0px;
+					right: 0px;
+					width: 40%;
+					height: 100%;
+					content: "";
+					z-index: 1;
+					background: linear-gradient(270deg, 
+						rgba(251,251,247,1) 0%, 
+						rgba(251,251,247,0.2) 50%, 
+						rgba(251,251,247,0) 100%);
+				}
+			}
+			.post-header-content {
+				width: 50%;
+				position: relative;
+				z-index: 2;
+				padding: 0;
+				@include flex_display();
+				@include flex_align_items(center);
+				.inner-wrap {
+					position: static; // allow .post-meta to get pinned outside of .inner-wrap
+					margin: 0px 10%;
+					// background: blue;
+					.post-meta {
+						position: absolute;
+						width: 80%;
+						max-width: none;
+						bottom: 5px; // push up slightly to appear aligned w blur border
+						margin: 0;
+						.corner {
+							width: 40px;
+							height: 40px;
+						}
+					}
+					.post-category {
+						margin-left: 3px;
+					}
+					.post-title, .post-tagline {
+						text-align: left;
+					}
+					.post-title {
+						font-size: 70px;
+					}
+				}
+
+			}
+		}
 	}
 	.post-content {
 		margin: 20px auto 100px;
-		max-width: 740px;
+		max-width: $post-text-width;
+		p {
+			font-weight: 400;
+			&.big { font-weight: 300; }
+		}
 	}
 }
 
@@ -134,6 +210,8 @@
 		.post-content {
 			width: 78%;
 			padding: 0px 60px;
+			margin: 0px 0px;
+			max-width: none;
 			.post-meta {
 				line-height: 1em;
 				margin: 10px 0px 20px 0px;
@@ -146,6 +224,8 @@
 			}
 			.post-title {
 				margin: 20px 0px;
+				font-weight: 700;
+				letter-spacing: -0.02em;
 			}
 			.post-excerpt {
 				line-height: 180%;

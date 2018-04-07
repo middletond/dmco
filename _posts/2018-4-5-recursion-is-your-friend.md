@@ -1,8 +1,8 @@
 ---
 layout: post
 
-title:  "Recursion is Your Friend"
-tagline: "It's a lot like traditional looping, but more funner."
+title:  "Recursion Explained"
+tagline: "Because you can't eat just one."
 excerpt: "In my 20s, I was a professional musician. Half of my life was spent touring the country, and the other half was spent in California recording studios producing records. I had no idea I would one day write code"
 
 category: technical
@@ -11,7 +11,8 @@ image_url: "/assets/posts/recursion.jpg"
 display: portrait
 ---
 
-In my 20s, I was a professional musician. Half of my life was spent touring the country, and the other half was spent in California recording studios producing records.
+<p class="big"><span class="lead">If we deify intelligence,</span> we tend to defer to it. This essentially translates into "let our most intelligent people control projects, and do whatever they want." Oftentimes, this can be a good thing, but other times it is not. How does one tell the difference? Intelligence becomes more valuable when iteration fails.</p>
+
 
 I had no idea I would one day write code. My conception of “programming" at the time was something akin to data entry, but maybe in a basement with a large bottle of Mountain Dew; it sounded mostly like carpal tunnel syndrome to me and my instrumentalist’s brain. I had no idea that for each hour it was 58 minutes of pacing and thinking, followed by type-type-typing in three lines. I had no idea it was as creative as any fine art form.
 

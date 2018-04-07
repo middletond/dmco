@@ -2,19 +2,21 @@
 layout: base
 ---
 
-<article class="post {{ page.display }}">
-    <div class="post-header">
+<article class="post">
+    <div class="post-header {{ page.display }}">
         <div class="post-header-image">
             <img src="{{ page.image_url }}" />
         </div>
         <div class="post-header-content">
-            <div class="post-category">{{ page.category }}</div>
-            <h1 class="post-title">{{ page.title | escape }}</h1>
-            <h3 class="post-tagline">{{ page.tagline }}</h1>
-            <div class="post-meta">
-                <div class="corner left"></div>
-                <div class="corner right"></div>
-                Post by Dave Middleton. {{ page.date | date: "%B %-d, %Y" }}.
+            <div class="inner-wrap">
+                <div class="post-category">{{ page.category }}</div>
+                <h1 class="post-title">{{ page.title | escape }}</h1>
+                <h3 class="post-tagline">{{ page.tagline }}</h3>
+                <div class="post-meta">
+                    <div class="corner left"></div>
+                    <div class="corner right"></div>
+                    By Dave Middleton. {{ page.date | date: "%B %-d, %Y" }}. 10 min read.
+                </div>
             </div>
         </div>
     </div>
