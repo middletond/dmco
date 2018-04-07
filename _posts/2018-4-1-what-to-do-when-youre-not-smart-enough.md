@@ -2,7 +2,7 @@
 layout: post
 
 title:  "What To Do When You're Not Smart Enough"
-tagline: "General intelligence is likely fixed (sorry). But there is still something we can do about it."
+tagline: "General intelligence is likely fixed (sorry).<br /> But there is still something we can do about it."
 excerpt: "If we deify intelligence,we will tend to defer to it. This essentially translates into “let our most intelligent people control projects, and do whatever they want.” Oftentimes, this can be a good thing, but other times it is not. How does one tell the difference? Intelligence becomes more valuable when iteration fails."
 
 category: editorial

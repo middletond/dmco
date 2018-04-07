@@ -33,4 +33,15 @@ p {
 	font-size: 19px;
 	line-height: 190%;
 	font-weight: 300;
+	&.big {
+		font-size: 25px;
+		font-weight: 300;
+		text-align: justify;
+	}
+	.lead {
+		font-family: "Source Code Pro", monospace, sans-serif;
+		font-weight: 700;
+		font-size: 25px;
+		text-transform: uppercase;
+	}
 }

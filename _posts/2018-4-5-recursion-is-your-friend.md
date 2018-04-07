@@ -8,6 +8,7 @@ excerpt: "In my 20s, I was a professional musician. Half of my life was spent to
 category: technical
 date:   2018-03-28 19:55:46 -0700
 image_url: "/assets/posts/recursion.jpg"
+display: portrait
 ---
 
 In my 20s, I was a professional musician. Half of my life was spent touring the country, and the other half was spent in California recording studios producing records.

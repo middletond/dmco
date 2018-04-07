@@ -3,3 +3,6 @@
 
 ### Ignore built site
 _site
+
+### Sorry DS_Store... ###
+.DS_Store
