@@ -10,10 +10,17 @@
 		height: inherit;
 		padding: 0;
 		margin: 0;
-		&.magenta { background-color: $magenta; }
-		&.white { background-color: $white; }
-		&.sand { background-color: $sand; }
-		&.steelblue { background-color: $steelblue; }
-		&.navy { background-color: $navy; }
+		&.first { background-color: $magenta; }
+		&.second { background-color: $white; }
+		&.third { background-color: $sand; }
+		&.fourth { background-color: $steelblue; }
+		&.fifth { background-color: $navy; }
+	}
+	&.reverse .segment {
+		&.first { background-color: $navy; }
+		&.second { background-color: $steelblue; }
+		&.third { background-color: $sand; }
+		&.fourth { background-color: $white; }
+		&.fifth { background-color: $magenta; }
 	}
 }

@@ -45,6 +45,48 @@ h2 {
 	margin: 10px 0px;
 	padding: 0;
 }
+h3 {
+	position: relative;
+	font-size: 24px;
+	font-weight: 500;
+	&:before {
+		content: "";
+		display: block;
+		width: 275px;
+		height: 12px;
+		background-color: $magenta;
+		position: relative;
+		margin-bottom: 15px;
+	}
+	border-top: $magenta solid 2px;
+	&.alt {
+		border-color: $blue;
+		&:before { background-color: $blue }
+	}
+	&.paint-spatter {
+		&:after {
+		content: "";
+		width: 397px;
+		height: 446px;
+		position: absolute;
+		top: 40px;
+		right: -10px;
+		background-image: url("../img/paint.png");
+		background-repeat: no-repeat;
+		}
+	}
+}
+.content {
+	margin: 0px 100px;
+	position: relative;
+}
+.content-block {
+	margin: 80px 0px;
+	&.center > div {
+		width: 700px;
+		margin: 0px auto 0px auto; // ha i didn't realize you could do this
+	}
+}
 
 // DARK
 .dark-section {
@@ -81,7 +123,7 @@ h2 {
 		h2 {
 			max-width: 950px;
 			margin: 80px 0px;
-			line-height: 125%;
+			line-height: 120%;
 			text-transform: none;
 			font-family: "Montserrat", sans-serif;
 			font-weight: 800;
@@ -105,11 +147,22 @@ h2 {
 			padding: 0px 40px;
 			border-left: $magenta solid 26px;
 			h1 {
+				&:before { content: none } // no hr above text
 				text-align: left;
 				line-height: 1em;
-				&:before { content: none }
+			}
+			&.plain { // big plain text no fanciness
+				border-left: none;
+				padding: 0;
+				h1 { 
+					font-size: 116px; 
+					font-weight: 400;
+					line-height: 95%;
+					letter-spacing: -0.08em;
+				}
 			}
 			.meta {
+				margin: 20px 0px;
 				font-family: "Merriweather", serif;
 				font-weight: 300;
 				font-style: italic;

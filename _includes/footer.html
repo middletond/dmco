@@ -1,46 +1,51 @@
 <footer class="dark-section">
-	{% include palette_bar.html %}
+	{% unless page.nofooter %}
 
-	<div class="content">
+		{% include palette_bar.html %}
 
-		<h2><b>Hi.</b> I am a <b>digital creative</b> based in central California with a background in <b>programming</b>, <b>publishing</b>, <b>data</b>, &amp; <b>design</b>.</h2>
+		<div class="content">
 
-		<a class="button" href="hello.html">More About Me</a>
+			<h2><b>Hi.</b> I am a <b>digital creative</b> based in central California with a background in <b>programming</b>, <b>publishing</b>, <b>data</b>, &amp; <b>design</b>.</h2>
 
-		<div class="grid footer-actions">
+			<a class="button" href="/hello.html">More About Me</a>
 
-			<div class="hello-form grid-item">
-				<h4>I love turning ideas into digital realities. <br />Let's talk.</h4>
+			<div class="grid footer-actions">
 
-				<form name="hello" class="hello" method="get">
-					<div class="field text">
-						<input type="text" name="email" id="email_field" placeholder="Email Address" />
-					</div>
-					<div class="field text">
-						<input type="text" name="name" id="name_field" placeholder="Name" />
-					</div>
-					<div class="field textarea">
-						<textarea name="message" id="message_field" placeholder="Type a message"></textarea>
-					</div>
-					<div class="button-block right">
-						<input type="submit" value="Send Message" />
-					</div>
-				</form>
-			</div>
+				<div class="hello-form grid-item">
+					<h4>I love turning ideas into digital realities. <br />Let's talk.</h4>
 
-			<div class="social grid-item">
-				<a class="social-item github" target="_blank" 
-				   href="https://github.com/middletond"><i class="fa fa-github"></i></a>
-				<a class="social-item linkedin" target="_blank" 
-				   href="https://www.linkedin.com/in/dave-middleton-92010957/"><i class="fa fa-linkedin"></i></a>
-				<a class="social-item twitter" target="_blank" 
-				   href="https://twitter.com/aheartalight"><i class="fa fa-twitter"></i></a>
-				<a class="social-item instagram" target="_blank" 
-				   href="http://instagram.com"><i class="fa fa-instagram"></i></a>
+					<form name="hello" class="hello" method="get">
+						<div class="field text">
+							<input type="text" name="email" id="email_field" placeholder="Email Address" />
+						</div>
+						<div class="field text">
+							<input type="text" name="name" id="name_field" placeholder="Name" />
+						</div>
+						<div class="field textarea">
+							<textarea name="message" id="message_field" placeholder="Type a message"></textarea>
+						</div>
+						<div class="button-block right">
+							<input type="submit" value="Send Message" />
+						</div>
+					</form>
+				</div>
+
+				<div class="social grid-item">
+					<a class="social-item github" target="_blank" 
+					   href="https://github.com/middletond"><i class="fa fa-github"></i></a>
+					<a class="social-item linkedin" target="_blank" 
+					   href="https://www.linkedin.com/in/dave-middleton-92010957/"><i class="fa fa-linkedin"></i></a>
+					<a class="social-item twitter" target="_blank" 
+					   href="https://twitter.com/aheartalight"><i class="fa fa-twitter"></i></a>
+					<a class="social-item instagram" target="_blank" 
+					   href="http://instagram.com"><i class="fa fa-instagram"></i></a>
+				</div>
+
 			</div>
 
 		</div>
 
-	</div>
+	{% endunless %}
 
+	<!-- credits here -->
 </footer>

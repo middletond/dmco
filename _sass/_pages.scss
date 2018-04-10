@@ -1,0 +1,31 @@
+// INDIVIDUAL PAGE STYLE ADJUSTMENTS
+
+#helloPage {
+	.dark-section {
+		padding-top: 20px;
+		background: $navy;
+		background: linear-gradient(30deg, $navy 0%, $navy 70%, $darkblue 100%);
+	}
+	h1 {
+		color: $cream;
+	}
+	.content {
+		padding-top: 120px;
+	}
+	.social {
+		margin-top: 60px;
+	}
+	.pre-content {
+		position: relative;
+		top: 80px;
+		
+		max-width: 1400px;
+		.palette-bar {
+			.segment.first { max-width: 105px; } // align w text margin below
+		}
+		.lantern { // .lantern "hangs" off .palette-bar
+			top: -110px;
+			right: 130px;
+		}
+	}
+}

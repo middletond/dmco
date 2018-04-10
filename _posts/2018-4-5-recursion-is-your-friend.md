@@ -2,7 +2,7 @@
 layout: post
 
 title:  "Recursion Explained"
-tagline: "Because you can't eat just one."
+tagline: "Once you start, you can't stop."
 excerpt: "In my 20s, I was a professional musician. Half of my life was spent touring the country, and the other half was spent in California recording studios producing records. I had no idea I would one day write code"
 
 category: technical

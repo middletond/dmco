@@ -112,7 +112,7 @@
 					position: absolute;
 					top: 0px;
 					right: 0px;
-					width: 40%;
+					width: 50%;
 					height: 100%;
 					content: "";
 					z-index: 1;
@@ -230,6 +230,7 @@
 			.post-excerpt {
 				line-height: 180%;
 				font-size: 18px;
+				font-weight: 300;
 			}
 		}
 		&.feature {
