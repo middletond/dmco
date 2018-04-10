@@ -18,8 +18,7 @@
 	.pre-content {
 		position: relative;
 		top: 80px;
-		
-		max-width: 1400px;
+		max-width: 1500px;
 		.palette-bar {
 			.segment.first { max-width: 105px; } // align w text margin below
 		}
@@ -27,5 +26,10 @@
 			top: -110px;
 			right: 130px;
 		}
+	}
+	.paint-spatter {
+		top: -92px;
+		right: -150px;
+		z-index: 1;
 	}
 }

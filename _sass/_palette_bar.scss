@@ -24,3 +24,13 @@
 		&.fifth { background-color: $magenta; }
 	}
 }
+
+.paint-spatter {
+	width: 397px;
+	height: 446px;
+	position: absolute;
+	top: 40px;
+	right: -10px;
+	background-image: url("../img/paint.png");
+	background-repeat: no-repeat;
+}
