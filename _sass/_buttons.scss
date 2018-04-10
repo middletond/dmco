@@ -2,16 +2,22 @@
 
 .button-block {
     text-align: center; // center inline-block buttons
-    margin: 60px auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
     &.right { text-align: right; }
     &.left { text-align: left; }
 }
-.button, input[type="submit"]  {
+.button, input[type="submit"], button  {
+    width: 150px;
+    padding: 16px 20px;
+    &.small {
+        width: 120px;
+    }
+    outline: none;
     display: inline-block;
     @include below($break-small) { display: block; }
-    width: 150px;
-    padding: 13px 17px;
     border-radius: 1px;
+    border: none;
     cursor: pointer;
     text-decoration: none;
     text-transform: uppercase;
@@ -22,10 +28,15 @@
     color: $white;
     background-color: $magenta;
     letter-spacing: 0.01em;
+    line-height: 1em;
     transition: 0.3s;
     box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.5);
     &:hover {
     	background-color: $hypermagenta;
         box-shadow: 4px 4px 20px 0px rgba(0,0,0,0.6);
     }
+}
+input[type="submit"].button {
+    width: auto;
+    min-width: 190px;
 }

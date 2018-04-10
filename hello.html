@@ -2,6 +2,8 @@
 layout: base
 title: hello
 nofooter: 1
+js_files:
+- hello
 ---
 
 <section class="dark-section">
@@ -17,9 +19,11 @@ nofooter: 1
             <h1>Hey<br />Traveler.</h1>
         </div>
 
-        <h2><b>Hi.</b> I am a <b>digital producer</b> based in central California with a background in <b>programming</b>, <b>publishing</b>, <b>data</b>, &amp; <b>design</b>.</h2>
+        <h2><b>I'm Dave.</b> I am a <b>digital producer</b> based in central California with a background in <b>programming</b>, <b>publishing</b>, <b>data</b>, &amp; <b>design</b>.</h2>
 
-        <div class="content-block left">
+        <button class="button" id="helloTextButton">More</button>
+
+        <div class="content-block left hidden" id="helloText">
 
             <p><span class="lead">Why does iteration work?</span> In a weird way, the iteration approach is springs from the idea behind wisdom — i.e. “life itself is the best teacher.” An iterative approachr places more value on knowledge gained from actual lived experience than knowledge gained from conclusions based on thinking things through conceptually. When you iterate, you are essentially subscribing to the School of Hard Knocks &mdash; you are deliberately striving in arenas where you not only expect to fail, but are counting on those failures &mdash; instead of your own ability to think through things clearly &mdash; to provide the information you need.</p>
 
@@ -46,7 +50,7 @@ nofooter: 1
                         <textarea name="message" id="message_field" placeholder="Type a message"></textarea>
                     </div>
                     <div class="button-block right">
-                        <input type="submit" value="Send Message" />
+                        <input class="button" type="submit" value="Send Message" />
                     </div>
                 </form>
             </div>

@@ -26,13 +26,9 @@ input, textarea, select {
 }
 input {
     display: block;
-    padding: 20px 0px 16px 0px;
     border: none;
     border-bottom: $magenta 2px solid;
-    @include below($break-tiny) { min-width: auto; }
-    &[type="submit"] {
-        width: auto;
-    }
+    &:not([type="submit"]) { padding: 20px 0px 16px 0px; }
 }
 textarea {
     background: transparent;
