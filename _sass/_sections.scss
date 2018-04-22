@@ -5,19 +5,11 @@
 h1 {
 	position: relative;
 	text-align: center;
-	font-size: 75px;
+	font-size: 82px;
 	font-family: "Source Code Pro", sans-serif;
 	font-weight: 500;
 	letter-spacing: -0.01em;
 	margin: 0px;
-	&:before { // hr line
-		display: block;
-		content: "";
-		background-color: $black;
-		width: 340px;
-		height: 1px;
-		margin: 40px auto;
-	}
 	&.dark { // header that transitions from dark to light
 		padding: 200px 0px;
 		margin-top: -200px;
@@ -41,59 +33,189 @@ h1 {
 }
 h2 {
 	letter-spacing: 0em;
-	font-size: 30px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 	padding: 0;
+	max-width: 950px;
+	line-height: 120%;
+	text-transform: none;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 800;
+	font-size: 36px;
+	color: $magenta;
+	b {
+		font-weight: 800;
+		color: $magenta;
+	}
+		
 }
 h3 {
-	position: relative;
+	position: relative; 
 	font-size: 24px;
-	font-weight: 500;
-	border-top: $magenta solid 2px;
-	&:before {
+	font-weight: 600;
+	padding-top: 24px;
+	margin: 50px 50px -30px 50px;
+	&:before { // left portion
 		content: "";
 		display: block;
-		width: 275px;
+		width: 50%; 
 		height: 12px;
 		background-color: $magenta;
-		position: relative;
-		margin-bottom: 18px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
 	}
-	// &:before {
-	// 	content: "";
-	// 	display: block;
-	// 	width: 700px;
-	// 	margin: 0px auto;
-	// 	height: 12px;
-	// 	background-color: $navy;
-	// 	position: relative;
-	// 	top: -10px;
-	// }
-	&:after {
+	&:after { // center portion
 		content: "";
 		display: block;
-		width: 700px;
-		margin: 0px auto;
 		height: 12px;
-		background-color: $navy;
+		background-color: $cream;
+		border-top: $magenta solid 2px;
 		position: relative;
-		top: -60px;
-		left: 700px;
+		margin-left: auto;
+		margin-right: auto;
+		top: -50px;
+		left: -15px; // make a little shorter on right side
+		max-width: $post-text-width; // this should match the text min-width
 	}
 	&.alt {
 		border-color: $blue;
-		&:before {
-			background-color: $blue;
-		}
+		&:before { background-color: $blue; }
+		&:after { border-color: $blue; }
 	}
 }
-.content {
+p {
+	text-align: justify;
+	max-width: 850px;
+	font-size: 20px;
+	.lead {
+		font-size: 23px;
+	}
+}
+.heading-block {
+	margin-top: 60px;
+	margin-bottom: 60px;
+	padding: 0px 40px;
+	border-left: $magenta solid 26px;
+	h1 {
+		&:before { content: none } // no hr above text
+		text-align: left;
+		line-height: 1em;
+	}
+	&.plain { // big plain text no fanciness
+		border-left: none;
+		padding: 0;
+		h1 { 
+			font-size: 116px; 
+			font-weight: 400;
+			line-height: 95%;
+			letter-spacing: -0.08em;
+		}
+	}
+	.meta {
+		margin: 20px 0px;
+		font-family: "Merriweather", serif;
+		font-weight: 300;
+		font-style: italic;
+		font-size: 24px;
+		text-transform: lowercase;
+		letter-spacing: -0.01em;
+		margin-left: 5px; // compensate for font glyphs
+	}
+	.definitions, h3 {
+		font-family: "Source Code Pro", monospace, sans-serif;
+		font-weight: 600;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+	.definitions li {
+		padding: 5px 0px;
+		margin-left: 10px; // compensate for font glyphs
+		line-height: 180%;
+	}
+	h3 {
+		&:before { content: none; }
+		&:after { content: none; }
+		margin: 0px;
+	}
+}
+.content { // default to left content
 	position: relative;
 	margin: 0px 0px; 
 	& > * { // default margins to .content children (h12345, div, p, etc) so option exists to bring child to edges
 		margin-left: 100px;
 		margin-right: 100px;
+	}
+	&.center {
+		p, h2 {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		p { max-width: $post-text-width; }
+		h2 {max-width: $post-header-width; }
+		.heading-block {
+			position: relative;
+			padding: 0px 0px 40px 0px;
+			margin-bottom: 80px;
+			&:before { // hr line
+				display: block;
+				content: "";
+				background-color: $cream;
+				width: 340px;
+				height: 1px;
+				margin: 40px auto;
+			}
+			&:after { // hr line
+				display: block;
+				content: "";
+				background-color: $cream;
+				width: 340px;
+				height: 1px;
+				position: absolute;
+				bottom: 0px;
+				left: 0; // center it
+				right: 0;
+				margin: auto;
+				z-index: 0;
+			}
+			text-align: center;
+			border-left: none;
+			h1, h2, h3 {
+				text-align: center;
+			}
+			h3 {
+				margin: 0px auto 10px auto;
+				font-family: "Merriweather", serif;
+				font-weight: 300;
+				font-style: italic;
+				font-size: 24px;
+				text-transform: lowercase;
+				letter-spacing: -0.01em;
+				margin-left: 5px; // compensate for font glyphs
+			}
+			.meta {
+				display: inline-block;
+				position: absolute;
+				z-index: 1;
+				left: 50%; // center it
+				-webkit-transform: translateX(-50%);
+				transform: translateX(-50%);
+				padding: 10px 30px;
+				background-color: $magenta;
+				font-family: "Source Code Pro", sans-serif;
+				font-weight: 700;
+				font-style: normal;
+				font-size: 18px;
+				line-height: 1.1em;
+				color: $white;
+				text-transform: uppercase;
+				text-align: center;
+				box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
+			}
+		}
+	}
+	&.center-text {
+		p, h2 { text-align: center; }
 	}
 }
 .content-block {
@@ -121,7 +243,7 @@ h3 {
 		margin-top: -$header-height-large;
 		padding-top: $header-height-large;
 		.content {
-			margin-top: 100px;
+			margin-top: 0px;
 		}
 	}
 	&.with-transition { // might be able to just have this for all dark sections
@@ -149,6 +271,10 @@ h3 {
 		background-repeat: no-repeat;
 	}
 	.content {
+		a {
+			&:after { background-color: $magenta; }
+			&:hover { color: $magenta; }
+		}
 		h1 {
 			color: $cream;
 			&:before {
@@ -156,69 +282,26 @@ h3 {
 			}
 		}
 		h2 {
-			max-width: 950px;
 			margin-top: 70px;
 			margin-bottom: 70px;
-			line-height: 120%;
-			text-transform: none;
-			font-family: "Montserrat", sans-serif;
-			font-weight: 800;
-			font-size: 36px;
 			color: $blue;
 			b {
 				font-weight: 800;
 				color: $cornflower;
 			}
 		}
+		h3 {
+			&:before { background-color: $magenta; }
+			&.alt:before { background-color: $blue; }
+			&:after { background-color: $navy; }
+		}
 		p {
-			text-align: justify;
-			max-width: 850px;
 			font-size: 22px;
-			.lead {
-				font-size: 23px;
-			}
+			font-weight: 300;
+			.lead { font-size: 23px; }
 		}
 		.heading-block {
-			margin-top: 40px;
-			margin-bottom: 40px;
-			padding: 0px 40px;
-			border-left: $magenta solid 26px;
-			h1 {
-				&:before { content: none } // no hr above text
-				text-align: left;
-				line-height: 1em;
-			}
-			&.plain { // big plain text no fanciness
-				border-left: none;
-				padding: 0;
-				h1 { 
-					font-size: 116px; 
-					font-weight: 400;
-					line-height: 95%;
-					letter-spacing: -0.08em;
-				}
-			}
-			.meta {
-				margin: 20px 0px;
-				font-family: "Merriweather", serif;
-				font-weight: 300;
-				font-style: italic;
-				font-size: 24px;
-				text-transform: lowercase;
-				letter-spacing: -0.01em;
-				margin-left: 5px; // compensate for font glyphs
-			}
-			.definitions {
-				font-family: "Source Code Pro", monospace, sans-serif;
-				font-weight: 600;
-				font-size: 24px;
-				text-transform: uppercase;
-				li {
-					padding: 5px 0px;
-					margin-left: 10px; // compensate for font glyphs
-					line-height: 180%;
-				}
-			}
+
 		}
 		.button { // should this go here?
 			margin-top: 10px;

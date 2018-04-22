@@ -32,11 +32,11 @@ p {
 	font-family: "Merriweather", serif;
 	font-size: 19px;
 	line-height: 190%;
-	font-weight: 300;
+	font-weight: 400;
 	&.big {
 		font-size: 25px;
 		font-weight: 300;
-		text-align: justify;
+		text-align: justify !important;
 	}
 	.lead {
 		font-family: "Source Code Pro", monospace, sans-serif;
@@ -56,16 +56,15 @@ p {
 			z-index: 0;
 			bottom: 2px;
 			left: 0px;
-			height: 6px;
-			background-color: $magenta;
+			height: 1px;
+			background-color: $sand;
 			width: 100%;
 			transition: 0.15s;
 		}
 		&:hover {
-			color: $magenta;
+			color: $sand;
 			&:after { bottom: 0px; height: 1px; }
 		}
-		// border-bottom: $magenta solid 3px;
 	}
 }
 

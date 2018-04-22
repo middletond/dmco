@@ -49,6 +49,7 @@
 				font-weight: 900; 
 			}
 			.post-tagline {
+				color: $black;
 				max-width: 900px;
 				margin: 20px auto;
 				font-family: "Merriweather", sans-serif;
@@ -159,9 +160,20 @@
 		}
 	}
 	.post-content {
-		margin: 20px auto 100px;
-		max-width: $post-text-width;
+		margin: 20px 0px 100px 0px;
+		& > * { // everything centered and columned unless otherwise specified
+			margin-left: auto;
+			margin-right: auto;
+			max-width: $post-text-width; 
+		}
+		h3 {
+			max-width: 100%;
+		}
+		img {
+			width: 100%;
+		}
 		p {
+			text-align: left;
 			font-weight: 400;
 			&.big { font-weight: 300; }
 		}
@@ -225,7 +237,9 @@
 			.post-title {
 				margin: 20px 0px;
 				font-weight: 700;
+				line-height: 110%;
 				letter-spacing: -0.02em;
+				text-transform: uppercase;
 			}
 			.post-excerpt {
 				line-height: 180%;
@@ -258,6 +272,8 @@
 				}
 				.post-meta {
 					text-align: center;
+					margin-left: auto;
+					margin-right: auto;
 				}
 				.post-excerpt {
 					margin: 20px auto;
