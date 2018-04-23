@@ -10,26 +10,6 @@ h1 {
 	font-weight: 500;
 	letter-spacing: -0.01em;
 	margin: 0px;
-	&.dark { // header that transitions from dark to light
-		padding: 200px 0px;
-		margin-top: -200px;
-		margin-bottom: -200px;
-		background-color: $navy;
-		color: $cream;
-		&:before {
-			background-color: $cream;
-		}
-		&:after {
-			position: absolute;
-			left: 0px;
-			bottom: -292px;
-			content: "";
-			background-image: url("../img/navy_paint_border.png");
-			background-repeat: no-repeat;
-			width: 100%;
-			height: 292px;
-		}
-	}
 }
 h2, blockquote p {
 	letter-spacing: 0em;
@@ -183,6 +163,10 @@ blockquote {
 		margin-left: 0px;
 		margin-right: 0px;
 	}
+	&.transitional {
+		padding: 0px 0px;
+		margin-top: -200px;
+	}
 	&.center {
 		p, h2 {
 			margin-left: auto;
@@ -253,6 +237,13 @@ blockquote {
 	&.center-text {
 		p, h2 { text-align: center; }
 		h2 {max-width: $post-header-width; }
+	}
+}
+section.transitional-content { // starts content between a dark and light section
+	position: relative;
+	z-index: 2;
+	.content {
+		margin-top: -443px;
 	}
 }
 .content-block {
