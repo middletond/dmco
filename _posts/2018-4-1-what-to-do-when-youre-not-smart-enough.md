@@ -6,7 +6,7 @@ tagline: "General intelligence is likely fixed (sorry).<br /> But there is still
 excerpt: "If we deify intelligence,we will tend to defer to it. This essentially translates into “let our most intelligent people control projects, and do whatever they want.” Oftentimes, this can be a good thing, but other times it is not. How does one tell the difference? Intelligence becomes more valuable when iteration fails."
 
 category: editorial
-date:   2018-04-01 19:55:46 -0700
+date:   2018-04-11 19:55:46 -0700
 image_url: "/assets/posts/knowledge.jpg"
 ---
 In my 20s, I was a professional musician. Half of my life was spent touring the country, and the other half was spent in California recording studios producing records.

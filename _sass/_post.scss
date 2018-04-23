@@ -180,7 +180,7 @@
 			&.big { font-weight: 300; }
 		}
 		blockquote {
-			border-left: $sand solid 26px;
+			border-left: $sandlight solid 26px;
 			margin: 40px auto;
 			p {
 				margin: 0px 0px 0px 30px;
@@ -285,6 +285,7 @@
 					margin-right: auto;
 				}
 				.post-excerpt {
+					text-align: center;
 					margin: 20px auto;
 					line-height: 180%;
 					width: 80%;
@@ -295,7 +296,7 @@
 	.post-divider {
 		height: 1px;
 		width: 100%;
-		background-color: $sand;
+		background-color: $sandlight;
 		margin: 40px 0px;
 	}
 }
