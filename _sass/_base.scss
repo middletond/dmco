@@ -56,17 +56,20 @@ p {
 			z-index: 0;
 			bottom: 2px;
 			left: 0px;
-			height: 1px;
-			background-color: $sand;
+			height: 15px;
+			background-color: $rust;
 			width: 100%;
 			transition: 0.15s;
+			opacity: 0.25;
 		}
 		&:hover {
-			color: $sand;
-			&:after { bottom: 0px; height: 1px; }
+			color: $rust;
+			&:after { bottom: 0px; height: 1px; opacity: 0.5; }
 		}
 	}
 }
 
 .shown { display: block !important; }
 .hidden { display: none !important; }
+.text-center { text-align: center; }
+

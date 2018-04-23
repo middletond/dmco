@@ -31,7 +31,7 @@ h1 {
 		}
 	}
 }
-h2 {
+h2, blockquote p {
 	letter-spacing: 0em;
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -92,6 +92,39 @@ p {
 		font-size: 23px;
 	}
 }
+blockquote {
+	p {
+		font-weight: 800 !important;
+	}
+}
+.image {
+	position: relative;
+	z-index: 1;
+	margin: 0px 0px 60px 0px;
+	width: 100%;
+	text-align: center;
+	img {
+		position: relative;
+		z-index: 1;
+		display: inline-block;
+		max-width: 100%;
+		left: 45px;
+	}
+	&.decorated {
+		padding: 80px 0px 150px 0px;
+		margin-bottom: -80px;
+		&:before { // vertical center line
+			content: "";
+			width: 1px;
+			height: 100%;
+			background-color: $magenta;
+			position: absolute;
+			top: 0px;
+			left: 50%;
+			margin-left: 0.5px;
+		}
+	}
+}
 .heading-block {
 	margin-top: 60px;
 	margin-bottom: 60px;
@@ -146,13 +179,16 @@ p {
 		margin-left: 100px;
 		margin-right: 100px;
 	}
+	.image {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
 	&.center {
 		p, h2 {
 			margin-left: auto;
 			margin-right: auto;
+			max-width: $post-text-width;
 		}
-		p { max-width: $post-text-width; }
-		h2 {max-width: $post-header-width; }
 		.heading-block {
 			position: relative;
 			padding: 0px 0px 40px 0px;
@@ -216,6 +252,7 @@ p {
 	}
 	&.center-text {
 		p, h2 { text-align: center; }
+		h2 {max-width: $post-header-width; }
 	}
 }
 .content-block {
@@ -238,7 +275,7 @@ p {
 	z-index: 2;
 	color: $cream;
 	background: $navy;
-	background: linear-gradient(15deg, $navy 0%, $navy 65%, lighten($navylit, 3) 100%);
+	background: linear-gradient(15deg, $navy 0%, $navy 65%, $darkblue 100%);
 	&.hero {
 		margin-top: -$header-height-large;
 		padding-top: $header-height-large;
@@ -272,8 +309,8 @@ p {
 	}
 	.content {
 		a {
-			&:after { background-color: $magenta; }
-			&:hover { color: $magenta; }
+			&:after { background-color: $blue; opacity: 0.4; }
+			&:hover { color: $blue; }
 		}
 		h1 {
 			color: $cream;

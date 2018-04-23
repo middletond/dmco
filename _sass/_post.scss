@@ -168,6 +168,8 @@
 		}
 		h3 {
 			max-width: 100%;
+			margin-left: 50px;
+			margin-right: 50px;
 		}
 		img {
 			width: 100%;
@@ -176,6 +178,13 @@
 			text-align: left;
 			font-weight: 400;
 			&.big { font-weight: 300; }
+		}
+		blockquote {
+			border-left: $sand solid 26px;
+			margin: 40px auto;
+			p {
+				margin: 0px 0px 0px 30px;
+			}
 		}
 	}
 }
