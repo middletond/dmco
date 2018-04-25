@@ -163,6 +163,12 @@ blockquote {
 		&.orange {
 			background-color: $orange;
 		}
+		&.white {
+			background-color: $white;
+			border-top: $sandhyperlight solid 1px;
+			border-bottom: $sandhyperlight solid 1px;
+			box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+		}
 	}
 }
 .heading-block {
