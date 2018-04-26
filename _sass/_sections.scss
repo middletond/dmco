@@ -160,6 +160,9 @@ blockquote {
 		&.blue {
 			background-color: $navylit;
 		}
+		&.navy {
+			background-color: saturate(lighten($navy, 5), 2);
+		}
 		&.orange {
 			background-color: $orange;
 		}
