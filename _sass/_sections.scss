@@ -105,6 +105,26 @@ blockquote {
 	margin: 40px auto;
 	p { margin: 0px !important; }
 }
+hr, .divider {
+	margin: 60px auto 70px auto !important;
+	height: 2px;
+	width: 70px;
+	border: none;
+	background-color: lighten($sand, 5);
+	display: block;
+	line-height: 0em;
+}
+.divider { // can't get <hr> to accept :after.content 
+	height: 10px;
+	font-size: 65px;
+	text-align: center;
+	color: $orange;
+	background-color: transparent;
+	&:after { 
+		display: block;
+		content: "\00B7\00B7\00B7"; // three middots
+	}
+}
 
 .image {
 	position: relative;
@@ -122,7 +142,7 @@ blockquote {
 		margin: 0px auto;
 	}
 	&.decorated {
-		padding: 80px 0px 100px 0px;
+		padding: 80px 0px 80px 0px;
 		margin-bottom: -80px;
 		&:before { // vertical center line
 			content: "";
@@ -308,6 +328,9 @@ blockquote {
 		p, h2 { text-align: center; }
 		h2 {max-width: $post-header-width; }
 	}
+	&.article {
+		p {text-align: left; }
+	}
 }
 section.transitional-content { // starts content between a dark and light section
 	position: relative;
@@ -410,6 +433,12 @@ section.transitional-content { // starts content between a dark and light sectio
 		}
 		blockquote {
 			border-left-color: $navylit;
+		}
+		hr {
+			background-color: darken($steelblue, 12);
+		}
+		.divider {
+			color: darken($steelblue, 12);
 		}
 		.heading-block {
 

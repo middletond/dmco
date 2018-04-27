@@ -34,7 +34,7 @@ p {
 	line-height: 190%;
 	font-weight: 400;
 	&.big {
-		font-size: 25px;
+		font-size: 25px !important;
 		font-weight: 300;
 		text-align: justify !important;
 	}
