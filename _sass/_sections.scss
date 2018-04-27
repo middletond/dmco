@@ -67,6 +67,17 @@ h3 {
 		&:after { border-color: $blue; }
 	}
 }
+h4 {
+	color: $sand;
+	font-family: "Source Code Pro", sans-serif;
+	font-size: 23px;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	padding: 5px 0px;
+}
+h5 {
+	color: $white;
+}
 p {
 	text-align: justify;
 	max-width: 850px;
@@ -422,6 +433,9 @@ section.transitional-content { // starts content between a dark and light sectio
 			&:before { background-color: $magenta; }
 			&.alt:before { background-color: $blue; }
 			&:after { background-color: $navy; }
+		}
+		h4 {
+			color: $cornflower;
 		}
 		p {
 			font-size: 22px;

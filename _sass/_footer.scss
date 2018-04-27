@@ -22,6 +22,17 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 			margin-top: 20px;
 			margin-bottom: 20px;
 		}
+		h3 {
+			margin: 0;
+			padding: 0;
+			width: auto;
+			font-size: 25px;
+			font-weight: 600;
+			line-height: 140%;
+			letter-spacing: 0.01em;
+			&:before { content: none; }
+			&:after { content: none; }
+		}
 		.button {
 			margin-top: 30px;
 			margin-bottom: 30px;
