@@ -4,7 +4,7 @@ layout: base
 
 <section class="dark-section hero with-transition">
 
-    <!-- <figure class="lantern">&nbsp;</figure> -->
+    <!-- <figure class="echinacea"></figure> -->
 
     <div class="content">
 
@@ -19,14 +19,14 @@ layout: base
             </ol>
         </div>
 
-        <h2>Hi, I'm Dave. I am a <b>digital producer</b> specializing in bringing <b>unconventional ideas, individuals, and brands</b> to life in the world.</h2>  
+        <h2>Hi, I'm Dave. I am a <b>digital producer</b> specializing in bringing <b>unconventional ideas, individuals, and brands</b> to life in the world.</h2>
 
         <p><span class="lead">A producer is someone</span> who navigates the often uncertain waters inherent in the journey from creative concept to tangible reality. They are the bridge between the technician and the dreamer. They are the gardener patiently watering the sprouting plant. They are the doctor attending to the baby being born.</p>
 
         <p>Their job is two-fold: to carefully suss out the true heart of a creative idea and transmute it into a clear and actionable plan, and to assess and handle all the technical hurdles manifest in growing the idea into a flourishing reality.</p>
 
-        <div class="button-block left">    
-            <a class="button small" href="hello.html">Read On</a>
+        <div class="button-block left">
+            <a class="button small" href="/hello/">Read On</a>
         </div>
 
     </div>
@@ -37,12 +37,12 @@ layout: base
 </section>
 
 <section class="light-section transitional-content">
-    <div class="content">    
+    <div class="content">
 
     {% if site.posts.size > 0 %}
     <div class="post-list">
     {% for post in site.posts %}
-        
+
         <article class="post {% if forloop.first %}feature{% endif %}">
             <div class="post-image">
                 <a href="{{ post.url | relative_url }}">

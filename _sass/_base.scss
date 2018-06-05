@@ -73,7 +73,13 @@ ul {
 	}
 }
 
+code {
+	margin-left: 5px;
+	margin-right: 5px;
+	display: inline-block;
+	color: $lime;
+}
+
 .shown { display: block !important; }
 .hidden { display: none !important; }
 .text-center { text-align: center; }
-
