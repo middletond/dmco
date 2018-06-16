@@ -1,0 +1,72 @@
+// Projects in `work` index page
+
+.dark-section .project .text {
+    background-color: $projectblue;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.25);
+    h2, p { color: $white; }
+}
+
+.light-section .project .text {
+    background-color: $projectcream;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+    h2, p { color: $black; }
+}
+
+.project-list {
+    margin: 0px;
+    .project {
+        @include flex_display();
+        @include flex_justify_content(space-between);
+        position: relative;
+        margin: 50px 0;
+        padding: 100px 0px 0px 0px;
+        height: 750px;
+        .text, .image {
+            position: absolute;
+            bottom: 0;
+        }
+        &.left {
+            .text { left: 0; padding-left: 70px; }
+            .image { left: 500px; }
+        }
+        &.right {
+            .text { right: 0; padding-right: 70px; }
+            .image { right: 500px; }
+        }
+        .text {
+            width: 325px;
+            padding: 30px 70px;
+            z-index: 1;
+            h2 {
+                font-family: "Source Code Pro";
+                font-weight: 600;
+                text-transform: uppercase;;
+                text-align: center;
+                font-size: 30px;
+                margin: 40px 0px;
+            }
+            hr {
+                margin: 0px auto 40px !important;
+            }
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 190%;
+            }
+            .button-block {
+                margin: 50px 0px;
+                .button {
+                    width: 100%;
+                    padding: 30px 0px;
+                    margin: 0;
+                }
+            }
+        }
+        .image {
+            width: 1400px;
+            margin: 0;
+            padding: 0;
+            z-index: 0;
+        }
+    }
+}

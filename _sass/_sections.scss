@@ -155,7 +155,7 @@ hr, .divider {
 	&.decorated {
 		padding: 80px 0px 80px 0px;
 		margin-bottom: -80px;
-		&:before { // vertical center line
+		&:before { // .decorated images have vertical center line
 			content: "";
 			width: 1px;
 			height: 100%;
@@ -357,6 +357,13 @@ section.transitional-content { // starts content between a dark and light sectio
 	z-index: 2;
 	.content {
 		margin-top: -380px;
+	}
+}
+section.semi-transitional-content { // starts content immediately after a dark and light section
+	position: relative;
+	z-index: 2;
+	.content {
+		margin-top: -180px;
 	}
 }
 .content-block {
