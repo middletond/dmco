@@ -27,11 +27,11 @@
         }
         &.left {
             .text { left: 0; padding-left: 70px; }
-            .image { left: 700px; }
+            .image { left: 550px; }
         }
         &.right {
             .text { right: 0; padding-right: 70px; }
-            .image { right: 700px; }
+            .image { right: 550px; }
         }
         .text {
             width: 325px;
@@ -63,7 +63,7 @@
             }
         }
         .image {
-            width: 1280px;
+            width: 1400px;
             margin: 0;
             padding: 0;
             z-index: 0;
