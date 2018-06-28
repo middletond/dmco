@@ -1,4 +1,4 @@
 ---
 layout: home
-title: hello world!
+title: home
 ---
