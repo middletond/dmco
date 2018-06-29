@@ -1,7 +1,7 @@
 ---
 layout: base
 ---
-<section class="dark-section hero with-transition">
+<section class="dark-section top with-transition">
     <div class="content center">
 
         <div class="heading-block">
@@ -14,11 +14,11 @@ layout: base
 
 <section class="light-section transitional-content">
     <div class="content">
-       
+
         {% if site.posts.size > 0 %}
         <div class="post-list">
         {% for post in site.posts %}
-            
+
             <article class="post {% if forloop.first %}feature{% endif %}">
                 <div class="post-image">
                     <a href="{{ post.url | relative_url }}">
