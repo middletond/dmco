@@ -13,6 +13,10 @@
     &.small {
         width: 120px;
     }
+    &.large {
+      padding: 24px 20px;
+      width: 300px;
+    }
     outline: none;
     display: inline-block;
     @include below($break-small) { display: block; }
