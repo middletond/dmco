@@ -7,6 +7,13 @@
 
   {% include fonts.html %}
 
+  <script src="/assets/js/hello.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      hello.init();
+    }
+  </script>
+
   {% if page.js_files %}
   {% for js_file in page.js_files %}
   	<script src="/assets/js/{{ js_file }}.js" type="text/javascript"></script>
