@@ -79,7 +79,7 @@ title: work
 
         <p>I made my pitch to John and Larry and it was decided: a good article delivered simply beat a mediocre multimedia experience delivered with the latest fad. Web piracy had no real teeth. We were putting 15 years of content on the web.</p>
 
-        <h4>Building the Platform</h4>
+        <h4>Choosing Technologies</h4>
 
         <p><i>Tape Op's</i> new website was by far the largest digital project I had ever taken on. At that point, I had zero experience with <i>any</i> web technology beyond the humble trio of HTML, vanilla Javascript, and CSS with which I had built my static sites. What was a "framework"? What was "relational database design"? It was my first real introduction to this stuff, and I wasn't entirely sure where to begin.</p>
 
@@ -87,15 +87,15 @@ title: work
 
         <p>It had to handle a significant range of content types: letters from readers, interviews, articles, blog posts, product reviews, video, audio, and photo galleries. All of these needed to be either tied to an issue of the magazine, or published independently by date. Issues needed have their own information, and to be able to be bought by subscribers. Access to content needed to be regulated by which issues were owned by which subscriber. Subscribers and subscriptions themselves, of course, had to be orchestrated and managed. Automation and manual subscriber tools for newsletters, renewals, address updates, cancellations, and status requests needed to be in place. Analytics and data viz for the state of subscriptions and our subscribers' demographics were also a crucial component of our lifeblood, both for our own decision-making as well as to report to advertisers.</p>
 
-        <p>Despite my neophyte status, all of this seemed weighty and complex enough that choosing a pre-fab blog engine like Wordpress or Moveable Type &mdash; what everyone was leaning towards at the time &mdash; gave me a sour feeling in my stomach. Yet the idea of building all this from scratch seemed insane. Fortunately, I had a programmer buddy named A.J. who showed me the light.</p>
+        <p>Despite my neophyte status, all of this seemed uncomfortably weighty and complex for a pre-fab blog engine like Wordpress or Moveable Type &mdash; what everyone was leaning towards at the time. Yet the idea of building all this from scratch seemed insane. Fortunately, I had a single programmer buddy named A.J. who showed me the light.</p>
 
         <p><i>"Web frameworks, dude. Best of both worlds."</i></p>
 
-        <p>Holy shit. They make those?</p>
+        <p><i>Holy shit. They make those?</i></p>
 
         <p>They did. The two big ones at the time were Ruby on Rails and Django. Rails was more popular &mdash; by kind of a lot &mdash; but these Django folks said their thing was <i>made for a freaking newsroom</i>. This seemed very difficult to argue against. Plus, the framework was named after Django Reinhardt, one of <a href="https://www.youtube.com/watch?v=ANArGmr74u4" target="_blank">the raddest</a> and most unusual jazz musicians of the early 20th century. And we were a magazine about music recording. So. Yeah. I think you get it.</p>
 
-        <p>We chose Django to put <i>Tape Op</i> on the web, and I was set on my path towards being a died-in-the-wool python developer.</p>
+        <p>We chose Django to put <i>Tape Op</i> on the web, and I was set on my path towards being a died-in-the-wool python developer. It was time to learn a metric shit-ton more about programming than I currently knew.</p>
 
         <!-- It was my first truly dynamic project. It was my first backend-dependent project -->
 
@@ -105,15 +105,23 @@ title: work
 
         <p>For the front end, I had one primary design principle: ruthlessly preserve all the things that made <i>Tape Op</i> unique and intensely beloved, and depart radically from anything that only existed because of the necessary constraints of print. If these two things overlap somewhere, get a vote from the staff.</p>
 
-        <p>For example, <i>Tape Op</i> was notoriously text-dense. There was <i>no</i> whitespace in the article bodies, and tiny fonts. At first I thought this was some sort of device to keep the not-nerdy-enough out, and a key design trait of the magazine, but once I understood our business model better, I realized this was simply to keep printing costs way down, and keep the magazine free. In other words, <i>more whitespace = thicker magazine = bigger bill from the printing press</i>. I was surprised to find out that John would've killed to put out a beautiful, quarterly-journal-style publication with lots of breathing room. On the web, where physical space is blessedly abundant, we could now make this happen.</p>
+        <p>For the preserve-at-all-costs list, we ended up prioritizing the print magazine's signature <a href="https://www.emigre.com/Fonts/Base-9-and-12" target="_blank">heading typography</a>, humanistic and artisanal cover art, and anti-gloss sense of humor and directness.</p>
 
-        <p>I preserved the print magazine's signature <a href="https://www.emigre.com/Fonts/Base-9-and-12" target="_blank">heading typography</a>, humanistic and artisanal cover art, and anti-gloss sense of humor and directness.</p>
+        <figure class="image medium">
+           <img src="/assets/img/work/tapeop/explained.png" />
+       </figure>
+
+        <p>On the other side of things, we definitely found stuff to abandon. For example, <i>Tape Op</i> was notoriously text-dense. There was <i>no</i> whitespace in the article bodies, and tiny fonts. At first I thought this was some sort of device to keep the not-nerdy-enough out, and a key design trait of the magazine, but once I understood our business model better, I realized this was simply to keep printing costs way down, and keep the magazine free. In other words, <i>more whitespace = thicker magazine = bigger bill from the printing press</i>. I was surprised to find out that John would've killed to put out a beautiful, quarterly-journal-style publication with lots of breathing room. On the web, where physical space is blessedly abundant, we could now make this happen.</p>
+
+        <figure class="image medium">
+           <img src="/assets/img/work/tapeop/pages_three.png" />
+        </figure>
+
+        <p>From there, I spent a lot of time studying <i>Wired</i> and <i>The New Yorker</i>, two magazines from outside our market which were very different from each other, but that I admired greatly as shining examples of how a web publication should look and feel. I loved the old-world stateliness of <i>The New Yorker</i> and the stylish futurism of <i>Wired</i>, and used them as inspiration for adding generous whitespace and clean, sharp text layouts, with the aim of synthesizing something new that heeded the best of both of them.</p>
 
         <figure class="image medium">
            <img src="/assets/img/work/tapeop/screens_phones.png" />
-       </figure>
-
-        <p>From there, I spent a lot of time studying <i>Wired</i> and <i>The New Yorker</i>, two magazines from outside our market which were very different from each other, but that I admired greatly as shining examples of how a web publication should look and feel. I loved the old-world stateliness of <i>The New Yorker</i> and the stylish futurism of <i>Wired</i>, and used them as inspiration for adding generous whitespace and clean, sharp text layouts, and hopefully synthesizing a publication that felt somewhere in between.</p>
+        </figure>
 
         <div class="button-block">
           <a class="button large" href="https://tapeop.com" target="_blank">Explore the Website</a>
@@ -125,7 +133,9 @@ title: work
 
         <h3>Unified Subscriptions</h3>
 
-        <p>So was the printed page dead? <i>Print was dead!</i> Or was it? Everyone had a strong opinion but no one really had any idea.</p>
+        <p>Several months of long hours and a nose-bleed learning curve later, I launched our shiny new website. John went around that year's trade shows showing advertisers and leading with, "Hey look, our website doesn't suck anymore!" We got strong reactions. Some of our most sophisticated advertisers did double takes and declared we had gone from zero web presence to the best web presence in the industry. We were all pretty stoked.
+
+        <p>Yet the future still had major gaps. That same initial question persisted: was the printed page dead? <i>Print was dead!</i> Or was it? Everyone had a strong opinion but no one really had any idea.</p>
 
         <h4>Lifeboats vs. Vampires</h4>
 
