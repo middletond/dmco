@@ -181,17 +181,17 @@ title: work
 
         <p>A funny fact about most serious audio engineers: they kind of detest modern digital tech. They <i>do</i> love technology, but <i>old</i> technology. <i>Analog</i> technology. Technology built with vacuum tubes, RF, and satisfyingly heavy, military-issue power supplies, instead of printed circuit boards, svelte beveled edges, and wifi. This all sprouted from their daily craft: much of modern music recording was spent in hot pursuit of re-capturing the golden era sounds from decades past, and those sounds were decidedly not created on an iPhone.</p>
 
-        <p>For many of our readers, this sensibility applied to things like magazines, and it presented us with a new problem: our more future-friendly readers embraced reading our content directly on the web, on their phones or tablets &mdash; i.e. what is utterly normal today &mdash; and loved it. Yet many of our traditionalist readers were clearly not going to accept this way of reading. They typed slowly, and with the firm precision of fingers that grew up with typewriters. They powered down their computers when they were done using them. They did email, but if the web wasn't the yahoo.com homepage, they stayed away from it.</p>
+        <p>For many of our readers, this sensibility applied to things like magazines, and it presented us with a new problem: our more future-friendly readers embraced reading our content directly on the web, on their phones or tablets &mdash; i.e. what is utterly normal today &mdash; and loved it. Yet many of our traditionalist readers were clearly not ready to accept this way of reading. They typed slowly, and with the firm precision of fingers that grew up with typewriters. They powered down their computers when they were done using them. They did email, but if the web wasn't the yahoo.com homepage, they stayed away from it.</p>
 
         <blockquote>
           <p>A funny fact about most serious audio engineers: they kind of detest modern digital technology.</p>
         </blockquote>
 
-        <p>We had talked to quite a few of these folks and gotten good feedback: to them, a "digital magazine" was a file that you clicked on and opened and looked just like the regular magazine, but on your computer screen. One older engineer laid it out more directly:</p>
+        <p>We had talked to quite a few of these folks and gotten clear feedback: to them, a "digital magazine" was a file that you clicked on and opened and looked just like the regular magazine, but on your computer screen. One older engineer laid it out more directly:</p>
 
         <p><i>"Gentlemen, it's simple. Just email us a PDF of your magazine. Isn't a PDF literally what you send to the printing press anyway?"</i></p>
 
-        <p>Uh, yep. Exactly that. So why didn't we do this? Everyone else was tied up in mobile apps and fear of pirates but not us... right? Well, okay, so we were still <i>a little</i> scared of piracy. We all felt it was playing a little too fast and loose with our content to send PDF masters flying out into the public. Mere hours after such a move, we imagined finding our entire catalog anonymously posted on every major internet forum with headlines like, "Haaaa Tape Op's SOOOOO STOOPID."</p>
+        <p>Uh, yep. Exactly that. So why didn't we do this? Everyone else was tied up in mobile apps and fear of pirates but not us... right? Well, okay, so we were still <i>a little</i> scared of piracy. We all felt it was playing a little too fast and loose with our content to send PDF masters flying out into the public. Mere hours after such a move, we imagined finding our entire catalog anonymously posted on every major internet forum with headlines like, "Haaaa Tape Op's SOOOOO STOOPID"</p>
 
         <p>This would not have been a real issue if we were only concerned with the United States, but we wanted to use the web to make proper subscriptions available worldwide. We had significant demand in Europe especially, but their were too many obstacles for print delivery: overseas shipping costs wrecked our free model, and paid subscriptions were a logistical nightmare across different countries. Digital was the clear solution, but just as in the U.S., many readers did not seem ready to go online to read stuff.</p>
 
@@ -199,36 +199,39 @@ title: work
 
         <p>The fact that we couldn't just give readers exactly what they wanted because of the threat of some anonymous anarchist was quite annoying. Surely there was a solution to this that didn't involve ceding our independence to some third-party app ecosystem? How do you protect a PDF and not make it a hassle for readers?</p>
 
-        <p>I kept churning on this during the trade shows that year, until someone said something offhandedly that stuck with me. Evidently a decade earlier there was some barely-working piece of software for Windows that took an email and added it as a watermark on a PDF. Oh! <i>Punk rock piracy protection</i>. If someone posted a PDF somewhere, we could trace it easily to its source.</p>
+        <p>I kept churning on this during the trade shows that year, until someone said something offhandedly that stuck with me. Evidently a decade earlier there was some barely-working piece of software for Windows 98 that took an email and added it as a watermark on a PDF. Oh! <i>Punk rock piracy protection</i>. If someone posted a PDF somewhere, we could trace it easily to its source.</p>
 
         <p>The lovable jankiness of this approach really appealed to me, yet it would also adroitly solve our problem. The website backend already dealt in individual issues and how they mapped to subscribers and their emails. I just needed to code an engine that generated watermarked issues, and then connect it to an action URL so it would run only when requested. (It should be noted that my first idea was to batch-generate the files synchronously, until I did the math and realized it would take a full month to complete a batch!)</p>
 
-        <p>This engine took some experimentation and time &mdash; mainly due to handling performance reliability at scale &mdash; but was fun to build, and in the end worked pretty damn well. The "victory lap" portion of the project was creating the new issue notifications to email to subscribers. I received such emails from other publications with digital versions and they always had their issue beautifully photographed on the latest iPad or phone. I thought <i>Tape Op's</i> version of this could be more suitably lo-fi.</p>
+        <p>This engine took some experimentation and time &mdash; mainly due to handling performance reliability at scale &mdash; but was fun to build, and in the end worked pretty damn well. The "victory lap" portion of the project was creating the new issue notifications to email to subscribers. I received such emails from other publications with digital versions and they always had their magazine cover beautifully photographed on the latest iPad or phone. I thought <i>Tape Op's</i> version of this could be more suitably lo-fi.</p>
 
         <figure class="image large with-bg white">
             <img src="/assets/img/work/tapeop/digital_access.png" />
         </figure>
 
-        <p>Somehow, against the more conservative voices in my head, all of this actually worked the way we thought it would. <i>Tape Op</i> announced "digital subscriptions available worldwide," and our total circulation quickly leapt up about 25%. Our traditionalist readers and advertisers seemed happy. And we had managed to stay clear of app ecosystems and maintain complete autonomy for our digital publishing process.</p>
+        <p>Somehow, against the more conservative voices in my head, all of this <i>actually worked</i> the way we thought it could. <i>Tape Op</i> announced "digital subscriptions now available worldwide!" and our total circulation quickly leapt up about 25%. Our traditionalist readers and advertisers seemed content. And we had managed to stay clear of app ecosystems and maintain complete autonomy for our digital publishing process.</p>
 
         <h3>Advertising</h3>
 
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="/">quis nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         <p>With its DIY digital magazine in place, <i>Tape Op's</i> digital infrastructure was beginning to feel like a legit thing. Our construction phase was coming to a close. The website and its core features worked smoothly and reliably, and did the brand justice. Now, how do we get more readers to it?</p>
 
-        <h2 class="center">At last, a true digital platform. <br/> Now, how are we going to get folks to visit it?</h2>
+         <p><i>Tape Op's</i> web traffic numbers were steady, but modest. I am speculating here, but I believe was in part due to our boutique audience, and how essential it was that we measured up to its expectations of us. <i>Tape Op's</i> editor, Larry Crane, had very careful standards for any content we put out &mdash; we <i>only</i> covered music recording, and within that, we heavily favored people, creativity, and art over technology and gear. We willfully steered clear of clickbait headlines and topics. We also only ran advertising for recording gear we genuinely loved, and never more general products outside of our industry (e.g. no random car commercials).</p>
+
+         <p>This all worked well for us, though, because of the whole unified subscription funnel &mdash; web traffic from new unique visitors that was mild by online-only standards would reliably convert into new print subscribers, which kept our core revenue stream nourished and strong. That said, there was room to grow. The ubiquity of easy-to-use laptop recording software and egalitarian web-based music publishing platforms like Soundcloud suggested an ever-widening community of bedroom recordists that would delight in what <i>Tape Op</i> had to offer.</p>
+
+        <h2 class="center">At last, a digital platform. <br/> Now, how are we going to get folks to visit it?</h2>
 
         <figure class="image full">
             <img src="/assets/img/work/tapeop/ads_light.png" />
         </figure>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="/">quis nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>I created a series of banner ad campaigns that I hoped would speak directly to the audiences we could benefit the most &mdash; passionate new recordists who wanted to learn more, but were burnt out on trolling through bite-sized youtube tutorials on this or that microphone technique, or the latest hyped piece of equipment. Folks who were more about the artistic end than the technical means. I also tried to speak to recordists searching for a community who shared their ethos and commitment to craft. There were a lot of places that talked about gear, and not many places that told stories.</p>
+
+        <p>At the time I was a much more experienced designer than marketer, and my straightforward banner ad approach to getting the word out was not particularly sophisticated. That said, when combined with a tag team effort between myself and our excellent <a href="https://www.linkedin.com/in/marshavdovin" target="_blank">social media manager</a>, we definitely were able to gain some ground.</p>
 
         <div class="divider"></div>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="/">quis nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>My time at <i>Tape Op</i> was crucial to my present professional self. It provided me with my first major leap forward as a programmer. It taught me about publishing, advertising, and design. It provided me an arena with a sterling brand and a built-in devoted audience, within which I could learn with real feedback and real stakes how to build a robust, flexible infrastructure and strong, unique online presence. Finally, it taught me that thinking for oneself, and finding solutions outside the norms is more than just  entrepreneural rhetoric from Silicon Valley hopefuls &mdash; if applied with measure and care, it actually can and does solve problems elegantly.</p>
 
         <div class="button-block">
           <a class="button large" href="/work/the-mill">Next Project &rarr;</a>
