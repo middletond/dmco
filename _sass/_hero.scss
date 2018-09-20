@@ -14,24 +14,37 @@
 		z-index: 1;
 		.heading-block {
 			padding-left: 100px;
-			// display: inline-block;
 			margin-top: 0px;
 			border: none;
-			h1 {
-				font-size: 50px;
+			h1.old {
+				font-size: 55px;
 			}
-			h3, .definitions li {
-				font-size: 15px;
+			h1 {
+				color: $cream;
+				font-size: 45px;
+				font-weight: 700;
+				letter-spacing: -0.02em;
+			}
+			h3 {
+				padding-top: 8px;
+				font-size: 25px;
+				letter-spacing: -0.02em;
+				color: $cream;
+				font-weight: 500;
+			}
+		  .definitions li {
+				font-family: "Source Code Pro";
+				font-size: 16px;
 				padding: 0px;
 				margin: 10px 0px 10px 3px;
 				letter-spacing: 0.02em;
 			}
 			.definitions {
 				margin: 0;
-				li { margin: 0 0 0 -7px; }
+				li { margin: 0 0 0 30px; }
 			}
 			.meta {
-				font-size: 16px;
+				font-size: 18px;
 				margin: 5px 0px 5px 3px;
 			}
 		}
