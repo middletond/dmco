@@ -17,6 +17,9 @@
       padding: 24px 20px;
       width: 300px;
     }
+    &.long {
+      width: 250px;
+    }
     outline: none;
     display: inline-block;
     @include below($break-small) { display: block; }

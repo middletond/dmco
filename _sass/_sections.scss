@@ -150,7 +150,6 @@ hr, .divider {
 	z-index: 1;
 	margin: 60px 0px;
 	width: 100%;
-	text-align: center;
 	img, h2, blockquote {
 		position: relative;
 		z-index: 1;
@@ -160,6 +159,8 @@ hr, .divider {
 		max-width: 100%;
 		margin: 0px auto;
 	}
+	&.left img { margin-left: 100px; }
+	&.right img { margin-right: 100px; }
 	&.decorated {
 		padding: 80px 0px 80px 0px;
 		margin-bottom: -80px;
