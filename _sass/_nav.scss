@@ -12,29 +12,30 @@ nav.primary {
 		@include flex_justify_content(flex-start);
 		li {
 			@include flex_display();
-            @include flex_align_items(center);
-            position: relative;
-            list-style: none;
-            margin: 0px 40px 0px 20px; 
-            padding: 0;
-            height: inherit;
-            top: 0px;
-            a.nav-item {
-            	display: block;
-            	padding: 12px 15px;
-            	line-height: 1em;
-            	color: $black;
-            	font-size: 14px;
-            	font-weight: 600;
-                  font-family: "Source Code Pro", sans-serif;
-            	text-transform: uppercase;
-            	border: transparent solid 3px;
-            	&.emphasized {
-            		color: $blue;
-            		border-color: $blue;
-            		font-weight: 700;
-            	}
-            }
+      @include flex_align_items(center);
+      position: relative;
+      list-style: none;
+      margin: 0px 40px 0px 20px;
+      padding: 0;
+      height: inherit;
+      top: 0px;
+      a.nav-item {
+				&:after { content: none }
+      	display: block;
+      	padding: 12px 15px;
+      	line-height: 1em;
+      	color: $black;
+      	font-size: 14px;
+      	font-weight: 600;
+            font-family: "Source Code Pro", sans-serif;
+      	text-transform: uppercase;
+      	border: transparent solid 3px;
+      	&.emphasized {
+      		color: $blue;
+      		border-color: $blue;
+      		font-weight: 700;
+      	}
+      }
 		}
 	}
 }

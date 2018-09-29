@@ -9,24 +9,20 @@
 	h1 {
 		color: $cream;
 	}
-	.content {
-		padding-top: 120px;
-	}
 	.social {
 		margin-top: 60px;
 		margin-bottom: 100px;
 	}
-	.pre-content {
-		position: relative;
-		top: 80px;
-		max-width: 1500px;
-		.palette-bar {
-			.segment.first { max-width: 105px; } // align w text margin below
-		}
-		.lantern { // .lantern "hangs" off .palette-bar
-			top: -110px;
-			right: 130px;
-		}
+	.lantern {
+		margin: 0px;
+		top: -140px;
+		right: 30px;
+		width: 336px;
+		height: 447px;
+		position: absolute;
+		background-size: 100%;
+		background-image: url("../img/lantern.png");
+		background-repeat: no-repeat;
 	}
 	.paint-spatter {
 		top: -92px;
@@ -40,7 +36,7 @@
 		background: $navy;
 	}
 	.image#workBundle {
-		margin-bottom: -35px;
+		margin-bottom: -20px;
 		img {
 			margin-left: 50px;
 		}

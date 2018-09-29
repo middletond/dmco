@@ -22,7 +22,7 @@ h1, h2, h3, h4 { // heading styles depend on section so in sections.scss
 	letter-spacing: 0.05em;
 	line-height: 110%;
 }
-p {
+p, li {
 	font-family: "Merriweather", serif;
 	font-size: 19px;
 	line-height: 190%;
