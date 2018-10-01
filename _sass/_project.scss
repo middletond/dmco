@@ -15,10 +15,11 @@
 .project-list {
     margin: 0px;
     .project {
+        // background-color: aqua;
         @include flex_display();
         @include flex_justify_content(space-between);
         position: relative;
-        margin: 50px 0;
+        margin: 100px 0 100px 0;
         padding: 100px 0px 0px 0px;
         height: 750px;
         .text, .image {
