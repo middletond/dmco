@@ -1,6 +1,6 @@
 .hero {
 	margin: 0;
-	min-height: 700px;
+	// min-height: 700px;
 	overflow: hidden;
 	position: relative;
 	// size of .hero-image dictates .hero height
@@ -11,19 +11,19 @@
 		z-index: 0;
     top: 0px;
     right: 0px;
-		@include below($break-large) {
-			right: -80px;
-		}
-    min-width: 1200px;
+		min-width: 1200px;
 		max-width: 1600px;
+		@include below($break-large) { right: -80px;}
+		@include below($break-small) {
+			min-width: 700px;
+			right: 0px;
+		}
+		@include below($break-tiny) { right: 0px;}
     img { width: 100%; }
 	}
 	.hero-text {
 		@include flex_display();
 		@include flex_align_items(center);
-		@include below($break-small) {
-			// @include flex_align_items(flex-end);
-		}
 		position: absolute;
 		top: 0px;
 		width: 100%;
@@ -31,42 +31,52 @@
 		z-index: 1;
 		.heading-block {
 			border: none;
-			margin-top: 0px;
+			margin: 0px;
 			box-sizing: border-box;
 			padding: 15px 20px 15px 100px;
 			@include below($break-large) { padding-left: 50px; }
 			@include below($break-medium) {
 				margin-top: 40px;
-				background: linear-gradient(180deg, hsla(203,68,15,0.5) 0%,
-																					  hsla(203,68,15,0.75) 100%);
+				background: linear-gradient(180deg, hsla(203,68,15,0.2) 0%,
+																					  hsla(203,68,15,1) 100%);
 			}
 			@include below($break-small) {
 				width: 100%;
-				padding: 15px 0px;
+				margin-top: 210px;
+				padding: 20px 0px 50px 0px;
 			}
+			// @include below($break-tiny) {
+			// 	margin-top: 140px;
+			// 	padding: 40px 0px;
+			// }
 			h1 {
 				color: $cream;
 				font-size: 45px;
-				@include below($break-large) { font-size: 40px; }
 				font-weight: 700;
 				letter-spacing: -0.02em;
 				line-height: 1.05em;
 				.plus-sign { color: $cornflower; }
+				@include below($break-large) { font-size: 40px; }
 				@include below($break-medium) {
 					text-align: right;
 					.mobile-break { display: block; }
 				}
-				@include below($break-small) { text-align: center }
+				@include below($break-small) {
+				  text-align: center;
+					text-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+				}
+				@include below($break-tiny) { font-size: 35px; }
 			}
 			h3 {
 				border: none;
 				padding-top: 5px;
 				font-size: 25px;
-				@include below($break-large) { font-size: 22px; }
-				@include below($break-small) { text-align: center }
 				letter-spacing: -0.02em;
 				font-weight: 500;
 				margin-left: 0px !important; // negate base section H3 rules
+				@include below($break-large) { font-size: 22px; }
+				@include below($break-small) { text-align: center }
+				@include below($break-tiny) { font-size: 20px; }
 			}
 			.meta {
 				font-size: 18px;
