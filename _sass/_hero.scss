@@ -1,72 +1,77 @@
 .hero {
-	min-height: 700px;
 	margin: 0;
-	position: relative;
+	min-height: 700px;
 	overflow: hidden;
+	position: relative;
+	// size of .hero-image dictates .hero height
+	.hero-image {
+		margin: 0;
+		position: relative;
+		float: right;
+		z-index: 0;
+    top: 0px;
+    right: 0px;
+		@include below($break-large) {
+			right: -80px;
+		}
+    min-width: 1200px;
+		max-width: 1600px;
+    img { width: 100%; }
+	}
 	.hero-text {
 		@include flex_display();
-		// @include flex_justify_content(center);
 		@include flex_align_items(center);
+		@include below($break-small) {
+			// @include flex_align_items(flex-end);
+		}
 		position: absolute;
-		top: 0;
-		width: 80%;
+		top: 0px;
+		width: 100%;
 		height: 100%;
 		z-index: 1;
 		.heading-block {
-			padding-left: 100px;
-			margin-top: 0px;
 			border: none;
-			h1.old {
-				font-size: 55px;
+			margin-top: 0px;
+			box-sizing: border-box;
+			padding: 15px 20px 15px 100px;
+			@include below($break-large) { padding-left: 50px; }
+			@include below($break-medium) {
+				margin-top: 40px;
+				background: linear-gradient(180deg, hsla(203,68,15,0.5) 0%,
+																					  hsla(203,68,15,0.75) 100%);
+			}
+			@include below($break-small) {
+				width: 100%;
+				padding: 15px 0px;
 			}
 			h1 {
 				color: $cream;
 				font-size: 45px;
+				@include below($break-large) { font-size: 40px; }
 				font-weight: 700;
 				letter-spacing: -0.02em;
-				span {
-					color: $cornflower;
+				line-height: 1.05em;
+				.plus-sign { color: $cornflower; }
+				@include below($break-medium) {
+					text-align: right;
+					.mobile-break { display: block; }
 				}
+				@include below($break-small) { text-align: center }
 			}
 			h3 {
 				border: none;
-				padding-top: 8px;
+				padding-top: 5px;
 				font-size: 25px;
+				@include below($break-large) { font-size: 22px; }
+				@include below($break-small) { text-align: center }
 				letter-spacing: -0.02em;
 				font-weight: 500;
-				margin-left: 0px !important;
-			}
-		  .definitions li {
-				font-family: "Source Code Pro";
-				font-size: 16px;
-				padding: 0px;
-				margin: 10px 0px 10px 3px;
-				letter-spacing: 0.02em;
-			}
-			.definitions {
-				margin: 0;
-				li { margin: 0 0 0 30px; }
+				margin-left: 0px !important; // negate base section H3 rules
 			}
 			.meta {
 				font-size: 18px;
 				margin: 5px 0px 5px 3px;
 			}
 		}
-	}
-	.hero-image {
-		margin: 0;
-		position: relative;
-		float: right;
-		z-index: 0;
-        top: 0;
-        right: 0;
-        z-index: 0;
-        height: 100%;
-        min-width: 1200px;
-		max-width: 1600px;
-        img {
-            width: 100%;
-            // margin-bottom: -8px; // Hack. Img is adding 4px margin to bottom of container div, can't figureo out why
-        }
 	}
 }
