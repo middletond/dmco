@@ -9,7 +9,7 @@
 		@include flex_align_items(center);
 		position: absolute;
 		top: 0;
-		width: 50%;
+		width: 80%;
 		height: 100%;
 		z-index: 1;
 		.heading-block {
@@ -32,8 +32,8 @@
 				padding-top: 8px;
 				font-size: 25px;
 				letter-spacing: -0.02em;
-				// color: $cornflower;
 				font-weight: 500;
+				margin-left: 0px !important;
 			}
 		  .definitions li {
 				font-family: "Source Code Pro";
