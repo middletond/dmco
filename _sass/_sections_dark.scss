@@ -1,0 +1,90 @@
+// DARK
+.dark-section {
+	position: relative;
+	z-index: 2;
+	color: $cream;
+	background: $navy;
+	background: linear-gradient(15deg, $navy 0%, $navy 65%, $darkblue 100%);
+	&.top {
+		margin-top: -$header-height-large;
+		padding-top: $header-height-large;
+		.content {
+			margin-top: 0px;
+		}
+	}
+	&.with-transition { // might be able to just have this for all dark sections
+		padding-bottom: 50px;
+		margin-bottom: 292px; // if we want overlap w the paint border, make this less to taste
+		&:after {
+			position: absolute;
+			left: 0px;
+			bottom: -292px;
+			content: "";
+			background-image: url("../img/navy_paint_border.png");
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 292px;
+		}
+	}
+	.content {
+		a {
+			&:after { background-color: $blue; opacity: 0.4; }
+			&:hover { color: $blue; }
+		}
+		h1 {
+			color: $cream;
+			&:before {
+				background-color: $cream;
+			}
+		}
+		h2 {
+			margin-top: 70px;
+			margin-bottom: 70px;
+			color: $blue;
+			b {
+				font-weight: 800;
+				color: $cornflower;
+			}
+			&.alt {
+				b { color: $magenta; }
+			}
+		}
+		h3 {
+			&:before { background-color: $magenta; }
+			&.alt:before { background-color: $blue; }
+			&:after { background-color: $navy; }
+      span {
+        @include below($break-headers) {
+          background: transparent;
+        }
+      }
+
+		}
+		h4 {
+			color: $cornflower;
+		}
+		p, li {
+			font-size: 22px;
+			font-weight: 300;
+			.lead { font-size: 23px; }
+		}
+		blockquote, blockquote p {
+			b { color: $cream }
+		}
+		blockquote {
+			border-left-color: $navylit;
+		}
+		hr {
+			background-color: darken($steelblue, 12);
+		}
+		.divider {
+			color: darken($steelblue, 12);
+		}
+		.heading-block {
+
+		}
+		.button { // should this go here?
+			margin-top: 10px;
+		}
+	}
+}

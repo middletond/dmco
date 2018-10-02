@@ -46,8 +46,14 @@ h3 {
 		margin-left: 25px !important;
 		margin-right: 25px !important;
 	}
-	@include below($break-large) {
-		padding-top: 15px;
+	@include below($break-headers) {
+		z-index: 1; // h3s should be above intersection .decorated elements
+		padding-top: 10px;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		border-top: $magenta solid 3px;
+		max-width: $post-text-width;
+		font-size: 28px;
 	}
 	span {
 		display: block;
@@ -56,10 +62,12 @@ h3 {
 		left: 0px;
 		max-width: calc(50% - 390px);
 		line-height: 1.3em;
-		@include below($break-large) {
+		@include below($break-headers) {
 			top: 0px;
 			position: relative;
 			max-width: initial;
+			background-color: $cream;
+			padding: 3px 0px;
 		}
 	}
 	&:before { // left portion
@@ -71,7 +79,7 @@ h3 {
 		position: absolute;
 		top: 0px;
 		left: 0px;
-		@include below($break-large) { height: 3px }
+		@include below($break-headers) { content: none; }
 	}
 	&:after { // center portion
 		// background-color: aqua !important;
@@ -80,7 +88,7 @@ h3 {
 		height: 12px;
 		background-color: $cream;
 		border-top: $magenta solid 2px;
-		@include below($break-large) { border-top-width: 3px }
+		@include below($break-headers) { content: none; }
 		position: absolute;
 		margin-left: auto;
 		margin-right: auto;
@@ -170,82 +178,6 @@ hr, .divider {
 	&:after {
 		display: block;
 		content: "\00B7\00B7\00B7"; // three middots
-	}
-}
-
-.image {
-	display: block;
-	position: relative;
-	z-index: 1;
-	margin: 60px 0px;
-	width: 100%;
-	img, h2, blockquote {
-		position: relative;
-		z-index: 1;
-		display: block;
-	}
-	img {
-		max-width: 100%;
-		width: 100%;
-		margin: 0px auto;
-	}
-	&.left img { margin-left: 100px; }
-	&.right img { margin-right: 100px; }
-	&.decorated {
-		padding: 80px 0px 80px 0px;
-		margin-bottom: -80px;
-		&:before { // .decorated images have vertical center line
-			content: "";
-			width: 1px;
-			height: 100%;
-			background-color: $magenta;
-			position: absolute;
-			top: 0px;
-			left: 50%;
-			margin-left: 0.5px;
-		}
-	}
-	&.full {
-		width: 100%;
-		min-width: 1000px;
-		img { width: 100%; }
-	}
-	&.large {
-		width: 100%;
-		img { max-width: 1400px; }
-	}
-	&.medium {
-		width: 100%;
-		img { max-width: 1050px; }
-	}
-	&.small {
-		width: 100%;
-		img { max-width: $post-text-width; }
-	}
-	&.with-bg {
-		padding: 40px 0px;
-		h2 {
-			margin-top: 20px !important;
-			margin-bottom: 40px !important;
-		}
-		&.lime {
-			background-color: $lime;
-		}
-		&.blue {
-			background-color: $navylit;
-		}
-		&.navy {
-			background-color: saturate(lighten($navy, 5), 2);
-		}
-		&.orange {
-			background-color: $orange;
-		}
-		&.white {
-			background-color: $white;
-			border-top: $sandhyperlight solid 1px;
-			border-bottom: $sandhyperlight solid 1px;
-			box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
-		}
 	}
 }
 .heading-block {
@@ -427,100 +359,5 @@ section.semi-transitional-content { // starts content immediately after a dark a
 	h3 {
 		margin-left: 0px;
 		margin-right: 0px;
-	}
-}
-
-// DARK
-.dark-section {
-	position: relative;
-	z-index: 2;
-	color: $cream;
-	background: $navy;
-	background: linear-gradient(15deg, $navy 0%, $navy 65%, $darkblue 100%);
-	&.top {
-		margin-top: -$header-height-large;
-		padding-top: $header-height-large;
-		.content {
-			margin-top: 0px;
-		}
-	}
-	&.with-transition { // might be able to just have this for all dark sections
-		padding-bottom: 50px;
-		margin-bottom: 292px; // if we want overlap w the paint border, make this less to taste
-		&:after {
-			position: absolute;
-			left: 0px;
-			bottom: -292px;
-			content: "";
-			background-image: url("../img/navy_paint_border.png");
-			background-repeat: no-repeat;
-			width: 100%;
-			height: 292px;
-		}
-	}
-	.echinacea {
-		top: 0px;
-		right: -70px;
-		width: 480px;
-		height: 956px;
-		position: absolute;
-		background-size: 100%;
-		background-image: url("../img/daisies2.png");
-		background-repeat: no-repeat;
-	}
-	.content {
-		a {
-			&:after { background-color: $blue; opacity: 0.4; }
-			&:hover { color: $blue; }
-		}
-		h1 {
-			color: $cream;
-			&:before {
-				background-color: $cream;
-			}
-		}
-		h2 {
-			margin-top: 70px;
-			margin-bottom: 70px;
-			color: $blue;
-			b {
-				font-weight: 800;
-				color: $cornflower;
-			}
-			&.alt {
-				b { color: $magenta; }
-			}
-		}
-		h3 {
-			&:before { background-color: $magenta; }
-			&.alt:before { background-color: $blue; }
-			&:after { background-color: $navy; }
-		}
-		h4 {
-			color: $cornflower;
-		}
-		p, li {
-			font-size: 22px;
-			font-weight: 300;
-			.lead { font-size: 23px; }
-		}
-		blockquote, blockquote p {
-			b { color: $cream }
-		}
-		blockquote {
-			border-left-color: $navylit;
-		}
-		hr {
-			background-color: darken($steelblue, 12);
-		}
-		.divider {
-			color: darken($steelblue, 12);
-		}
-		.heading-block {
-
-		}
-		.button { // should this go here?
-			margin-top: 10px;
-		}
 	}
 }

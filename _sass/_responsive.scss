@@ -4,8 +4,9 @@ $break-tiny: 360px;
 $break-small: 480px;
 $break-medium: 720px;
 $break-large: 1024px;
-$break-x-large: 1285px;  
-$break-xx-large: 1700px;  
+$break-headers: 1250px;
+$break-x-large: 1285px;
+$break-xx-large: 1700px;
 
 @mixin below($breakpoint) {
      @media screen and (max-width: $breakpoint) { @content; }
