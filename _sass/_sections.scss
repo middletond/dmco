@@ -37,7 +37,31 @@ h3 {
 	font-size: 24px;
 	font-weight: 600;
 	padding-top: 24px;
-	margin: 50px 50px -30px 50px;
+	margin: 50px 100px 30px 100px;
+	@include below($break-xx-large) {
+		margin-left: 50px !important;
+		margin-right: 50px !important;
+	}
+	@include below($break-x-large) {
+		margin-left: 25px !important;
+		margin-right: 25px !important;
+	}
+	@include below($break-large) {
+		padding-top: 15px;
+	}
+	span {
+		display: block;
+		position: absolute;
+		top: 25px;
+		left: 0px;
+		max-width: calc(50% - 390px);
+		line-height: 1.3em;
+		@include below($break-large) {
+			top: 0px;
+			position: relative;
+			max-width: initial;
+		}
+	}
 	&:before { // left portion
 		content: "";
 		display: block;
@@ -47,19 +71,23 @@ h3 {
 		position: absolute;
 		top: 0px;
 		left: 0px;
+		@include below($break-large) { height: 3px }
 	}
 	&:after { // center portion
+		// background-color: aqua !important;
 		content: "";
 		display: block;
 		height: 12px;
 		background-color: $cream;
 		border-top: $magenta solid 2px;
-		position: relative;
+		@include below($break-large) { border-top-width: 3px }
+		position: absolute;
 		margin-left: auto;
 		margin-right: auto;
-		top: -50px;
+		top: 0px;
 		left: -15px; // make a little shorter on right side
-		max-width: $post-text-width; // this should match the text min-width
+		right: 10px;
+	  width: $post-text-width; // this should match the text min-width
 	}
 	&.alt {
 		border-color: $blue;
