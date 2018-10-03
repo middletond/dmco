@@ -4,6 +4,7 @@
 	z-index: 1;
 	margin: 60px 0px;
 	width: 100%;
+	@include below($break-small) { margin: 30px 0px; }
 	img, h2, blockquote {
 		position: relative;
 		z-index: 1;

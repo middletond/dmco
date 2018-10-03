@@ -54,6 +54,9 @@ h2 {
 	font-weight: 800;
 	font-size: 36px;
 	color: $magenta;
+	@include below($break-medium) { font-size: 30px; line-height: 130%; }
+	@include below($break-small) { font-size: 28px; }
+	@include below($break-tiny) { font-size: 26px; }
 	b {
 		font-weight: 800;
 		color: $magenta;
@@ -145,21 +148,34 @@ h4 {
 h5 {
 	color: $white;
 }
+p, ul, ol {
+	max-width: 850px;
+	text-align: justify;
+	@include below($break-tiny) { text-align: left; }
+}
 p, li {
 	font-family: "Merriweather", serif;
-	font-size: 19px;
+	font-size: 20px;
 	line-height: 190%;
 	font-weight: 400;
+	@include below($break-small) { font-size: 19px; }
+	@include below($break-tiny) { font-size: 17px; }
 	&.big {
 		font-size: 25px !important;
 		font-weight: 300;
 		text-align: justify !important;
+		@include below($break-small) { font-size: 21px !important; }
+		@include below($break-tiny) {
+			font-size: 18px !important;
+			text-align: left !important;
+		}
 	}
 	.lead {
 		font-family: "Source Code Pro", monospace, sans-serif;
 		font-weight: 700;
-		font-size: 25px;
+		font-size: 23px;
 		text-transform: uppercase;
+		@include below($break-small) { font-size: 21px !important; }
 	}
 	a {
 		transition: 0.15s;
@@ -178,6 +194,9 @@ p, li {
 			width: 100%;
 			transition: 0.15s;
 			opacity: 0.25;
+			@include below($break-small) {
+				height: 8px;
+			}
 		}
 		&:hover {
 			color: $rust;
@@ -185,30 +204,23 @@ p, li {
 		}
 	}
 }
-p, ul {
-	text-align: justify;
-	max-width: 850px;
-	font-size: 20px;
-	.lead {
-		font-size: 23px;
-	}
-}
+
 ul, ol {
 	margin: 0;
 	padding: 0;
 	li {
+		margin-left: 20px;
+		padding-left: 10px;
+		padding-bottom: 10px;
 		font-family: "Merriweather", serif;
 		font-size: 19px;
 		line-height: 190%;
 		font-weight: 400;
-	}
-}
-ul, ol {
-	li {
-		margin-left: 20px;
-		padding-left: 10px;
-		padding-bottom: 10px;
-		font-size: 22px;
+		@include below($break-medium) {
+			margin-left: 10px;
+			padding-left: 0px;
+		}
+
 	}
 }
 
@@ -266,6 +278,10 @@ hr, .divider {
 	margin-top: 60px;
 	margin-bottom: 60px;
 	padding: 0px 40px;
+	@include below($break-small) {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
 	h1 {
 		&:before { content: none } // no hr above text
 		text-align: left;
@@ -280,6 +296,9 @@ hr, .divider {
 			font-weight: 400;
 			line-height: 95%;
 			letter-spacing: -0.08em;
+			@include below($break-medium) { font-size: 90px; }
+			@include below($break-small) { font-size: 70px; }
+			@include below($break-tiny) { font-size: 58px; }
 		}
 	}
 	.meta {

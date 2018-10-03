@@ -41,6 +41,14 @@
 			margin-top: 70px;
 			margin-bottom: 70px;
 			color: $blue;
+			@include below($break-medium) {
+				margin-top: 40px;
+				margin-bottom: 40px;
+			}
+			@include below($break-small) {
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
 			b {
 				font-weight: 800;
 				color: $cornflower;
@@ -66,7 +74,9 @@
 		p, li {
 			font-size: 22px;
 			font-weight: 300;
-			.lead { font-size: 23px; }
+			@include below($break-medium) { font-size: 20px; }
+			@include below($break-small) { font-size: 19px; }
+			@include below($break-tiny) { font-size: 17px; }
 		}
 		blockquote, blockquote p {
 			b { color: $cream }
@@ -79,9 +89,6 @@
 		}
 		.divider {
 			color: darken($steelblue, 12);
-		}
-		.heading-block {
-
 		}
 		.button { // should this go here?
 			margin-top: 10px;

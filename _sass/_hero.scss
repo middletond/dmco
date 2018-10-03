@@ -2,6 +2,10 @@
 	margin: 0;
 	overflow: hidden;
 	position: relative;
+	@include below($break-small) { // XXX HACK: compensate for hero .heading-block bottom padding
+		margin-bottom: -20px;
+		z-index: 0;
+	}
 	// size of .hero-image dictates .hero height
 	.hero-image {
 		margin: 0;
@@ -17,7 +21,7 @@
 			min-width: 750px;
 			right: 0px;
 		}
-		@include below($break-tiny) { right: 0px;}
+		@include below($break-tiny) { right: -30px;}
     img { width: 100%; }
 	}
 	.hero-text {
@@ -36,13 +40,16 @@
 			@include below($break-large) { padding-left: 50px; }
 			@include below($break-medium) {
 				margin-top: 40px;
-				background: linear-gradient(180deg, hsla(203,68,15,0.2) 0%,
-																					  hsla(203,68,15,1) 100%);
+				background: linear-gradient(180deg, rgba(17,38,67,0) 0%,
+																						rgba(17,38,67,1) 100%);
 			}
 			@include below($break-small) {
 				width: 100%;
-				margin-top: 210px;
-				padding: 20px 0px 50px 0px;
+				margin-top: 150px;
+				padding: 120px 0px 120px 0px;
+				background: linear-gradient(180deg, rgba(17,38,67,0) 0%,
+																					  rgba(17,38,67,0.7) 50%,
+																						rgba(17,38,67,0.5) 100%);
 			}
 			h1 {
 				color: $cream;
@@ -51,7 +58,7 @@
 				letter-spacing: -0.02em;
 				line-height: 1.05em;
 				.plus-sign { color: $cornflower; }
-				@include below($break-large) { font-size: 40px; }
+				@include below($break-large) { font-size: 42px; }
 				@include below($break-medium) {
 					text-align: right;
 					.mobile-break { display: block; }
@@ -60,7 +67,6 @@
 				  text-align: center;
 					text-shadow: 0px 0px 20px rgba(0,0,0,0.5);
 				}
-				// @include below($break-tiny) { font-size: 35px; }
 			}
 			h3 {
 				border: none;
@@ -70,7 +76,7 @@
 				font-weight: 500;
 				margin-left: 0px !important; // negate base section H3 rules
 				@include below($break-large) { font-size: 22px; }
-				@include below($break-small) { text-align: center }
+				@include below($break-small) { text-align: center; padding-top: 20px; }
 				@include below($break-tiny) { font-size: 20px; }
 			}
 			.meta {

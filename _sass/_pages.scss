@@ -19,6 +19,7 @@
 		right: 30px;
 		width: 336px;
 		height: 447px;
+		z-index: -1;
 		position: absolute;
 		background-size: 100%;
 		background-image: url("../img/lantern.png");
@@ -35,11 +36,18 @@
 	.dark-section {
 		background: $navy;
 	}
+	h2#introduction {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
 	.image#workBundle {
+		margin-top: 40px;
 		margin-bottom: -20px;
 		img {
 			margin-left: 50px;
-			@include below($break-large) { margin-left: 10px; }
+			min-width: 800px;
+			@include below($break-large) { margin-top: 30px; margin-left: 10px; }
+			@include below($break-small) { margin-left: -10px; }
 		}
 	}
 }
