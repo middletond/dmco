@@ -39,6 +39,7 @@
 		margin-bottom: -20px;
 		img {
 			margin-left: 50px;
+			@include below($break-large) { margin-left: 10px; }
 		}
 	}
 }

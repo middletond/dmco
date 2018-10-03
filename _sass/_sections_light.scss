@@ -10,6 +10,13 @@ h1 {
 	font-weight: 500;
 	letter-spacing: -0.01em;
 	margin: 60px 0px;
+	span.dot { // middots that behave as non-breaking spaces
+		display: inline-block;
+		&:before {
+			position: absolute;
+			content: "\00b7";
+		}
+	}
 }
 h2 {
 	letter-spacing: 0em;
@@ -184,7 +191,6 @@ hr, .divider {
 	margin-top: 60px;
 	margin-bottom: 60px;
 	padding: 0px 40px;
-	border-left: $magenta solid 26px;
 	h1 {
 		&:before { content: none } // no hr above text
 		text-align: left;
@@ -230,17 +236,21 @@ hr, .divider {
 }
 .content { // default to left content
 	position: relative;
-	margin: 0px 0px;
+	margin: 0px;
 	& > * { // default margins to .content children (h12345, div, p, etc) so option exists to bring child to edges
 		margin-left: 100px;
 		margin-right: 100px;
+		@include below($break-large) { // XXX maybe make this more selective
+			margin-left: 50px;
+			margin-right: 50px;
+		}
 	}
 	.image {
 		margin-left: 0px;
 		margin-right: 0px;
 	}
 	&.transitional {
-		padding: 0px 0px;
+		padding: 0px;
 		margin-top: -200px;
 	}
 	&.center {
@@ -248,37 +258,41 @@ hr, .divider {
 			margin-left: auto;
 			margin-right: auto;
 			max-width: $post-text-width;
+			@include below($post-text-width) {
+				margin-left: 40px;
+				margin-right: 40px;
+			}
+			@include below($break-medium) {
+				margin-left: 20px;
+				margin-right: 20px;
+			}
 		}
 		h4 {
 			margin-top: 50px;
 			margin-bottom: 20px;
-			// span {
-			// 	display: inline-block;
-			// 	// padding-bottom: 6px;
-			// 	// border-bottom: $darkblue solid 1px;
-			// }
-		}
-		object.pdf-viewer {
-			height: 800px;
 		}
 		.heading-block {
 			position: relative;
 			padding: 0px 0px 40px 0px;
 			margin-bottom: 80px;
-			&:before { // hr line
+			@include below($break-small) {
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			&:before, &:after {
 				display: block;
 				content: "";
 				background-color: $cream;
 				width: 340px;
 				height: 1px;
+				@include below($break-small) {
+					width: 100%;
+				}
+			}
+			&:before { // hr line
 				margin: 40px auto;
 			}
 			&:after { // hr line
-				display: block;
-				content: "";
-				background-color: $cream;
-				width: 340px;
-				height: 1px;
 				position: absolute;
 				bottom: 0px;
 				left: 0; // center it
