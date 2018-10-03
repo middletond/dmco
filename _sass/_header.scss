@@ -1,11 +1,13 @@
 // HEADER STYLES
 
 header {
-	top: $palette-bar-height;
 	width: 100%;
 	height: $header-height-large;
+	top: $palette-bar-height;
+	left: 0;
 	background-color: $cream;
 	box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.7);
+	@include below($break-small) { height: $header-height-small; }
 	.palette-bar {
 		position: absolute;
 		top: -$palette-bar-height;
@@ -15,15 +17,20 @@ header {
 		width: 70%;
 	}
 	.logo {
-		// background-color: green;
+		@include flex_display();
+		@include flex_justify_content(flex-end); // right
+		@include flex_align_items(center);
 		width: 140px;
 		height: inherit;
 		position: absolute;
 		top: 0;
-		right: 0;
-		@include flex_display();
-		@include flex_justify_content(center); // right
-		@include flex_align_items(center);
+		right: 30px;
+		@include below($break-tiny) {
+			right: 15px;
+			// width: 100%;
+			// right: 0;
+			// @include flex_justify_content(center);
+		}
 		a {
 			display: block;
 			margin: 0;

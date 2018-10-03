@@ -3,10 +3,11 @@
   @include flex_display();
   @include flex_align_items(center);
   width: 80px;
-  padding-left: 25px;
   height: inherit;
-  // background-color: aqua;
   cursor: pointer;
+  padding-left: 25px;
+  @include below($break-small) { padding-left: 20px; }
+  @include below($break-tiny) { padding-left: 15px; }
   .icon {
     @include flex_display();
     @include flex_direction(column);
@@ -63,7 +64,8 @@ nav.mobile {
     margin: 0;
     width: inherit;
     position: relative;
-    top: -30px; // position slightly above flex center
+    top: -30px; // position slightly above flex center on larger views
+    @include below($break-tiny) { top: 0px; }
     li {
       margin: 0;
       padding: 24px 0px;
@@ -81,9 +83,7 @@ nav.mobile {
         font-weight: 500;
         font-size: 24px;
         &:after { content: none }
-        &.selected {
-          color: $magenta;
-        }
+        &.selected { color: $magenta; }
       }
     }
   }
