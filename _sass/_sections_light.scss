@@ -17,6 +17,9 @@ h1 {
 			content: "\00b7";
 		}
 	}
+	@include below($break-medium) { font-size: 75px; }
+	@include below($break-small) { font-size: 65px; }
+	@include below($break-tiny) { font-size: 50px; }
 }
 h2 {
 	letter-spacing: 0em;
@@ -240,7 +243,9 @@ hr, .divider {
 	& > * { // default margins to .content children (h12345, div, p, etc) so option exists to bring child to edges
 		margin-left: 100px;
 		margin-right: 100px;
-		@include below($break-large) { // XXX maybe make this more selective
+	}
+	@include below($break-large) {
+		& > * {
 			margin-left: 50px;
 			margin-right: 50px;
 		}
@@ -276,29 +281,22 @@ hr, .divider {
 			padding: 0px 0px 40px 0px;
 			margin-bottom: 80px;
 			@include below($break-small) {
-				margin-left: 20px;
-				margin-right: 20px;
+				margin: 20px 20px 40px 20px;
 			}
-			&:before, &:after {
-				display: block;
+			&:before, &:after { // hrs above and below
 				content: "";
+				margin: 40px auto;
+				display: block;
 				background-color: $cream;
 				width: 340px;
 				height: 1px;
 				@include below($break-small) {
+					margin: 40px auto 40px auto;
 					width: 100%;
 				}
 			}
-			&:before { // hr line
-				margin: 40px auto;
-			}
-			&:after { // hr line
-				position: absolute;
-				bottom: 0px;
-				left: 0; // center it
-				right: 0;
-				margin: auto;
-				z-index: 0;
+			&:after {
+				margin-bottom: -40px;
 			}
 			text-align: center;
 			border-left: none;
@@ -333,6 +331,11 @@ hr, .divider {
 				text-transform: uppercase;
 				text-align: center;
 				box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
+				@include below($break-small) {
+					font-size: 15px;
+					margin: 23px 0px;
+					min-width: 120px;
+				}
 			}
 		}
 	}
