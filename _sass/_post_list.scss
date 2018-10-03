@@ -13,7 +13,7 @@
 		width: 100%;
 		background-color: $sandlight;
 		margin: 40px 0px;
-    @include below($break-post-list) { margin: 20px 0px; }
+    @include below($break-mobile-nav) { margin: 20px 0px; }
     @include below($break-medium) { display: none; }
 	}
   // post-list item
@@ -87,7 +87,7 @@
 			margin: 0px 0px;
 			max-width: none;
       @include below($break-large) { padding: 0px 50px; }
-      @include below($break-post-list) { padding: 0px 35px; }
+      @include below($break-mobile-nav) { padding: 0px 35px; }
       @include below($break-medium) { padding: 15px 35px; }
       @include below($break-tiny) { padding: 15px 30px 10px 30px; }
 			.post-meta {

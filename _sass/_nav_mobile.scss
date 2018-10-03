@@ -1,0 +1,90 @@
+.mobile-nav-toggle {
+  @include above($break-mobile-nav) { display: none; }
+  @include flex_display();
+  @include flex_align_items(center);
+  width: 80px;
+  padding-left: 25px;
+  height: inherit;
+  // background-color: aqua;
+  cursor: pointer;
+  .icon {
+    @include flex_display();
+    @include flex_direction(column);
+    @include flex_justify_content(space-between);
+    position: relative;
+    width: 35px;
+    height: 30px;
+    transition: 0.2s;
+    .line {
+      position: relative;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $blue;
+      transition: 0.25s;
+      &.short { width: 55%; }
+      &.medium { width: 75%; }
+    }
+  }
+  &.active {
+    .icon .line { // convert to cross icon
+      position: absolute;
+      &.short { opacity: 0; }
+      &.medium, &.long { width: 100%; }
+      &.medium { transform: rotate(45deg); top: 13px; left: -5px; }
+      &.long { transform: rotate(-45deg); top: 13px; left: -5px; }
+    }
+  }
+}
+
+// Mobile Nav
+nav.mobile {
+	@include flex_display();
+  @include flex_align_items(center);
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  opacity: 0;
+  background-color: $cream;
+  width: 100%;
+  height: 0;
+  box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.7);
+  transition: opacity 0.2s, top 0.3s;
+  padding-top: $header-height-large + $palette-bar-height;
+  box-sizing: border-box;
+  // @include below($break-small) { top: $header-height-large; }
+  &.visible {
+    @include below($break-mobile-nav) { // show mobile nav
+      height: 100%;
+      opacity: 1;
+    }
+  }
+  ul {
+    margin: 0;
+    width: inherit;
+    position: relative;
+    top: -30px; // position slightly above flex center
+    li {
+      margin: 0;
+      padding: 24px 0px;
+      list-style-type: none;
+      text-align: center;
+      a.nav-item {
+        margin: 0;
+        padding: 0;
+      	display: block;
+        text-decoration: none;
+        letter-spacing: -0.03em;
+        line-height: 80%;
+        text-align: center;
+        font-family: "Source Code Pro", sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        &:after { content: none }
+        &.selected {
+          color: $magenta;
+        }
+      }
+    }
+  }
+}

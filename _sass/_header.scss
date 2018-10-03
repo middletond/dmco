@@ -1,8 +1,6 @@
 // HEADER STYLES
 
 header {
-	@include flex_display();
-	position: fixed;
 	top: $palette-bar-height;
 	width: 100%;
 	height: $header-height-large;
@@ -17,13 +15,18 @@ header {
 		width: 70%;
 	}
 	.logo {
-		width: 30%;
+		// background-color: green;
+		width: 140px;
+		height: inherit;
+		position: absolute;
+		top: 0;
+		right: 0;
 		@include flex_display();
-		@include flex_justify_content(flex-end); // right
+		@include flex_justify_content(center); // right
 		@include flex_align_items(center);
 		a {
 			display: block;
-			margin: 0px 40px;
+			margin: 0;
 			color: $black;
 			font-family: "Montserrat", sans-serif;
 			font-weight: 900;
