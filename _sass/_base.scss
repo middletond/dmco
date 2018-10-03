@@ -22,6 +22,129 @@ h1, h2, h3, h4 { // heading styles depend on section so in sections.scss
 	letter-spacing: 0.05em;
 	line-height: 110%;
 }
+
+h1 {
+	position: relative;
+	text-align: center;
+	font-size: 82px;
+	font-family: "Source Code Pro", sans-serif;
+	font-weight: 500;
+	letter-spacing: -0.01em;
+	margin: 60px 0px;
+	span.dot { // middots that behave as non-breaking spaces
+		display: inline-block;
+		&:before {
+			position: absolute;
+			content: "\00b7";
+		}
+	}
+	@include below($break-medium) { font-size: 75px; }
+	@include below($break-small) { font-size: 65px; }
+	@include below($break-tiny) { font-size: 50px; }
+}
+h2 {
+	letter-spacing: 0em;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 0;
+	max-width: 950px;
+	line-height: 120%;
+	text-transform: none;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 800;
+	font-size: 36px;
+	color: $magenta;
+	b {
+		font-weight: 800;
+		color: $magenta;
+	}
+	&.center {
+		text-align: center;
+	}
+
+}
+h3 {
+	position: relative;
+	font-size: 24px;
+	font-weight: 600;
+	padding-top: 24px;
+	margin: 50px 100px 30px 100px;
+	@include below($break-xx-large) {
+		margin-left: 50px !important;
+		margin-right: 50px !important;
+	}
+	@include below($break-x-large) {
+		margin-left: 25px !important;
+		margin-right: 25px !important;
+	}
+	@include below($break-headers) {
+		z-index: 1; // h3s should be above intersection .decorated elements
+		padding-top: 10px;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		border-top: $magenta solid 3px;
+		max-width: $post-text-width;
+		font-size: 28px;
+	}
+	span {
+		display: block;
+		position: absolute;
+		top: 25px;
+		left: 0px;
+		max-width: calc(50% - 390px);
+		line-height: 1.3em;
+		@include below($break-headers) {
+			top: 0px;
+			position: relative;
+			max-width: initial;
+			background-color: $cream;
+			padding: 3px 0px;
+		}
+	}
+	&:before { // left portion
+		content: "";
+		display: block;
+		width: 50%;
+		height: 12px;
+		background-color: $magenta;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		@include below($break-headers) { content: none; }
+	}
+	&:after { // center portion
+		// background-color: aqua !important;
+		content: "";
+		display: block;
+		height: 12px;
+		background-color: $cream;
+		border-top: $magenta solid 2px;
+		@include below($break-headers) { content: none; }
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		top: 0px;
+		left: -15px; // make a little shorter on right side
+		right: 10px;
+	  width: $post-text-width; // this should match the text min-width
+	}
+	&.alt {
+		border-color: $blue;
+		&:before { background-color: $blue; }
+		&:after { border-color: $blue; }
+	}
+}
+h4 {
+	color: $sand;
+	font-family: "Source Code Pro", sans-serif;
+	font-size: 23px;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	padding: 5px 0px;
+}
+h5 {
+	color: $white;
+}
 p, li {
 	font-family: "Merriweather", serif;
 	font-size: 19px;
@@ -62,6 +185,14 @@ p, li {
 		}
 	}
 }
+p, ul {
+	text-align: justify;
+	max-width: 850px;
+	font-size: 20px;
+	.lead {
+		font-size: 23px;
+	}
+}
 ul, ol {
 	margin: 0;
 	padding: 0;
@@ -70,6 +201,112 @@ ul, ol {
 		font-size: 19px;
 		line-height: 190%;
 		font-weight: 400;
+	}
+}
+ul, ol {
+	li {
+		margin-left: 20px;
+		padding-left: 10px;
+		padding-bottom: 10px;
+		font-size: 22px;
+	}
+}
+
+blockquote, blockquote p {
+	max-width: none !important;
+	letter-spacing: 0em;
+	line-height: 120%;
+	text-align: left;
+	text-transform: none;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 800 !important;
+	font-size: 36px !important;
+	color: $magenta;
+	b {
+		color: $magenta;
+		font-weight: 800 !important;
+	}
+	&.alt p {
+		color: $orange;
+		b { color: $brown; };
+	}
+}
+blockquote {
+	margin: 50px auto !important;
+	padding: 0 0 0 30px;
+	width: $post-text-width + 100px; // minus border + padding widths
+	position: relative;
+	left: 80px;
+	&.pulled { left: -80px }
+	border-left: $sandlight solid 30px;
+	margin: 40px auto;
+	p { margin: 0px !important; }
+}
+hr, .divider {
+	margin: 60px auto 70px auto !important;
+	height: 2px;
+	width: 70px;
+	border: none;
+	background-color: lighten($sand, 5);
+	display: block;
+	line-height: 0em;
+}
+.divider { // can't get <hr> to accept :after.content
+	height: 10px;
+	font-size: 65px;
+	text-align: center;
+	color: $orange;
+	background-color: transparent;
+	&:after {
+		display: block;
+		content: "\00B7\00B7\00B7"; // three middots
+	}
+}
+.heading-block {
+	margin-top: 60px;
+	margin-bottom: 60px;
+	padding: 0px 40px;
+	h1 {
+		&:before { content: none } // no hr above text
+		text-align: left;
+		line-height: 1em;
+		margin: 0px;
+	}
+	&.plain { // big plain text no fanciness
+		border-left: none;
+		padding: 0;
+		h1 {
+			font-size: 116px;
+			font-weight: 400;
+			line-height: 95%;
+			letter-spacing: -0.08em;
+		}
+	}
+	.meta {
+		margin: 20px 0px;
+		font-family: "Merriweather", serif;
+		font-weight: 300;
+		font-style: italic;
+		font-size: 24px;
+		text-transform: lowercase;
+		letter-spacing: -0.01em;
+		margin-left: 5px; // compensate for font glyphs
+	}
+	.definitions, h3 {
+		font-family: "Source Code Pro", monospace, sans-serif;
+		font-weight: 600;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+	.definitions li {
+		padding: 5px 0px;
+		margin-left: 10px; // compensate for font glyphs
+		line-height: 180%;
+	}
+	h3 {
+		&:before { content: none; }
+		&:after { content: none; }
+		margin: 0px;
 	}
 }
 

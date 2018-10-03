@@ -2,15 +2,15 @@
 ---
 
 @import "colors";
-@import "base";
 @import "mixins";
 @import "responsive";
+@import "base";
 @import "header";
 @import "nav";
 @import "nav_mobile";
 @import "images";
-@import "sections_light";
-@import "sections_dark";
+@import "content";
+@import "dark_sections";
 @import "palette_bar";
 @import "layout";
 @import "post";
