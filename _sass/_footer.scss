@@ -14,13 +14,23 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 		right: -10px;
 		background-image: url("../img/paint.png");
 		background-repeat: no-repeat;
+		@include below($break-small) { top: 10px; }
 	}
 	.content {
 		padding: 60px 0px;
+		@include below($break-small) { padding: 30px 0px; }
 		h2 {
 			max-width: 1000px;
 			margin-top: 20px;
 			margin-bottom: 20px;
+			// hide the paint spatter behind the h2 just a bit
+			background: linear-gradient(90deg, rgba(17,38,67,1.0) 0%,
+																				 rgba(17,38,67,0.4) 80%,
+																				 rgba(17,38,67,0.0) 100%);
+			@include below($break-xx-large) {
+				max-width: 900px;
+				text-shadow: 0px 0px 6px rgba(0,0,0,0.3);
+			}
 		}
 		h3 {
 			border: none;
@@ -37,6 +47,10 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 		.button {
 			margin-top: 30px;
 			margin-bottom: 30px;
+			@include below($break-small) {
+				margin-top: 45px;
+				margin-bottom: 45px;
+			}
 		}
 	}
 	.footer-actions {
