@@ -12,8 +12,6 @@ hello = {
 		var form = document.querySelector("form.hello");
 		var button = document.querySelector("form.hello input[type='submit']");
 
-		this.button = button;
-
 		form.addEventListener("submit", function(event) {
 			event.preventDefault();
 
@@ -32,17 +30,17 @@ hello = {
 				message: message
 			})
 			.then(
-				response => {
+				function(response) {
 					form.classList.remove(LOADING_CLASS);
 					form.classList.add(SUCCESS_CLASS);
 					button.value = "Sent!";
-					window.setTimeout(() => {
+					window.setTimeout(function() {
 						form.classList.remove(SUCCESS_CLASS);
 						button.value = "Send Message";
 						button.disabled = false;
 					}, OUTCOME_MESSAGE_DURATION);
 				},
-				error => {
+				function(error) {
 					form.classList.remove(LOADING_CLASS);
 					form.classList.add(FAILURE_CLASS);
 					button.value = "Couldn't Send :(";
@@ -70,8 +68,12 @@ hello = {
 			}),
 			headers: { "Content-Type": "application/json; charset=utf-8" },
 			mode: "no-cors"
-		}) // sleep for `MIN_LOAD_DURATION` 
-		.then(response => new Promise(resolve => setTimeout(() => resolve(response), MIN_LOAD_DURATION)))
+		}) // sleep for `MIN_LOAD_DURATION`
+		.then(function(response) {
+			 return new Promise(function(resolve) {
+				 return setTimeout(function() {resolve(response)}, MIN_LOAD_DURATION)
+			 })
+		 })
 	}
 }
 
