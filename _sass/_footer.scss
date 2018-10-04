@@ -18,7 +18,7 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 	}
 	.content {
 		padding: 60px 0px;
-		@include below($break-small) { padding: 30px 0px; }
+		@include below($break-small) { padding: 30px 0px 60px 0px; }
 		h2 {
 			max-width: 1000px;
 			margin-top: 20px;
@@ -57,7 +57,6 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 	}
 	.footer-actions {
 		margin-top: 30px;
-		margin-bottom: 30px;
 		.hello-form {
 			width: 100%;
 			max-width: 650px;
@@ -66,43 +65,46 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 
 		}
 		.social {
-			@include flex_display();
-			@include flex_justify_content(space-between);
-			@include flex_direction(column);
-			width: 68px;
-			margin-left: 100px;
-			text-align: center;
-			padding: 35px 0px;
-			position: relative;
-			top: 2px; // nudge this to appear more aligned w .hello-form
-			&:before {	// center vertical line
-				content: "";
-				position: absolute;
-				z-index: 0;
-				top: 0px;
-				left: 33px;
-				width: 2px;
-				height: 100%;
-				background-color: $blue;
-			}
-			.social-item {
-				display: block;
+			@include above($break-medium) {
+				@include flex_direction(column);
+				width: 68px;
+				margin-left: 100px;
+				text-align: center;
+				padding: 35px 0px;
 				position: relative;
-				z-index: 1;
-				margin: 0;
-				width: 64px;
-				height: 64px;
-				border: $blue solid 2px;
-				border-radius: 50%;
-				background-color: $steelbluedark;
-				i.fa { // icons
-					font-size: 28px;
-					color: $blue;
-					position: relative; // use flex?
-					top: 18px;
-					&.fa-linkedin { font-size: 25px; } // outlier, fkn shit up
+				top: 2px; // nudge this to appear more aligned w .hello-form
+				&:before {	// center vertical line
+					content: "";
+					position: absolute;
+					z-index: 0;
+					top: 0px;
+					left: 33px;
+					width: 2px;
+					height: 100%;
+				}
+				.social-item {
+						margin: 0;
 				}
 			}
+
+			// .social-item {
+			// 	display: block;
+			// 	position: relative;
+			// 	z-index: 1;
+			// 	margin: 0;
+			// 	width: 64px;
+			// 	height: 64px;
+			// 	border: $blue solid 2px;
+			// 	border-radius: 50%;
+			// 	background-color: $steelbluedark;
+			// 	i.fa { // icons
+			// 		font-size: 28px;
+			// 		color: $blue;
+			// 		position: relative; // use flex?
+			// 		top: 18px;
+			// 		&.fa-linkedin { font-size: 25px; } // outlier, fkn shit up
+			// 	}
+			// }
 		}
 	}
 }

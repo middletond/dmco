@@ -2,12 +2,16 @@
 
 .social {
 	@include flex_display();
-	@include flex_justify_content(space-between);
+	@include flex_justify_content(space-around);
 	@include flex_direction(row);
-	margin-left: 100px;
+	margin: 0 0 0 100px;
 	text-align: center;
 	padding: 0px;
 	position: relative;
+	@include below($break-medium) { margin: 40px 0 0 0; }
+	@include below($break-tiny) {
+		@include flex_justify_content(space-between);
+	}
 	&:before {	// center vertical line
 		content: "";
 		position: absolute;
@@ -22,18 +26,37 @@
 		display: block;
 		position: relative;
 		z-index: 1;
-		margin: 0 35px;
+		margin: 0;
 		width: 64px;
 		height: 64px;
 		border: $blue solid 2px;
 		border-radius: 50%;
 		background-color: $steelbluedark;
+		transition: 0.3s;
 		i.fa { // icons
 			font-size: 28px;
 			color: $blue;
 			position: relative; // use flex?
 			top: 18px;
 			&.fa-linkedin { font-size: 25px; } // outlier, fkn shit up
+			transition: 0.4s;
+		}
+		@include below($break-small) {
+			width: 52px;
+			height: 52px;
+			i.fa { top: 14px; font-size: 25px !important; }
+			i.fa.fa-linkedin { top: 12px; }
+		}
+		@include below($break-tiny) {
+			width: 44px;
+			height: 44px;
+			i.fa { top: 10px; }
+			i.fa.fa-linkedin { top: 9px; }
+		}
+		&:hover {
+			background-color: lighten($steelbluedark, 5);
+			border-color: lighten($blue, 10);
+			i.fa { color: lighten($blue, 10); }
 		}
 	}
 }
