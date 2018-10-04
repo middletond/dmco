@@ -48,8 +48,12 @@
     	background-color: $hypermagenta;
       box-shadow: 4px 4px 20px 0px rgba(0,0,0,0.6);
     }
+    @include below($break-small) { font-size: 16px; }
 }
 input[type="submit"].button {
     width: auto;
     min-width: 190px;
+}
+input[type="email"], input[type="text"] {
+    border-radius: 0px !important;
 }

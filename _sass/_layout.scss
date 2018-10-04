@@ -32,6 +32,9 @@ footer {
 .grid {
 	@include flex_display();
 	@include flex_justify_content(flex-start);
+	@include below($break-medium) {
+		display: block;
+	}
 	.grid-item {
 
 	}

@@ -26,7 +26,7 @@ hello = {
 			button.value = "Sending...";
 			button.disabled = true;
 
-			this.toSlack("The hello form was just submitted", {
+			this.toSlack("Someone just said hello!", {
 				email: email,
 				name: name,
 				message: message
@@ -70,7 +70,7 @@ hello = {
 			}),
 			headers: { "Content-Type": "application/json; charset=utf-8" },
 			mode: "no-cors"
-		})
+		}) // sleep for `MIN_LOAD_DURATION` 
 		.then(response => new Promise(resolve => setTimeout(() => resolve(response), MIN_LOAD_DURATION)))
 	}
 }

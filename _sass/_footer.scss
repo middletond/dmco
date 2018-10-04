@@ -43,13 +43,15 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 			letter-spacing: 0.01em;
 			&:before { content: none; }
 			&:after { content: none; }
+			@include below($break-small) { font-size: 23px; }
+			@include below($break-tiny) { font-size: 21px; }
 		}
 		.button {
 			margin-top: 30px;
 			margin-bottom: 30px;
 			@include below($break-small) {
-				margin-top: 45px;
-				margin-bottom: 45px;
+				margin-top: 55px;
+				margin-bottom: 55px;
 			}
 		}
 	}
@@ -57,7 +59,8 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 		margin-top: 30px;
 		margin-bottom: 30px;
 		.hello-form {
-			width: 650px;
+			width: 100%;
+			max-width: 650px;
 			h4 { margin-top: 0px; } // no margins on top / bottom elems so we can align w .social
 			form { margin-bottom: 0px; }
 
