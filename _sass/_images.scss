@@ -10,6 +10,13 @@
 		z-index: 1;
 		display: block;
 	}
+	h2 {
+		@include below($break-medium) {
+			margin-top: 30px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+	}
 	img {
 		max-width: 100%;
 		width: 100%;
@@ -23,6 +30,10 @@
 		@include below($break-headers) {
 			padding: 65px 0px;
 			margin-bottom: -65px;
+		}
+		@include below($break-small) {
+			padding: 40px 0px;
+			margin-bottom: -50px;
 		}
 		&:before { // .decorated images have vertical center line
 			content: "";
