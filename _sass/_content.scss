@@ -2,7 +2,7 @@
 .content { // default to left content
 	position: relative;
 	margin: 0px;
-	& > * { // default margins to .content children (h12345, div, p, etc) so option exists to bring child to edges
+	& > *, .content-block > * { // default margins to .content children (h12345, div, p, etc) so option exists to bring child to edges
 		margin-left: 100px;
 		margin-right: 100px;
 		@include below($break-large) {
@@ -16,6 +16,11 @@
 		@include below($break-small) {
 			margin-left: 20px;
 			margin-right: 20px;
+		}
+	}
+	h3, .content-block > h3 {
+		@include below($break-headers) {
+			max-width: $page-text-width;
 		}
 	}
 	.image { // keep images as full width
@@ -38,6 +43,11 @@
 			@include below($break-medium) {
 				margin-left: 20px;
 				margin-right: 20px;
+			}
+		}
+		h3 {
+			@include below($break-headers) {
+				max-width: $post-text-width;
 			}
 		}
 		h4 {
@@ -131,21 +141,19 @@ section.semi-transitional-content { // starts content immediately after a dark a
 }
 .content-block {
 	position: relative;
-	margin-top: 80px;
-	margin-bottom: 80px;
+	margin: 80px 0px;
 	@include below($break-medium) {
 		margin-top: 30px;
 		margin-bottom: 30px;
 	}
 	&.center > div {
-		width: 700px;
-		margin: 0px auto 0px auto; // ha i didn't realize you could do this
+		@include above($break-large) {
+			width: 100%;
+			max-width: 700px;
+			margin: 0px auto;
+		}
 	}
 	&.full-width { // allow content to edges
-		margin-left: 0px;
-		margin-right: 0px;
-	}
-	h3 {
 		margin-left: 0px;
 		margin-right: 0px;
 	}

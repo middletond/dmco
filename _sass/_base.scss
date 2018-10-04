@@ -155,7 +155,7 @@ h5 {
 	color: $white;
 }
 p, ul, ol {
-	max-width: 850px;
+	max-width: $page-text-width;
 	text-align: justify;
 	@include below($break-tiny) { text-align: left; }
 }
