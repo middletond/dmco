@@ -36,12 +36,12 @@
 			border: none;
 			margin: 0px;
 			box-sizing: border-box;
-			padding: 15px 20px 15px 100px;
+			padding: 25px 20px 25px 100px;
 			@include below($break-large) { padding-left: 50px; }
 			@include below($break-medium) {
 				margin-top: 40px;
-				background: linear-gradient(180deg, rgba(17,38,67,0) 0%,
-																						rgba(17,38,67,1) 100%);
+				background: linear-gradient(90deg, rgba(17,38,67,0.0) 0%,
+																						rgba(17,38,67,0.8) 100%);
 			}
 			@include below($break-small) {
 				width: 100%;
@@ -74,10 +74,15 @@
 				font-size: 25px;
 				letter-spacing: -0.02em;
 				font-weight: 500;
-				margin-left: 0px !important; // negate base section H3 rules
 				@include below($break-large) { font-size: 22px; }
 				@include below($break-small) { text-align: center; padding-top: 20px; }
 				@include below($break-tiny) { font-size: 20px; }
+				// negate base section H3 rules
+				margin-left: 0px !important;
+				@include below($post-text-width) {
+					margin: 0px !important;
+					width: initial;
+				}
 			}
 			.meta {
 				font-size: 18px;

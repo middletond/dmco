@@ -24,7 +24,7 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 		}
 		h3 {
 			border: none;
-			margin: 0;
+			margin: 0 !important; // override H3 mobile content styles
 			padding: 0;
 			width: auto;
 			font-size: 25px;
