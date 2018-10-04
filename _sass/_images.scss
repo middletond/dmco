@@ -4,7 +4,7 @@
 	z-index: 1;
 	margin: 60px 0px;
 	width: 100%;
-	@include below($break-small) { margin: 30px 0px; }
+	@include below($break-medium) { margin: 30px 0px; }
 	img, h2, blockquote {
 		position: relative;
 		z-index: 1;
@@ -31,9 +31,9 @@
 			padding: 65px 0px;
 			margin-bottom: -65px;
 		}
-		@include below($break-small) {
+		@include below($break-medium) {
 			padding: 40px 0px;
-			margin-bottom: -50px;
+			margin-bottom: -55px;
 		}
 		&:before { // .decorated images have vertical center line
 			content: "";

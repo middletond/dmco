@@ -6,12 +6,13 @@
     margin-bottom: 60px;
     &.right { text-align: right; }
     &.left { text-align: left; }
+    .button { margin-top: 0; }
 }
 .button, input[type="submit"], button  {
     width: 150px;
     padding: 16px 20px;
     &.small {
-        width: 120px;
+      width: 120px;
     }
     &.large {
       padding: 24px 20px;
@@ -19,6 +20,10 @@
     }
     &.long {
       width: 250px;
+    }
+    @include below($break-small) {
+      display: block;
+      width: initial !important;
     }
     outline: none;
     display: inline-block;
