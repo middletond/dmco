@@ -66,7 +66,8 @@ hello = {
 					})
 				}]
 			}),
-			headers: { "Content-Type": "application/json; charset=utf-8" },
+			// can't use "application/json" bc polyfill version must use CORS
+			headers: { "Content-Type": "text/plain" },
 			mode: "no-cors"
 		}) // sleep for `MIN_LOAD_DURATION`
 		.then(function(response) {
