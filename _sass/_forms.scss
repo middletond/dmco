@@ -13,6 +13,14 @@ form {
     }
     .button-block {
         margin: 0px 0px;
+        .button {
+    			margin-top: 30px;
+    			margin-bottom: 30px;
+    			@include below($break-small) {
+    				margin-top: 55px;
+    				margin-bottom: 55px;
+    			}
+        }
     }
 }
 

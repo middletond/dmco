@@ -29,11 +29,51 @@
 		top: -92px;
 		right: -150px;
 		z-index: -1;
+		@include below($break-headers) { top: 0px; }
+	}
+	h3 { // XXX needs major refactor but just wanna get it running
+		@include below($break-xx-large) {
+			margin-left: 50px !important;
+			margin-right: 50px !important;
+		}
+		@include below($break-x-large) {
+			margin-left: 25px !important;
+			margin-right: 25px !important;
+		}
+	}
+	h3, div#contact > *, div#credentials > * {
+		@include below($break-headers) {
+			max-width: $page-text-width;
+			margin-left: 100px !important;
+		}
+		@include below($break-large) {
+			margin-left: 50px !important;
+			margin-right: 50px !important;
+		}
+		@include below($break-medium) {
+			margin-left: 30px !important;
+			margin-right: 30px !important;
+		}
 	}
 	div#contact {
-		background: linear-gradient(90deg, rgba(17,38,67,1.0) 0%,
-																			 rgba(17,38,67,0.4) 80%,
-																			 rgba(17,38,67,0.0) 100%);
+		@include below($break-headers) {
+			background: linear-gradient(90deg, rgba(17,38,67,0.0) 0%,
+																				 rgba(17,38,67,0.5) 80%,
+																				 rgba(17,38,67,0.0) 100%);
+		}
+	}
+	div#credentials {
+		@include below($break-medium) {
+			.button-block { margin-bottom: 0px; }
+			.button {
+				display: block;
+				width: initial;
+			}
+			.social { margin-bottom: 60px; }
+		}
+		@include below($break-small) {
+			.button-block { margin-top: 20px; }
+		}
 	}
 }
 

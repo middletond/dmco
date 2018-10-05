@@ -18,11 +18,6 @@
 			margin-right: 20px;
 		}
 	}
-	h3, .content-block > h3 {
-		@include below($break-headers) {
-			max-width: $page-text-width;
-		}
-	}
 	.image { // keep images as full width
 		margin-left: 0px;
 		margin-right: 0px;
@@ -46,8 +41,26 @@
 			}
 		}
 		h3 {
+			@include below($break-xx-large) {
+				margin-left: 50px !important;
+				margin-right: 50px !important;
+			}
+			@include below($break-x-large) {
+				margin-left: 25px !important;
+				margin-right: 25px !important;
+			}
 			@include below($break-headers) {
 				max-width: $post-text-width;
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+			@include below($post-text-width + 50) {
+				margin: 40px 40px 20px 40px !important;
+				width: initial;
+			}
+			@include below($break-medium) {
+				margin-left: 20px !important;
+				margin-right: 20px !important;
 			}
 		}
 		h4 {

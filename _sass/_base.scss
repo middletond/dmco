@@ -72,26 +72,12 @@ h3 {
 	font-weight: 600;
 	padding-top: 24px;
 	margin: 50px 100px 30px 100px;
-	@include below($break-xx-large) {
-		margin-left: 50px !important;
-		margin-right: 50px !important;
-	}
-	@include below($break-x-large) {
-		margin-left: 25px !important;
-		margin-right: 25px !important;
-	}
 	@include below($break-headers) {
 		z-index: 1; // h3s should be above intersection .decorated elements
 		padding-top: 10px;
-		margin-left: auto !important;
-		margin-right: auto !important;
 		border-top: $magenta solid 3px;
 		max-width: $post-text-width;
 		font-size: 28px;
-	}
-	@include below($post-text-width + 50) {
-		margin: 40px 20px 20px 20px !important;
-		width: initial;
 	}
 	@include below($break-small) {
 		font-size: 24px;
