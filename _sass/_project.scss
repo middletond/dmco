@@ -35,6 +35,9 @@
         box-sizing: border-box;
       }
     }
+    @include below($break-small) {
+      margin: 60px 0px;
+    }
     .text {
       width: 325px;
       padding: 30px 70px;
@@ -45,8 +48,7 @@
         padding-right: 50px !important;
       }
       @include below($break-small) {
-        padding-left: 30px !important;
-        padding-right: 30px !important;
+        padding: 0px 30px 20px 30px !important;
       }
       @include below($break-tiny) {
         padding-left: 20px !important;
@@ -64,9 +66,14 @@
           font-size: 32px;
           letter-spacing: 0.5em;
         }
+        @include below($break-small) { margin: 30px 0px; }
+        @include below($break-tiny) {
+          font-size: 26px;
+        }
       }
       hr {
         margin: 0px auto 40px !important;
+        @include below($break-small) { margin-bottom: 30px !important; }
       }
       p {
         @include above($break-large) {
@@ -76,7 +83,10 @@
           line-height: 190%;
         }
         font-style: italic;
-        @include below($break-medium) { margin: 20px 0px; }
+        @include below($break-medium) {
+          margin: 20px 0px;
+          text-align: justify !important;
+        }
       }
       .button-block {
         @include above($break-large) {
@@ -107,6 +117,7 @@
   background-color: $projectblue;
   box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.25);
   h2, p { color: $white; }
+  @include below($break-large) { background-color: $navy };
 }
 .light-section .project .text {
   background-color: $projectcream;
@@ -115,14 +126,54 @@
 }
 
 @include below($break-large) {
+  .project {
+    position: relative;
+    z-index: 1;
+    &:before { // curved shadow effect
+      z-index: -1;
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 80px;
+      background-color: aqua;
+      border-radius: 40%;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    }
+    &:after { // .decorated images have vertical center line
+			content: "";
+			width: 2px;
+			height: 50%;
+			background-color: $magenta;
+			position: absolute;
+			bottom: -70px;
+			left: 50%;
+			margin-left: 0.5px;
+		}
+    .text {
+      z-index: initial;
+      box-shadow: none !important;
+    }
+  }
   .dark-section .project {
-    .text { box-shadow: 0px 0px 45px 0px rgba(0,0,0,0.45); }
-    .image { background: linear-gradient(0deg, rgba(27,48,79,1) 0%,
-                                               rgba(27,48,79,0) 100%); }
+    &:before { box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.6); }
+    .text { background: $navy; }
+    .image { background: linear-gradient(0deg, rgba(17,38,67,1) 0%,
+                                               rgba(17,38,67,0) 100%); }
   }
   .light-section .project {
-    .text { box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25); }
+    &:before { box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3); }
+    .text { background: $cream; }
     .image { background: linear-gradient(0deg, rgba(250,244,237,1) 0%,
                                                rgba(250,244,237,0) 100%); }
+  }
+}
+@include below($break-small) {
+  .project {
+    &:after {
+      width: 1px;
+      bottom: -40px;
+    }
   }
 }
