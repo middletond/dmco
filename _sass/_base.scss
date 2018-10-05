@@ -136,6 +136,7 @@ h4 {
 	font-weight: 600;
 	letter-spacing: 0.01em;
 	padding: 5px 0px;
+	@include below($break-tiny) { font-size: 20px; }
 }
 h5 {
 	color: $white;
@@ -150,24 +151,24 @@ p, li {
 	font-size: 20px;
 	line-height: 190%;
 	font-weight: 400;
-	@include below($break-small) { font-size: 19px; }
-	@include below($break-tiny) { font-size: 17px; }
+	@include below($break-small) { font-size: 18px; }
+	@include below($break-tiny) { font-size: 16px; }
 	&.big {
-		font-size: 25px !important;
 		font-weight: 300;
+		font-size: 25px !important;
 		text-align: justify !important;
+		@include below($break-large) { font-size: 23px !important; }
+		@include below($break-medium) { font-size: 22px !important; }
 		@include below($break-small) { font-size: 21px !important; }
-		@include below($break-tiny) {
-			font-size: 18px !important;
-			text-align: left !important;
-		}
+		@include below($break-tiny) { font-size: 17px !important; }
 	}
 	.lead {
 		font-family: "Source Code Pro", monospace, sans-serif;
 		font-weight: 700;
 		font-size: 23px;
 		text-transform: uppercase;
-		@include below($break-small) { font-size: 21px !important; }
+		@include below($break-medium) { font-size: 21px !important; }
+		@include below($break-small) { font-size: 20px !important; }
 	}
 	a {
 		transition: 0.15s;

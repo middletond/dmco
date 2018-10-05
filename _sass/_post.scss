@@ -1,15 +1,51 @@
 // POST-SPECIFIC STYLES
 
+@mixin fade_in_from_bottom() {
+	background: linear-gradient(0deg, rgba(251,251,247,1) 0%,
+																		rgba(251,251,247,0.5) 50%,
+																		rgba(251,251,247,0) 100%);
+}
+
 .post {
 	.post-header { // landscape header styles (default)
 		position: relative;
 		overflow: hidden;
 		max-height: $post-header-height-landscape; // controls where header ends and content starts
+
+		// LAYOUT: On larger screens, image dictates .post-header height
 		.post-header-image {
 			position: relative;
 			top: 0px;
 			width: 100%;
-			height: 100%;
+		}
+		.post-header-content {
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			@include fade_in_from_bottom();
+		}
+		// LAYOUT: On smaller screens, content dictates .post-header height
+		@include below($break-mobile-nav) {
+			.post-header-image {
+				position: absolute;
+				min-width: 400px;
+				&:before {
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+					@include fade_in_from_bottom();
+				}
+			}
+			.post-header-content {
+				position: relative;
+				top: 0px;
+				bottom: initial;
+			}
+		}
+		// DETAILS
+		.post-header-image {
 			img {
 				width: 100%;
 				display: block; // remove unintentional padding from line-height
@@ -18,16 +54,14 @@
 			}
 		}
 		.post-header-content {
-			position: absolute;
-			padding-top: 50px;
-			bottom: 0px;
-			left: 0px;
+			padding: 50px 30px 0px 30px;
+			box-sizing: border-box;
 			width: 100%;
 			z-index: 1;
-			background: linear-gradient(0deg, rgba(251,251,247,1) 0%, rgba(251,251,247,0.5) 50%, rgba(251,251,247,0) 100%);
-			.inner-wrap {
-				position: relative;
-			}
+			@include below($break-small) { padding: 5px 0px 0px 0px; }
+			// lets us dictate height of absolute .post-header-content
+			// by .inner-wrap's child content
+			.inner-wrap { position: relative; }
 			.post-category {
 				width: 180px;
 				margin: 30px auto;
@@ -39,7 +73,13 @@
 				color: $white;
 				text-transform: uppercase;
 				text-align: center;
-				box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
+				box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+				@include below($break-small) {
+					box-sizing: border-box;
+					margin: 0px 0px 50px 0px;
+					width: 100%;
+					box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+				}
 			}
 			.post-title {
 				&:before { content: none } // remove hr divider
@@ -47,6 +87,9 @@
 				margin: 25px auto 20px auto;
 				font-family: "Montserrat", sans-serif;
 				font-weight: 900;
+				@include below($break-medium) { font-size: 65px; }
+				@include below($break-small) { font-size: 50px; margin: 30px 15px; }
+				@include below($break-tiny) { font-size: 40px; }
 			}
 			.post-tagline {
 				color: $black;
@@ -60,18 +103,29 @@
 				text-align: center;
 				line-height: 170%;
 				letter-spacing: 0.01em;
+				@include below($break-medium) {
+					max-width: 450px;
+					br { display: none; }
+				}
+				@include below($break-small) { font-size: 20px; margin: 20px 40px; }
+				@include below($break-tiny) { font-size: 17px; }
 			}
 			.post-meta {
 				max-width: $post-text-width;
 				position: relative;
 				line-height: 1em;
-				margin: 60px auto 20px auto;
+				margin: 60px auto 0px auto;
+				padding: 0;
 				font-family: "Source Code Pro", sans-serif;
 				font-weight: 500;
 				color: $steelblue;
 				text-transform: uppercase;
 				text-align: center;
 				letter-spacing: 0.00em;
+				@include below($break-small) {
+					margin: 30px 10px 0px 10px;
+					font-size: 15px !important;
+				}
 				.corner {
 					position: absolute;
 					width: 50px;
@@ -86,6 +140,7 @@
 						right: 0px;
 						border-right: $steelblue solid 2px;
 					}
+					@include below($break-medium) { display: none; }
 				}
 			}
 		}
@@ -155,12 +210,11 @@
 						font-size: 70px;
 					}
 				}
-
 			}
 		}
 	}
 	.post-content {
-		margin: 20px 0px 100px 0px;
+		margin: 40px 0px 100px 0px;
 		& > * { // everything centered and columned unless otherwise specified
 			max-width: $post-text-width;
 			margin-left: auto;
@@ -179,9 +233,11 @@
 			}
 		}
 		h3 {
-			max-width: 100%;
-			margin-left: 50px;
-			margin-right: 50px;
+			@include above($break-headers) {
+				max-width: 100%;
+				margin-left: 50px;
+				margin-right: 50px;
+			}
 		}
 		img {
 			width: 100%;

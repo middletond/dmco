@@ -75,8 +75,8 @@
 			font-size: 22px;
 			font-weight: 300;
 			@include below($break-medium) { font-size: 20px; }
-			@include below($break-small) { font-size: 19px; }
-			@include below($break-tiny) { font-size: 17px; }
+			@include below($break-small) { font-size: 18px; }
+			@include below($break-tiny) { font-size: 15px; }
 		}
 		blockquote, blockquote p {
 			b { color: $cream }
