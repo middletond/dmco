@@ -15,15 +15,40 @@
 	}
 	.lantern {
 		margin: 0px;
-		top: -140px;
-		right: 30px;
-		width: 336px;
-		height: 447px;
+		top: -160px;
+		right: -10px;
+		width: 380px;
+		height: 510px;
 		z-index: -1;
 		position: absolute;
 		background-size: 100%;
 		background-image: url("../img/lantern.png");
 		background-repeat: no-repeat;
+		transform: rotate(-8deg); // TODO: update the image itself w rotation
+		width: 320px;
+		top: -165px;
+		right: -155px;
+		@include below($break-large) {
+			transform: rotate(-8deg);
+			top: -125px;
+			right: -138px;
+			width: 285px;
+		}
+		@include below($break-medium) {
+			top: -135px;
+			right: -125px;
+			width: 250px;
+		}
+		@include below($break-small) {
+			top: -80px;
+			right: -98px;
+			width: 175px;
+		}
+		@include below($break-tiny) {
+			top: -60px;
+			right: -88px;
+			width: 140px;
+		}
 	}
 	.paint-spatter {
 		top: -92px;
