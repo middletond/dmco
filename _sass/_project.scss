@@ -1,73 +1,128 @@
 // Projects in `work` index page
 
-.dark-section .project .text {
-    background-color: $projectblue;
-    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.25);
-    h2, p { color: $white; }
-}
-
-.light-section .project .text {
-    background-color: $projectcream;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
-    h2, p { color: $black; }
-}
-
 .project-list {
-    margin: 0px;
-    .project {
-        // background-color: aqua;
-        @include flex_display();
-        @include flex_justify_content(space-between);
-        position: relative;
-        margin: 100px 0 100px 0;
-        padding: 100px 0px 0px 0px;
-        height: 750px;
-        .text, .image {
-            position: absolute;
-            bottom: 0;
-        }
-        &.left {
-            .text { left: 0; padding-left: 70px; }
-            .image { left: 550px; }
-        }
-        &.right {
-            .text { right: 0; padding-right: 70px; }
-            .image { right: 550px; }
-        }
-        .text {
-            width: 325px;
-            padding: 30px 70px;
-            z-index: 1;
-            h2 {
-                font-family: "Source Code Pro";
-                font-weight: 600;
-                text-transform: uppercase;;
-                text-align: center;
-                font-size: 30px;
-                margin: 40px 0px;
-            }
-            hr {
-                margin: 0px auto 40px !important;
-            }
-            p {
-                font-size: 18px;
-                font-weight: 400;
-                line-height: 190%;
-            }
-            .button-block {
-                margin: 50px 0px;
-                .button {
-                    width: 100%;
-                    padding: 30px 0px;
-                    margin: 0;
-                }
-            }
-        }
-        .image {
-            width: 1400px;
-            margin: 0;
-            padding: 0;
-            z-index: 0;
-        }
+  margin: -50px 0 0 0;
+  .project {
+    @include flex_display();
+    @include flex_justify_content(space-between);
+    position: relative;
+    z-index: 1;
+    margin: 100px 0 100px 0;
+    padding: 100px 0px 0px 0px;
+    height: 750px;
+    .text, .image {
+        position: absolute;
+        bottom: 0;
     }
+    &.left {
+        .text { left: 0; padding-left: 70px; }
+        .image { left: 550px; }
+    }
+    &.right {
+        .text { right: 0; padding-right: 70px; }
+        .image { right: 550px; }
+    }
+    @include below($break-large) {
+      @include flex_direction(column);
+      height: initial;
+      padding: 0;
+      .text, .image {
+        position: relative;
+        bottom: initial;
+        right: initial !important;
+        left: initial !important;
+        width: 100% !important;
+        box-sizing: border-box;
+      }
+    }
+    .text {
+      width: 325px;
+      padding: 30px 70px;
+      z-index: 1;
+      @include below($break-large) { padding: 10px 70px 20px 70px !important; }
+      @include below($break-medium) {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+      }
+      @include below($break-small) {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+      }
+      @include below($break-tiny) {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+      h2 {
+        font-family: "Source Code Pro";
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 30px;
+        margin: 40px 0px;
+        max-width: initial;
+        @include below($break-large) {
+          font-size: 32px;
+          letter-spacing: 0.5em;
+        }
+      }
+      hr {
+        margin: 0px auto 40px !important;
+      }
+      p {
+        @include above($break-large) {
+          font-size: 18px;
+          font-weight: 400;
+          font-style: normal;
+          line-height: 190%;
+        }
+        font-style: italic;
+        @include below($break-medium) { margin: 20px 0px; }
+      }
+      .button-block {
+        @include above($break-large) {
+          margin: 50px 0px;
+          .button {
+            width: 100%;
+            padding: 30px 0px;
+            margin: 0;
+          }
+        }
+        @include below($break-small) {
+          margin: 40px 0px;
+        }
+      }
+    }
+    .image {
+      width: 1400px;
+      margin: 0;
+      padding: 0;
+      z-index: 0;
+      @include below($break-large) { z-index: 2; }
+    }
+  }
+}
+
+// Light / Dark project themes
+.dark-section .project .text {
+  background-color: $projectblue;
+  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.25);
+  h2, p { color: $white; }
+}
+.light-section .project .text {
+  background-color: $projectcream;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+  h2, p { color: $black; }
+}
+
+@include below($break-large) {
+  .dark-section .project {
+    .text { box-shadow: 0px 0px 45px 0px rgba(0,0,0,0.45); }
+    .image { background: linear-gradient(0deg, rgba(27,48,79,1) 0%,
+                                               rgba(27,48,79,0) 100%); }
+  }
+  .light-section .project {
+    .text { box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25); }
+    .image { background: linear-gradient(0deg, rgba(250,244,237,1) 0%,
+                                               rgba(250,244,237,0) 100%); }
+  }
 }
