@@ -105,6 +105,7 @@
 				letter-spacing: 0.01em;
 				@include below($break-medium) {
 					max-width: 450px;
+					line-height: 150%;
 					br { display: none; }
 				}
 				@include below($break-small) { font-size: 20px; margin: 20px 40px; }
@@ -161,13 +162,14 @@
 					rgba(251,251,247,1) 0%,
 					rgba(251,251,247,0.2) 50%,
 					rgba(251,251,247,0) 100%);
+				@include below($break-mobile-nav) { content: none; }
 			}
 			.post-header-image {
 				width: 50%;
 				&:before { // right blur border
 					position: absolute;
 					top: 0px;
-					right: 0px;
+					right: -1px;
 					width: 50%;
 					height: 100%;
 					content: "";
@@ -176,39 +178,64 @@
 						rgba(251,251,247,1) 0%,
 						rgba(251,251,247,0.2) 50%,
 						rgba(251,251,247,0) 100%);
+					@include below($break-mobile-nav) { content: none; }
 				}
 			}
 			.post-header-content {
 				width: 50%;
 				position: relative;
 				z-index: 2;
-				padding: 0;
+				// padding: 0;
 				@include flex_display();
 				@include flex_align_items(center);
 				.inner-wrap {
 					position: static; // allow .post-meta to get pinned outside of .inner-wrap
 					margin: 0px 10%;
-					// background: blue;
+					@include below($break-mobile-nav) {
+						position: relative;
+						margin: 0 auto;
+					}
 					.post-meta {
-						position: absolute;
-						width: 80%;
-						max-width: none;
-						bottom: 5px; // push up slightly to appear aligned w blur border
-						margin: 0;
-						.corner {
-							width: 40px;
-							height: 40px;
+						@include above($break-mobile-nav) {
+							position: absolute;
+							width: 80%;
+							max-width: none;
+							bottom: 5px; // push up slightly to appear aligned w blur border
+							margin: 0;
+							.corner {
+								width: 30px;
+								height: 30px;
+							}
+							@include below($break-x-large) {
+								text-align: left;
+								.corner { display: none; }
+							}
+
 						}
 					}
 					.post-category {
 						margin-left: 3px;
+						@include below($break-mobile-nav) { margin-left: auto }
 					}
 					.post-title, .post-tagline {
 						text-align: left;
+						@include below($break-mobile-nav) { text-align: center; }
 					}
 					.post-title {
-						font-size: 70px;
+						@include above($break-x-large) { font-size: 70px; }
+						@include below($break-x-large) { font-size: 50px; }
 					}
+					.post-tagline {
+						@include below($break-x-large) { font-size: 22px; }
+						@include below($break-large) { font-size: 20px; }
+					}
+				}
+			}
+			@include below($break-mobile-nav) {
+				display: block;
+				.post-header-image,
+				.post-header-content {
+					width: 100%;
 				}
 			}
 		}
