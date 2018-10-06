@@ -87,9 +87,10 @@
 				margin: 25px auto 20px auto;
 				font-family: "Montserrat", sans-serif;
 				font-weight: 900;
-				@include below($break-medium) { font-size: 65px; }
-				@include below($break-small) { font-size: 50px; margin: 30px 15px; }
-				@include below($break-tiny) { font-size: 40px; }
+				color: darken($black, 5);
+				@include below($break-medium) { font-size: 60px; }
+				@include below($break-small) { font-size: 45px; margin: 30px 15px 15px 15px; }
+				@include below($break-tiny) { font-size: 40px; margin: 30px 15px 0px 15px;}
 			}
 			.post-tagline {
 				color: $black;
@@ -223,7 +224,7 @@
 					}
 					.post-title {
 						@include above($break-x-large) { font-size: 70px; }
-						@include below($break-x-large) { font-size: 50px; }
+						@include above($break-large) { font-size: 50px; }
 					}
 					.post-tagline {
 						@include below($break-x-large) { font-size: 22px; }
