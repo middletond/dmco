@@ -223,8 +223,8 @@
 						@include below($break-mobile-nav) { text-align: center; }
 					}
 					.post-title {
+						@include above($break-mobile-nav) { font-size: 50px; }
 						@include above($break-x-large) { font-size: 70px; }
-						@include above($break-large) { font-size: 50px; }
 					}
 					.post-tagline {
 						@include below($break-x-large) { font-size: 22px; }
