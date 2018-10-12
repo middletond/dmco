@@ -275,5 +275,10 @@
 			font-weight: 400;
 			&.big { font-weight: 300; }
 		}
+		.image { // keep images as full width
+			margin-left: 0px;
+			margin-right: 0px;
+			max-width: initial;
+		}
 	}
 }
