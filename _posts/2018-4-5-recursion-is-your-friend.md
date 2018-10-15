@@ -31,7 +31,7 @@ The best practical definition of recursion I've heard comes from Mattias Petter 
 
 **Recursion is when a function calls itself until it doesn't.**
 
-In my experience, when someone first encounters and struggles with a new concept, it is less that they are not able to *grasp the idea* and more than it isn't clear *why the idea is useful.* This is certainly true for me, and recursion was no exception.
+In my experience, when someone first encounters and struggles with a new concept, it is less that they are not able to *grasp the idea* and more that it isn't clear *why the idea is useful.* This is certainly true for me, and recursion was no exception.
 
 When I first heard the definition, I recognized it as the endless mirrors meme that almost everyone has seen. I tried to think about what this would look like as code.
 
@@ -97,7 +97,7 @@ It turns out though, that buried beneath the fanciness, recursion implementation
 
 ![some cats and one mouse](/assets/posts/recursion_cats.jpg)
 
-The Russian doll metaphor is one of the "classic" recursion examples, and it is a good one. This being the internet, you'll understand that one or more of our dolls are legally required to be anthropomorphic cats. When you want to take them out to play with them (okay... clearly playing with dolls is not a common modern thing. Perhaps "hypothesize about the leisure activities of a deceased and once-great ancient civilization" is more appropriate), you unpack them and line them up side-by-side, as above. When you put them away, the dolls all fit nicely inside one another, so that from the outside one only sees the biggest one.
+The Russian doll metaphor is one of the "classic" recursion examples, and it is a good one. This being the internet, you'll understand that one or more of our dolls are legally required to be anthropomorphic cats. When you want to take them out to play with them (okay... clearly playing with dolls is not a common modern thing. Perhaps "pay homage to the leisure activities of a deceased and once-great ancient civilization" is more appropriate), you unpack them and line them up side-by-side, as above. When you put them away, the dolls all fit nicely inside one another, so that from the outside one only sees the biggest one.
 
 Here are our Russian cat-dolls in this put-away state, represented as a data structure.
 
@@ -124,7 +124,7 @@ Notice how for a structure like the dolls above, a traditional loop would only �
 
 #### Tunneling To the Center
 
-Recursion is an amazing tool for operating on data structures with *depth or nesting*. Recursive patterns allow us to easily "drill down" into data structures, instead of "skimming across" them like `for` and `while` loops do.  Recursion lets us iterate *into* something instead of *across* it.
+Recursion is an amazing tool for operating on data structures with *depth or nesting*. Recursive patterns allow us to easily "drill down" into data structures, instead of "skimming across" them like `for` loops do. Recursion lets us easily iterate *into* something instead of *across* it.
 
 Okay, enough with the wild claims. Let's see some hard evidence.
 
@@ -148,9 +148,9 @@ unpack(catDolls);
 
 Look familiar? Like the earlier endless mirrors code, this function a) modifies the argument and re-runs itself with it during each loop, and b) checks the argument against a *base case* to see if it should break the loop. The part that is new &mdash; and incidentally what nudges it towards being actual, useable code &mdash; is the first line, where we snag each doll name for the `unpackedDolls` array. In other words, it's where we leverage our loop to do *meaningful work* of some kind.
 
-This gives us a generic pattern with three meaningful components:
+This gives us a generic pattern with three basic components:
 1. **Do meaningful work.** Extract to an external array, print to console, etc.
-2. **Check for the base case.** Without this, our loop will careen on infinitely until we hit the lovely `StackOverflowError`.
+2. **Check for the base case.** Without this, our loop will careen on infinitely until we hit a wild `StackOverflowError`.
 3. **Modify the argument and re-run the function with it.** Hopefully, self-explanatory at this point.
 
 Or the same thing expressed as pseudo-code:
@@ -188,17 +188,17 @@ function countUp(num) {
 }
 countUp(0); // 1 2 3 4 5 6 7 8 9 10
 ```
-#### Wrapping It Up
+#### Encapsulation
 
 In the cat-dolls example, you may have noticed that defining the `unpackedDolls` array outside the function was a bit awkward. Specifically, it's not so great that the arrays get populated as a *side effect* &mdash; intuitively the function should return the array itself when invoked.
 
-This is because *any variables we initialize inside a recursive function will turn to vapor at the next iteration.* In other words, the body of a recursive function operates basically the same as the body of a `for` loop.
+We are forced into this pattern because *any variables we initialize inside a recursive function will turn to vapor at the next iteration.* In other words, the body of a recursive function operates the same as the body of a `for` loop.
 
-This won't work...
+So, this won't work...
 ```javascript
 function count(num) {
   let counted = []; // !! paved over with each iteration
-  counted.push(count)
+  counted.push(num)
 
   if (num <= 10)
     return num;
@@ -216,7 +216,7 @@ for (num = 1; num <= 10; num++) {
 The `for` loop version of this is everywhere, and we habitually solve it by properly moving `counted` outside the loop so it isn't paved over, then encapsulating the whole thing in a function call.
 ```javascript
 function countToTen(start) {
-  let counted = []; // safe from the loop!
+  let counted = []; // persists through the loop!
   // begin loop
   for (num = start; num <= 10; num++) {
     counted.push(num);
@@ -231,7 +231,7 @@ There, nice and tidy. And likely super obvious. But hang tight, the point is we 
 The recursive version of this might *seem* more sophisticated on first glance because it has a function within a function, but it is the *exact same pattern* done for the *exact same reasons.*
 ```javascript
 function countToTen(start) {
-  let counted = []; // safe from the (recursive) loop!
+  let counted = []; // persists through the (recursive) loop!
   // begin loop
   function count(num) {
     counted.push(count)
@@ -250,7 +250,7 @@ countToTen(1); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 Back to our dolls. This pattern works exactly the same for them.
 ```javascript
 function collectDolls(dolls) {
-  var collected = []; // safe from the loop!
+  var collected = []; // persists!
 
   function unpack(doll) {
     collected.push(doll.name);
@@ -267,7 +267,7 @@ function collectDolls(dolls) {
 collectDolls(catDolls);
 // ["Katerina", "Dimitri", "Alyosha", "Grushenka", "Ivan"]
 ```
-This encapsulation now gives us a pure function without side effects, which is pretty great. Things are starting to be genuinely useful.
+This encapsulation now gives us a pure function without side effects, which is pretty great. Things are starting to look kinda useful.
 
 Still, we are fairly limited &mdash; this pattern will only work with nested structures that deal with *one object at a time*. In other words, we can only drill straight down. Roughly speaking, we have traditional loops to traverse horizontally, and now recursive loops to traverse vertically. But what about the ability to do both? How do we handle *nested lists* of objects?
 
@@ -275,11 +275,13 @@ Still, we are fairly limited &mdash; this pattern will only work with nested str
 
 ![box party](/assets/posts/recursion_unboxing.jpg)
 
-Imagine you receive two packages from Amazon. Now, you order a lot of stuff from Amazon, so you have no idea what’s in the packages, but it’s not a problem as your brain has a comfortable routine for opening these packages and getting at the happy treasures within them. You tear open the first one and discover whiskey-scented pillar candles. Sweet. First giddy consumerism high of the day. You tear open the second one and discover… three smaller boxes. OH GOD. This was not the expected results! What shall we do????
+Okay, it's real-life analogy time again.
 
-Yet you know, reading and imagining this stuation, that there would be no panic. You wouldn't think twice about it — you would simply execute your brain's `open Amazon package` routine on the three smaller packages. If there are *even smaller packages inside those,* that'd be fine too (and also adorably, whimsically surreal). You would simply keep going until you hit the paydirt of an actual ordered product.  
+Imagine you receive two packages from Amazon. Now, you order a lot of stuff from Amazon, so you have no idea what’s in the packages, but it’s not a problem as your brain has a comfortable routine for opening them and getting at the happy treasures within them. You tear open the first one and discover whiskey-scented pillar candles. Sweet. First giddy consumerism high of the day. You tear open the second one and discover… three smaller boxes. OH GOD. This was not the expected results! What shall we do????
 
-We could roughly etch this out in code like this:
+Yet you know, reading and imagining this stuation, that there would be no panic. You wouldn't think twice about it — you would simply execute your brain's `open Amazon package` routine on the three smaller packages. If there are *even smaller packages inside those,* that'd be fine too (though also: adorably, whimsically surreal). You would simply keep going until you hit the paydirt of an actual ordered product.  
+
+At first glance, we might etch this out in code like this:
 
 ```javascript
 function unpack(box) {
@@ -293,13 +295,15 @@ function unpack(box) {
   }
 }
 ```
-Looks familiar, right? But, there's a problem. The above will only work if there is a *single* box inside the larger box.
+Looks familiar, right? This is simply the Russian dolls algorithm again. But, there's a problem. The above will only work if there is a *single* box inside each larger box.
 
-[ dolls algo ]
+![dolls algo](/assets/posts/recursion_algos_dolls.jpg)
 
-This, of course, would be pointless — the whole reason for a larger box is to carry multiple smaller boxes inside. In that scenario, that means `box.contents` above will be an *array*.
+This, of course, would be pointless — the whole reason for a larger box is to carry *multiple* smaller boxes inside. In that scenario, that means `box.contents` above will be an iterable *array*.
 
-Okay, let's back up and try and visualize what an Amazon Prime delivery of a large and a small mystery box would be in data structure form.
+![unboxing algo](/assets/posts/recursion_algos_unboxing.jpg)
+
+Okay, again, enough theory &mdash; let's prove it. Here is an Amazon Prime delivery of a large and a small mystery box in data structure form.
 
 ```javascript
 // Don't judge me.
@@ -335,11 +339,9 @@ function unpack(box) {
 
 You'll notice our three basic recursion components still apply here, but now they are all happening *inside a traditional array loop.*
 
-This means we are actually now running *two* loops that work together: a "vertical" recursive loop that progresses layer-by-layer deeper *into* the object, and a "horizontal" array loop that scours *across* each layer upon arrival. Because of this, our function not only *drills down* but also *fans out*, giving it that gratifying tree-like shape so beloved by CS professors across the world.
+This means we are actually now running *two* loops that work together: a "vertical" recursive loop that progresses layer-by-layer deeper *into* the object, and a "horizontal" array loop that scours *across* each layer upon arrival. Because of this, this function now not only *drills down* but also *fans out*.
 
-[ algo image ]
-
-Ah, the abstracted patterns of the natural world. Let's try to generalize this as pseudo-code like we did for the Russian dolls:
+Pretty sweet. Let's generalize this as pseudo-code like we did for the Russian dolls:
 
 ```javascript
 function doSomething(object) {
@@ -357,9 +359,39 @@ function doSomething(object) {
 }
 ```
 
+This cooperative across-and-down pattern allows us to write functions that handle all kinds of uncertainties in the topology of our data, with relatively little code.
+
+Here is another common use case example:
+
+```javascript
+// flatten a randomly nested series of arrays.
+const nested = [1, 2, [3, [4, [5, 6, 7], 8]], 9, [10]];
+
+let flattened = []; // collector
+
+function flatten(array) {
+  array.forEach(item => {
+    // base case
+    if (!Array.isArray(item)) {
+      flattened.push(item); // meaningful work
+      return;
+    }
+    return flatten(item); // child item is an array -- re-run.
+  })
+}
+flatten(nested);
+flattened; // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+Note that `nested` could be as few or as many layers as is required, and in any permutation. Moreover, *we don't need to know anything about that permutation beforehand,* other than the fact that they are all arrays.
+
+#### Recursion + Reduce = Happy
+
 It's worth noting that the *type* of loop does not have to be `forEach()` &mdash; you could use `map()`, `reduce()`, a straight `for` loop, etc. It simply depends on the particulars of the situation and your own preference.
 
 It is particularly common to see this pattern implemented with `reduce()`, which slims things down quite a bit in a quasi-voodoo-magic-seeming way.
+
+Here is the `reduce()` version of our unboxing Amazon packages function:
 
 ```javascript
 function unpack(box) {
@@ -371,8 +403,20 @@ function unpack(box) {
   }, [])
 }
 ```
+And here our flattening of arrays:
 
-I'll refrain from turning this into a tutorial on `reduce()`, but notice that "collector" array, `products`, is no longer initialized outside the function, and instead magically appears as an argument to the function passed to `reduce()`. This is actually `reduce`'s primary purpose &mdash; to abstract and handle this common "do stuff over and over and add it to a collector" pattern.
+```javascript
+function flatten(array) {
+  return array.reduce((flattened, item) => {
+    if (!Array.isArray(item)) {
+      return flattened.concat(item);
+    }
+    return flattened.concat(flatten(item));
+  }, [])
+}
+```
+
+I'll refrain from turning this into a full tutorial on `reduce()`, but notice that our "collector" arrays, `products` and `flattened`, are no longer initialized outside the function. Instead, they "magically" appear as an argument to the function passed to `reduce()`. This is actually `reduce`'s primary purpose &mdash; to abstract and handle this common *"do stuff with each item of an array and add the results to some sort of collector"* pattern.
 
 If you'd like to learn more about `reduce()` used specifically with recursion, I highly recommend this [clear and cuddly article](https://vickylai.com/verbose/understanding-array-prototype-reduce-and-recursion-using-apple-pie/) by developer / entrepreneur Vicky Lai. For `reduce()` in general, check out [MPJ's series](https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) on functional programming.
 
