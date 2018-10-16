@@ -186,9 +186,10 @@
 				width: 50%;
 				position: relative;
 				z-index: 2;
-				// padding: 0;
+				padding-top: 0; // vertically center w flex instead
 				@include flex_display();
 				@include flex_align_items(center);
+				@include below($break-small) { padding-top: 5px;}
 				.inner-wrap {
 					position: static; // allow .post-meta to get pinned outside of .inner-wrap
 					margin: 0px 10%;
@@ -207,23 +208,27 @@
 								width: 30px;
 								height: 30px;
 							}
-							@include below($break-x-large) {
+							@include below(1500px) { // width of normal post-meta
 								text-align: left;
 								.corner { display: none; }
 							}
+							// XXX this is hacky and needs fixing
+							@include between($break-mobile-nav, 1150px) { display: none; }
 
 						}
 					}
 					.post-category {
 						margin-left: 3px;
 						@include below($break-mobile-nav) { margin-left: auto }
+						@include below($break-small) { margin-bottom: 0px; }
 					}
 					.post-title, .post-tagline {
 						text-align: left;
 						@include below($break-mobile-nav) { text-align: center; }
 					}
 					.post-title {
-						@include above($break-mobile-nav) { font-size: 50px; }
+						@include above($break-medium) { font-size: 60px; }
+						@include above($break-mobile-nav) { font-size: 55px; }
 						@include above($break-x-large) { font-size: 70px; }
 					}
 					.post-tagline {
