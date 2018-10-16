@@ -151,15 +151,17 @@ p, li {
 	font-size: 20px;
 	line-height: 190%;
 	font-weight: 400;
+	@include below($break-medium) { font-size: 19px; }
 	@include below($break-small) { font-size: 18px; }
 	@include below($break-tiny) { font-size: 16px; }
 	&.big {
 		font-weight: 300;
 		font-size: 25px !important;
 		text-align: justify !important;
-		@include below($break-large) { font-size: 23px !important; }
-		@include below($break-medium) { font-size: 22px !important; }
-		@include below($break-small) { font-size: 21px !important; }
+		@include below($break-x-large) { font-size: 23px !important; }
+		@include below($break-large) { font-size: 22px !important; }
+		@include below($break-medium) { font-size: 21px !important; }
+		@include below($break-small) { font-size: 20px !important; }
 		@include below($break-tiny) { font-size: 17px !important; }
 	}
 	.lead {
@@ -206,7 +208,7 @@ ul, ol {
 		padding-left: 10px;
 		padding-bottom: 10px;
 		font-family: "Merriweather", serif;
-		font-size: 19px;
+		// font-size: 19px;
 		line-height: 190%;
 		font-weight: 400;
 		@include below($break-medium) {
@@ -338,19 +340,36 @@ code {
 	font-family: "Source Code Pro", monospace;
 }
 
-pre { // code blocks
-	background-color: darken($cream, 2);
-	border-radius: 8px;
-	padding: 20px 20px;
-	margin-top: 30px;
-	margin-bottom: 30px;
-	code {
-		color: darken($brown, 25);
-		font-size: 18px;
-		letter-spacing: -0.02em;
-		line-height: 150%;
+div.highlighter-rouge {
+	width: 100%;
+	@include below($break-mobile-nav) {
+		max-width: initial !important;
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+	pre { // code blocks
+		background-color: darken($cream, 2);
+		border-radius: 8px;
+		padding: 20px 20px;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		@include below($break-mobile-nav) {
+			padding: 30px 30px; // increase padding when we switch to 100% width
+			overflow: scroll;
+		}
+		@include below($break-small) {  padding: 15px 20px; white-space: pre-wrap !important; }
+		code {
+			color: darken($brown, 25);
+			font-size: 18px;
+			letter-spacing: -0.02em;
+			line-height: 150%;
+			@include below($break-medium) { font-size: 17px; line-height: 170%; }
+			@include below($break-small) { font-size: 16px; }
+			@include below($break-tiny) { font-size: 14px !important; }
+		}
 	}
 }
+
 
 .shown { display: block !important; }
 .hidden { display: none !important; }

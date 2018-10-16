@@ -6,7 +6,7 @@ tagline: "A practical self-help guide."
 excerpt: "For those of us who are not naturally math + science inclined, recursion can be less of a tool and more of a nemesis. Let me illustrate this by setting a scene."
 
 category: technical
-date:   2018-04-20 19:55:46 -0700
+date:   2018-10-15 19:55:46 -0700
 minutes: 20
 image_url: "/assets/posts/recursion.jpg"
 display: portrait
@@ -22,11 +22,11 @@ display: portrait
 
 It's not that you don't *get the rough idea* and all. Yes, yes, frames within frames within frames. Yes, yes, turtles all the way down. Yes, yes, you nod at technical buzzwords and giggle at programming memes. But when you sit down to solve a real-life problem with code and start considering implementations you think about how there is undoubtedly some more mathematically elegant approach to succinctly decimate the task, then you… swear under your breath and begin typing out another f***ing `for` loop.
 
-And truthfully, `for` loops are probably fine. Most meaningful success from coding <a href="https://www.cs.drexel.edu/~yfcai/CS451/RequiredReadings/MythicalManMonth.pdf">really does</a> come more from tenacity and careful planning than from dazzling our fellow under-the-hood jockeys. In tech, straightforward is better than magical.
+And here's the thing: `for` loops are generally just fine. Most meaningful success from coding <a href="https://www.cs.drexel.edu/~yfcai/CS451/RequiredReadings/MythicalManMonth.pdf">really does</a> come more from tenacity and careful planning than from dazzling our fellow under-the-hood jockeys. In tech, straightforward is better than magical.
 
-But, there will also inevitably be times when we *do* need some magic, and that's where these slightly more sophisticated CS concepts like recursion really shine. Moreover, they help keep our craft exciting and fresh, and keep our problem-solver brains from stagnating around old patterns.
+That said, mastery of slightly more sophisticated CS concepts like recursion offer much more than feeling at ease in a technical interview. Inevitably, there will be times when we *do* need some magic. Sometimes the fancier solution is *simply the right answer*. In these situations, we must be careful not to let a Keep It Simple Stupid mentality distort our thinking in the other direction. Moreover, these concepts help keep our craft exciting and fresh, and keep our problem-solver brains from stagnating around old patterns.
 
-So, let's dig in and see what we can unearth. Let's figure out what recursion *is* in simplest terms. Then, let's cover *common implementation patterns*, and *what those implementations look like* in working code. Finally, let's cover *how to think about* what actually happens when recursion performs its magic.
+So, let's dig in and see what we can unearth. Let's first figure out what recursion *is* in simplest terms. Then, let's cover *common implementation patterns*, and *what those implementations look like* in working code. Finally, let's cover *how to think about* what actually happens when recursion performs its magic.
 
 ### <span>What Is Recursion?</span>
 
@@ -34,7 +34,7 @@ The best practical definition of recursion I've heard comes from Mattias Petter 
 
 **Recursion is when a function calls itself until it doesn't.**
 
-In my experience, when someone first encounters and struggles with a new concept, it is less that they are not able to *grasp the idea* and more that it isn't clear *why the idea is useful.* This is certainly true for me, and recursion was no exception.
+In my experience, if someone encounters a new concept and finds it a struggle, it is less that they are not able to *grasp the idea* and more that it isn't clear *why the idea is useful.* This is certainly true for me, and recursion was no exception.
 
 When I first heard the definition, I recognized it as the endless mirrors meme that almost everyone has seen. I tried to think about what this would look like as code.
 
