@@ -34,6 +34,7 @@ nav.primary {
             font-family: "Source Code Pro", sans-serif;
       	text-transform: uppercase;
       	border: transparent solid 3px;
+				&.selected { font-weight: bold; }
       	&.emphasized {
       		color: $blue;
       		border-color: $blue;
