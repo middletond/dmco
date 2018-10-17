@@ -14,11 +14,11 @@ display: portrait
 
 <p class="big"><span class="lead">For those of us</span> who are not naturally math + science inclined, recursion can often be less of a tool and more of a nemesis. Let me illustrate this by setting a scene.</p>
 
-<p class="big">You've been a hard-working, scrappy professional developer for several years. Over these years, you've learned by doing. You've managed to create real, useful things. You've regularly handled deluges of uncertainty. You've taken full responsibility for finding tangible, working solutions to critical problems. You've locked yourself in rooms and paced, inhaling stimulants and exhaling expletives, brutally iterating until things finally, finally <i>worked</i>.</p>
+<p class="">You've been a hard-working, scrappy professional developer for several years. Over these years, you've learned by doing. You've managed to create real, useful things. You've regularly handled deluges of uncertainty. You've taken full responsibility for finding tangible, working solutions to critical problems. You've locked yourself in rooms and paced, inhaling stimulants and exhaling expletives, brutally iterating until things finally, finally <i>worked</i>.</p>
 
-<p class="">You should, if you really looked objectively, be reliably proud of yourself. Reliably confident. You should be assured in your identity and craft, as a brave and experienced coder clutching a bundle of metaphoric digital purple hearts.</p>
+You should, if you really looked objectively, be reliably proud of yourself. Reliably confident. You should be assured in your identity and craft, as a brave and experienced coder clutching a bundle of metaphoric digital purple hearts.
 
-<p class="">But, you aren't. Because you feel deep down that you aren't a "real" programmer. Because <i>real programmers</i> understand &mdash; deeply, indisputably, and nonchalantly &mdash; things like recursion.</p>
+But, you aren't. Because you feel deep down that you aren't a "real" programmer. Because real programmers understand &mdash; fully, deeply, nonchalantly yet indisputably &mdash; *things like recursion*.
 
 It's not that you don't *get the rough idea* and all. Yes, yes, frames within frames within frames. Yes, yes, turtles all the way down. Yes, yes, you nod at technical buzzwords and giggle at programming memes. But when you sit down to solve a real-life problem with code and start considering implementations you think about how there is undoubtedly some more mathematically elegant approach to succinctly decimate the task, then you… swear under your breath and begin typing out another f***ing `for` loop.
 
