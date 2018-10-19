@@ -280,6 +280,9 @@
 			font-weight: 400;
 			&.big { font-weight: 300; }
 		}
+		li {
+			text-align: left;
+		}
 		.image { // keep images as full width
 			margin-left: 0px;
 			margin-right: 0px;
