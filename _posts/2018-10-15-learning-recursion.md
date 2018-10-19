@@ -3,7 +3,7 @@ layout: post
 
 title:  "Learn Recursion Without Wanting to Shoot Yourself"
 tagline: "A practical self-help guide."
-excerpt: "For those of us who are not naturally math + science inclined, recursion can be less of a tool and more of a nemesis. Let me illustrate this by setting a scene."
+excerpt: "For those of us who are not naturally math + science inclined, recursion can be less of a tool and more of a nemesis."
 
 category: technical
 date:   2018-10-15 19:55:46 -0700
@@ -12,19 +12,17 @@ image_url: "/assets/posts/recursion.jpg"
 display: portrait
 ---
 
-<p class="big"><span class="lead">For those of us</span> who are not naturally math + science inclined, recursion can often be less of a tool and more of a nemesis. Let me illustrate this by setting a scene.</p>
-
-<p class="">You've been a hard-working, scrappy professional developer for several years. Over these years, you've learned by doing. You've managed to create real, useful things. You've regularly handled deluges of uncertainty. You've taken full responsibility for finding tangible, working solutions to critical problems. You've locked yourself in rooms and paced, inhaling stimulants and exhaling expletives, brutally iterating until things finally, finally <i>worked</i>.</p>
+<p class="big"><span class="lead">Raise you're hand</span> if this is you. You've been a hard-working, scrappy professional developer for a number of years. Over these years, you've <i>learned by doing</i>. You've managed to create real, useful things. You've regularly handled deluges of uncertainty. You've taken full responsibility for finding tangible, working solutions to critical problems. You've locked yourself in rooms and paced, inhaling stimulants and exhaling expletives, brutally iterating until things finally, finally <i>worked</i>.</p>
 
 You should, if you really looked objectively, be reliably proud of yourself. Reliably confident. You should be assured in your identity and craft, as a brave and experienced coder clutching a bundle of metaphoric digital purple hearts.
 
 But, you aren't. Because you feel deep down that you aren't a "real" programmer. Because real programmers understand &mdash; fully, deeply, nonchalantly yet indisputably &mdash; *things like recursion*.
 
-It's not that you don't *get the rough idea* and all. Yes, yes, frames within frames within frames. Yes, yes, turtles all the way down. Yes, yes, you nod at technical buzzwords and giggle at programming memes. But when you sit down to solve a real-life problem with code and start considering implementations you think about how there is undoubtedly some more mathematically elegant approach to succinctly decimate the task, then you… swear under your breath and begin typing out another f***ing `for` loop.
+It's not that you don't *get the rough idea* and all. Frames within frames within frames? Turtles all the way down? Yes. You nod at the technical buzzwords and giggle at the programming memes. But when you sit down to solve a real-life problem with code and start considering implementations, you… swear under your breath and begin typing out another f***ing `for` loop.
 
 And here's the thing: `for` loops are generally just fine. Most meaningful success from coding <a href="https://www.cs.drexel.edu/~yfcai/CS451/RequiredReadings/MythicalManMonth.pdf">really does</a> come more from tenacity and careful planning than from dazzling our fellow under-the-hood jockeys. In tech, straightforward is better than magical.
 
-That said, mastery of slightly more sophisticated CS concepts like recursion offer much more than feeling at ease in a technical interview. Inevitably, there will be times when we *do* need some magic. Sometimes the fancier solution is *simply the right answer*. In these situations, we must be careful not to let a Keep It Simple Stupid mentality distort our thinking in the other direction. Moreover, these concepts help keep our craft exciting and fresh, and keep our problem-solver brains from stagnating around old patterns.
+But mastery of slightly more sophisticated CS concepts like recursion offer much more than feeling 50% more at ease before a technical interview. Inevitably, there will be times when we *do* need some magic. Sometimes the fancier solution is *simply the right answer*. In these situations, we must be careful not to let a Keep It Simple Stupid mentality hijack our thinking too far in the other direction. Moreover, these concepts help keep our craft exciting and fresh, and keep our problem-solver brains from stagnating around old patterns.
 
 So, let's dig in and see what we can unearth. Let's first figure out what recursion *is* in simplest terms. Then, let's cover *common implementation patterns*, and *what those implementations look like* in working code. Finally, let's cover *how to think about* what actually happens when recursion performs its magic.
 
@@ -92,7 +90,7 @@ This dichotomy actually makes sense, though &mdash; spoken languages are designe
 
 ### <span>Real Life Patterns</span>
 
-This is the part that gave me that internal deer-in-headlights feeling for so many years, every time I sat down to solve an actual problem. It is all well and good to gesticulate excitedly about theory, but nuts-and-bolts implementation is the master we serve. And implementation is almost always thornier. When pressed against a corner by real-world challenges and deadlines, I tend to throw my hands up and reach for what I already know.
+This is the part that gave me that internal deer-in-headlights feeling for so many years, every time I sat down to solve an actual problem. It is all well and good to gesticulate excitedly about theory, but nuts-and-bolts implementation is the master we serve. And implementation is almost always the tougher master. When pressed against a corner by real-world challenges and deadlines, I tend to throw my hands up and reach for what I already know.
 
 It turns out though, that buried beneath the fanciness, recursion implementations follow a simple and fairly reliable set of patterns. These are the two that I see most often, and that I’ve learned to rely upon during "actual" coding.
 
