@@ -10,9 +10,9 @@
 	<nav class="primary" id="primaryNav">
 		<ul>
 			<li><a href="/hello/" class="nav-item emphasized">Let's Talk</a></li>
-			<li><a href="/posts/" class="nav-item {% if page.title == 'posts' %}selected{% endif %}">Posts</a></li>
-			<li><a href="/work/" class="nav-item {% if page.title == 'work' %}selected{% endif %}">Work</a></li>
-			<li><a href="/services/" class="nav-item {% if page.title == 'services' %}selected{% endif %}">Services</a></li>
+			<li><a href="/posts/" class="nav-item {% if page.nav == 'posts' %}selected{% endif %}">Posts</a></li>
+			<li><a href="/work/" class="nav-item {% if page.nav == 'work' %}selected{% endif %}">Work</a></li>
+			<li><a href="/services/" class="nav-item {% if page.nav == 'services' %}selected{% endif %}">Services</a></li>
 		</ul>
 	</nav>
 	<div class="logo">
@@ -22,10 +22,10 @@
 <!-- Put mobile nav outside header so header can appear on top of it. -->
 <nav class="mobile" id="mobileNav">
 	<ul>
-		<li><a href="/" class="nav-item {% if page.title == 'home' %}selected{% endif %}">Home</a></li>
-		<li><a href="/posts/" class="nav-item {% if page.title == 'posts' %}selected{% endif %}">Posts</a></li>
-		<li><a href="/work/" class="nav-item {% if page.title == 'work' %}selected{% endif %}">Work</a></li>
-		<li><a href="/services/" class="nav-item {% if page.title == 'services' %}selected{% endif %}">Services</a></li>
-		<li><a href="/hello/" class="nav-item {% if page.title == 'hello' %}selected{% endif %} emphasized">Let's Talk</a></li>
+		<li><a href="/" class="nav-item {% if page.nav == 'home' %}selected{% endif %}">Home</a></li>
+		<li><a href="/posts/" class="nav-item {% if page.nav == 'posts' %}selected{% endif %}">Posts</a></li>
+		<li><a href="/work/" class="nav-item {% if page.nav == 'work' %}selected{% endif %}">Work</a></li>
+		<li><a href="/services/" class="nav-item {% if page.nav == 'services' %}selected{% endif %}">Services</a></li>
+		<li><a href="/hello/" class="nav-item {% if page.nav == 'hello' %}selected{% endif %} emphasized">Let's Talk</a></li>
 	</ul>
 </nav>

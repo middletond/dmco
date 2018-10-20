@@ -1,5 +1,6 @@
 ---
 layout: post
+nav: posts
 
 title:  "Learn Recursion Without Wanting to Shoot Yourself"
 tagline: "A practical self-help guide."

@@ -1,5 +1,6 @@
 ---
 layout: post
+nav: posts
 
 title:  "Do Artists Make Good Engineers?"
 tagline: "Nikola Tesla believed artists made the best technicians.<br /> He also was by some measures clinically insane."
@@ -7,6 +8,7 @@ excerpt: "In my 20s, I was a professional musician. Half of my life was spent to
 
 category: editorial
 date:   2018-10-16 19:55:46 -0700
+minutes: 15
 image_url: "/assets/posts/artists/beauty.jpg"
 ---
 
@@ -137,14 +139,14 @@ It bears mentioning that the success version here was decidedly the outlier.
 
 #### The Finest Teacher
 
-In the end, the publishing platform bit launched on time, and actually launched beautifully. And, upon  delivery date, the app actually *did* operate in the manner we had all agreed upon. However, it was clear the client had lost faith &mdash; gradually but prodoundly &mdash; along the way, and had internally pivoted in a more traditional direction. As it played out, this direction *worked*, and they flourished, but with the Everything Machine pretty much abandoned. Despite the essentially happy ending, it was my first visceral encounter with a true technical failure. What the hell happened? We worked so hard. We proceeded so carefully. How did we do everything right but end up here?
+In the end, the publishing platform bit launched on time, and actually launched beautifully. And, upon  delivery date, the app actually *did* operate in the manner we had all agreed upon. However, it was clear the client had lost faith &mdash; gradually but profoundly &mdash; along the way, and had internally pivoted in a more traditional direction. As it played out, this direction *worked*, and they flourished, but with the Everything Machine pretty much abandoned. Despite the essentially happy ending, it was my first visceral encounter with a true technical failure. What the hell happened? We worked so hard. We proceeded so carefully. How did we do everything right but end up here?
 
 Well, the answer was that we *didn't* do everything right. We doted on every micro while ignoring the macro. We took no decision *within* the project for granted, except for whether the project itself was the correct one.
 
 Failure hurts, but is the finest of teachers. The experience taught me three crucial things:
 
 1. **Part of "making things happen" is sometimes asserting that things *can't* happen.** This means tread carefully, even at the highest levels. Don't necessarily take the foundational tenets of the project for granted. We only have so many professional hours on this earth &mdash; the most important decisions we have to make aren't *how* to make things happen in the thick of things, but rather *which* thick-of-things are we likely to be able to make meaningful things happen in.
-2. **Adaptability is just as crucial to success as smarts, tenacity, and effort.** It was pretty much a complete news flash for me that you can't just wad up a fat ball of IQ and perseverance, hurl it in an arbitrary direction, and expect reliable results. Especially with any ambitious project, you will learn new essentials about the nature and limits of what you are trying to do the further you venture into the proverbial jungle. Sometimes, these new essentials will be complete non-starters. It is up to you to heed these for what they actually are, and adjust accordingly despite the upset it may create.
+2. **Adaptability is just as crucial to success as smarts, tenacity, and effort.** It was pretty much a complete news flash for me that you can't just wad up a fat ball of IQ and perseverance, hurl it in an arbitrary direction, and expect reliable results. *Especially* with any ambitious project, important new essentials about the nature and limits of what you are trying to do will spring up *as you go*. Sometimes, these new essentials will be complete non-starters. It is up to you to heed these for what they actually are, and adjust accordingly despite the upset it may create.
 3. **Adhering to an image of perfection for clients will often limit your ability to be adaptable.** This is a tough one. A big chunk of what we hire professionals *for* is to put all that unpleasant stuff like uncertainties and missteps in a black box so we don't have to deal with it. Yet when things clearly aren't working behind the scenes, the ability for client and agency to dialogue and re-configure things candidly in crisis moments seems to me the best option for averting future disaster.
 
 #### Autodidacticism: the Dangers
