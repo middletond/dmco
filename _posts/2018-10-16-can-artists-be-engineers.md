@@ -8,7 +8,7 @@ excerpt: "In my 20s, I was a professional musician. Half of my life was spent to
 
 category: editorial
 date:   2018-10-28 19:55:46 -0700
-minutes: 15
+minutes: 10
 image_url: "/assets/posts/artists/beauty.jpg"
 ---
 

@@ -283,9 +283,9 @@ Still, we are fairly limited &mdash; this pattern will only work with nested str
 
 Okay, it's real-life analogy time again.
 
-Imagine you receive two packages from Amazon. Now, you order a lot of stuff from Amazon, so you have no idea what’s in the packages, but it’s not a problem as your brain has a comfortable routine for opening them and getting at the happy treasures within them. You tear open the first one and discover whiskey-scented pillar candles. Sweet. First giddy consumerism high of the day. You tear open the second one and discover… three smaller boxes. OH GOD. This was not the expected results! What shall we do????
+Imagine you receive two packages from Amazon. Now, you order a lot of stuff from Amazon, so you have no idea what's in the packages, but it's hardly a problem — your brain has a comfortable routine for opening them and getting at the happy treasures within them. You tear open the first one and discover whiskey-scented pillar candles. Sweet. First giddy consumerism high of the day. You tear open the second one and discover… three smaller boxes. OH GOD. This was not the expected results! What shall we do????
 
-Yet you know, dear Reader, that were you in this stuation there would be no panic. You wouldn't think twice about it — you would simply execute your brain's `open Amazon package` routine on the three smaller packages. If there are *even smaller packages inside those,* that'd be fine too (though also: adorably, whimsically surreal). You would simply keep going until you hit the paydirt of an actual ordered product.  
+Yet you know, dear Reader, that were you in this situation there would be no panic. You wouldn't think twice about it — you would simply execute your brain's `open Amazon package` routine on the three smaller packages. If there are *even smaller packages inside those,* that'd be fine too (not to mention adorably, whimsically surreal). You would simply keep going until you hit the paydirt of an actual ordered product.  
 
 At first glance, we might etch this out in code like this:
 
@@ -393,7 +393,7 @@ Note that `nested` could be as few or as many layers as is required, and in any 
 
 #### Recursion + Reduce = Happy
 
-It's worth noting that the *type* of loop does not have to be `forEach()` &mdash; you could use `map()`, `reduce()`, a straight `for` loop, etc. It simply depends on the particulars of the situation and your own preference.
+It's worth noting that the *type* of loop does not have to be `forEach()` — you could use `map()`, `reduce()`, a straight `for` loop, etc. It simply depends on the particulars of the situation and your own preference.
 
 It is particularly common to see this pattern implemented with `reduce()`, which slims things down quite a bit in a quasi-voodoo-magic-seeming way.
 
@@ -434,7 +434,7 @@ function flatten(array) {
 
 I'll refrain from turning this into a full tutorial on `reduce()`, but notice that our "collector" arrays, `products` and `flattened`, are no longer initialized outside the function. Instead, they "magically" appear as an argument to the function passed to `reduce()`. This is actually `reduce`'s primary purpose &mdash; to abstract and handle this common *"do stuff with each item of an array and add the results to some sort of collector"* pattern.
 
-If you'd like to learn more about `reduce()` used specifically with recursion, I highly recommend this [clear and cuddly article](https://vickylai.com/verbose/understanding-array-prototype-reduce-and-recursion-using-apple-pie/) by developer / entrepreneur Vicky Lai. For `reduce()` in general, check out [MPJ's series](https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) on functional programming.
+If you'd like to learn more about `reduce()` used specifically with recursion, I highly recommend this [concise and friendly article](https://vickylai.com/verbose/understanding-array-prototype-reduce-and-recursion-using-apple-pie/) by developer / entrepreneur Vicky Lai. For `reduce()` in general, check out [MPJ's series](https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) on functional programming.
 
 ### <span>Mechanics Etc.</span>
 
@@ -446,9 +446,9 @@ A declared function is like a user manual &mdash; a set of instructions describi
 
 In computer programs, this pile is called the *call stack*.
 
-An easy way to visualize the call stack is as a pile of dirty dishes. Each dirty dish is a *called function*. Each different type of crusty food residue is a *function argument*. You are a dishwasher in a restaurant, and servers swoop back into the airless kitchen in a hurried stream, unceremoniously dropping more dishes on your pile. New dishes are added in clumps as full tables are cleared, but you attend to them *one at a time, in order*. It seems like you can never quite get to the bottom, like you can never wash them quite fast enough. Finally, mercifully, the rush of customers slows as the dinner hours fade and you at last get completely through your stack. [Whew](https://www.washingtonpost.com/sf/style/2017/08/07/chefs-say-a-dishwasher-can-make-or-break-a-restaurant-so-i-signed-up-for-a-shift/?noredirect=on&utm_term=.deaa1d445f1d). At least you have headphones, history podcasts, and Spotify.
+An easy way to visualize the call stack is as a pile of dirty dishes. Each dirty dish is a *called function*. Each different type of crusty food residue is a *function argument*. Imagine you are a dishwasher in a restaurant, and servers swoop back into the airless kitchen in a hurried stream, unceremoniously dropping more dishes on your pile. New dishes are added in clumps as full tables are cleared, but you attend to them *one at a time, in order*. It seems like you can never quite get to the bottom, like you can never wash them quite fast enough. Finally, mercifully, the rush of customers slows as the dinner hours fade and you at last get completely through your stack. [Whew](https://www.washingtonpost.com/sf/style/2017/08/07/chefs-say-a-dishwasher-can-make-or-break-a-restaurant-so-i-signed-up-for-a-shift/?noredirect=on&utm_term=.deaa1d445f1d). At least you have headphones, history podcasts, and Spotify.
 
-Not to bring us near the novel yet uncomfortable area of machine serfdom ethics, but this is the experience our program interpreters have when we run programs. The key point of this allegory is that *your functions are attended to one at a time, in order, no matter how complicated the manner in which they were called.* A restaurant kitchen is pure orchestrated chaos, but the dishes are always done *one at a time.*
+Not to bring us near the newly uncomfortable area of machine serfdom ethics, but this is the experience our program interpreters have when we run programs. The key point of this allegory is that *your functions are attended to one at a time, in order, no matter how complicated the manner in which they were called.* A restaurant kitchen is pure orchestrated chaos, but the dishes are always done *one at a time.*
 
 #### Recursion on the Call Stack
 
@@ -523,11 +523,11 @@ return { size: 0 }
 
 You can see this sort of *cascade-in-then-out* shape that occurs, which hints at what is happening behind the scenes.
 
-Each `reflect()` call shrinks `image` a bit, calls itself again with the shrunken image, then *waits for the result* before finally returning. So `size: 3` can't complete until `size: 2`, which can't complete until `size: 1`. Then `size: 1` hits our base case of zero and returns it directly, without needing to wait for anything.
+Each `reflect()` call shrinks `image` a bit, calls itself again with the shrunken image, then *waits for the result* before finally returning. So `size: 3` can't complete until `size: 2`, which can't complete until `size: 1`.
 
-Then, *success happens* &mdash; the result is passed rapidly back up the chain to everyone else, who have *already done their required work* and are just waiting around so they can finally finish their `return` statement.
+Then, *success happens* &mdash; `size: 1` hits our base case of zero and returns it directly, without needing to wait for anything. The result is passed rapidly back up the chain to everyone else, who have *already done their required work* and are just waiting around so they can finally finish their `return` statement.
 
-We can imagine this in terms of our dishwasher analogy as a formal dish set. Like anything else in the pile, each dish in the set must be washed individually, in order. However, since the smaller dishes must rest on top of the larger ones, we can't cede the larger dishes in the set to the cooks without the smaller ones washed too.
+We can imagine this in terms of our dishwasher analogy as a formal dish set. Like anything else in the pile, each dish in the set must be washed individually, in order. However, since the smaller dishes must rest on top of the larger ones, we can't cede the larger dishes in the set to the cooks until the smaller ones are washed too.
 
 ![recursive plates](/assets/posts/recursion_plates.jpg)
 
@@ -535,7 +535,7 @@ So, with recursive patterns, we always have these two waves of action. The first
 
 ### <span>Conclusion</span>
 
-Recursion is a powerful way of thinking and design pattern that is particularly well suited to problems or data structures with *depth* or *nesting*. When combined with more "traditional" iteration, recursive patterns can often flexibly handle a wide variety of data permutations with relatively little code. Finally, the mechanics behind recursion can be understood first by understanding the call stack, and how &mdash; like a dishwasher in a restaurant kitchen &mdash; functions are handled in strict single-file line at runtime, no matter how convoluted or nested the function declarations may appear.
+Recursion is both a powerful way of thinking and a design pattern that is particularly well suited to problems or data structures with *depth* or *nesting*. When combined with more "traditional" iteration, recursive patterns can often flexibly handle a wide variety of data permutations with relatively little code. Finally, the mechanics behind recursion can be understood first by understanding the call stack, and how &mdash; like a dishwasher in a restaurant kitchen &mdash; functions are handled in strict single-file line at runtime, no matter how convoluted or nested the function declarations may appear.
 
 If you chose to stay with me through what has ended up to be a pretty long-ass read, I am deeply grateful. I hope some, all, or any of this material may have helped  you to develop more intuition and burn away some of the fog around these concepts.
 
