@@ -42,7 +42,7 @@ Writing this out makes me realize that *the act of creation* is the essential sh
 
 ![die antwoord](/assets/posts/artists/dieantwoord.jpg)
 
-Formidable contrasts, however, *must* exist. It just seems... axiomatic. Plus, without them I have no good way to explain my own lengthy and often [wince-worthy transition][1] from one to the other.
+Formidable contrasts, however, *must* exist. I hang out with both artists and engineers and this just seems... axiomatic. Plus, without them I have no good way to explain my own lengthy and often wince-worthy [transition][1] from one to the other.
 
 First the low hanging fruit. While there *are* actual technical problems in music (guitar amplifier doesn't work, etc), the real problems to solve are aesthetic. This means, how do you adjust things to make something feel more fragile, more aggressive, more like snow falling in a big city at night? Why does this one line of a vocal performance "work" while this other one does not?
 
