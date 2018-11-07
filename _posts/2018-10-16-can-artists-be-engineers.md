@@ -48,13 +48,15 @@ First the low hanging fruit. While there *are* actual technical problems in musi
 
 To deal with these kinds of problems, you have to deal with the *gestalt*, the totality, the simultaneity of things. One takes in all aspects at once, makes subtle iterative movements toward the desired effect, and observes how those movements ripple outward to affect the whole. You take a bunch of linear elements, stack them all on top of each other, zoom waaaay out and judge the effect. In other words, your goal is to "make a good forest."
 
-Coding is the opposite. You take a naturally simultaneous process, chop it up into bite-sized, graspable components, and then string them all out like a clothesline into a step-by-step procedure. And yes, in a display of tidy symmetry, there are aesthetic considerations involved in coding, but the *real* problems to solve are technical. Roughly speaking, your goal as a programmer is to "make good trees."
-
 ![yinyang](/assets/posts/artists/yinyang.jpg)
 
-### <span>Shared Ecstasy</span>
+Coding is the opposite. You take a naturally simultaneous process, chop it up into bite-sized, graspable components, and then string them all out like a clothesline into a step-by-step procedure. And yes, in a display of tidy symmetry, there are aesthetic considerations involved in coding, but the *real* problems to solve are technical. Roughly speaking, your goal as a programmer is to "make good trees."
 
-I want to return to that common eureka moment of creation and examine it further, as I think there is something important still hiding in there. The moment itself is undeniably mutual. What proceeds from there, I am realizing, is starkly different.
+### <span>Ecstasies</span>
+
+![alive](/assets/posts/artists/alive.gif)
+
+I want to return to that shared ecstatic moment of creation again and examine it further, as I think there is something important still hiding in there. The moment itself is undeniably mutual. What proceeds from there, I am realizing, is starkly different.
 
 With art, eureka time is party time. If I play back my song and everything feels balanced and just so and makes the persons in the room feel the things they want to feel, I can pack it all up and call it a day. The only real uncertainty after the initial victory is, "will I still feel the same things when I play this back tomorrow?" (which oftentimes you don't, because things feel different at different times and contexts, and all that is terrifying and mysterious, but that is another article) But really, you are more or less finished. The race is ended. You *won*.
 
