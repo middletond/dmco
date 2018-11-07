@@ -52,17 +52,17 @@ Coding is the opposite. You take a naturally simultaneous process, chop it up in
 
 ![yinyang](/assets/posts/artists/yinyang.jpg)
 
-#### Finish Line or Mid-Race?
+### <span>Shared Ecstasy</span>
 
-I want to return to the shared eureka moment of creation and examine it further, as I think there is something important still hiding in there. The moment itself is undeniably mutual. What proceeds from there, however, is starkly different.
+I want to return to that common eureka moment of creation and examine it further, as I think there is something important still hiding in there. The moment itself is undeniably mutual. What proceeds from there, I am realizing, is starkly different.
 
 With art, eureka time is party time. If I play back my song and everything feels balanced and just so and makes the persons in the room feel the things they want to feel, I can pack it all up and call it a day. The only real uncertainty after the initial victory is, "will I still feel the same things when I play this back tomorrow?" (which oftentimes you don't, because things feel different at different times and contexts, and all that is terrifying and mysterious, but that is another article) But really, you are more or less finished. The race is ended. You *won*.
 
 Technical things are different. That first eureka moment is only the first leg in the race. Okay, this thing *works*, for a single user, in a single environment, in a single test. But will it work *again?* Will it work *a thousand times in a row?* Will it work for *a thousand people at once?* How about a *million?* When it doesn't work, *how will we know about it?* As an artist, these were completely foreign considerations. Scale and consistency were not issues I had ever needed to worry about.
 
-#### Endogenous Drug Addict
-
 In my own experience, I think this is what I had to learn in order to transition meaningfully. It fits my history. I always created things with satisfying *effects*. I never missed the mark on what was *supposed* to happen. But once built, those effects often broke down. They weren't tested enough. They weren't resilient enough.
+
+#### Drug Addiction
 
 I have always been an endogenous drug addict. Early in my coding career, I was driven towards the highs of those deeply satisfying eureka moments, that feeling of, *"Ah this is just, exactly right."* That feeling of *pitch-perfection*. That was my professional engine. Once achieved, I came down, packed up, and immediately moved on seeking my next high.
 
@@ -70,7 +70,7 @@ I think this *totally works* if you're an artist, and without any meaningful lia
 
 Creative ecstasy is also a very real component of engineering. But, it is not *all* of engineering. More seasoned technicians will tell you that the real shit is what happens *before* and *after* the nucleus of raw creation. It is about the surprisingly immense power of truly careful planning, and truly thorough testing. It is about how trust in your tools and the data they provide can achieve things unimaginable by your creative impulse alone. By quietly and persistently seeking what is actually true, and then ceding ourselves to it completely, we extend our reach dramatically.
 
-It has taken me years of on-the-job learning to begin to understand these things. Despite sharing a core of creativity, engineering is different than art in crucial ways. But, it offers its own rewards. It has its own deep beauty. It has its own potent highs. One simply must be patient, careful, and quiet enough to notice them.
+It has taken me years of on-the-job learning to begin to understand these things. It has taken even longer to begin to be driven by them. Despite sharing a core of creativity, engineering is different than art in crucial ways. But, it offers its own rewards. It has its own deep beauty. It has its own potent highs. One simply must be patient, careful, and quiet enough to notice them.
 
 <div class="divider">&nbsp;</div>
 
