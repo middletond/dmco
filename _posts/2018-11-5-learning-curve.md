@@ -3,7 +3,7 @@ layout: post
 nav: posts
 
 title:  "Portrait of a Learning Curve"
-tagline: "A story about introversion, writing code, and mistakes."
+tagline: "A story about introversion, computer programming, and mistakes."
 excerpt: "There are many things that don't come naturally to me, and many life endeavors where I've bait-and-switched pure talent with persistence and sweat, but let me tell you"
 
 category: editorial
@@ -12,7 +12,7 @@ minutes: 10
 image_url: "/assets/posts/learning_curve/streams.jpg"
 ---
 
-<p class="big"><span class="lead">There are a number of things</span> that don't come naturally to me, and many life endeavors where I've bait-and-switched pure talent with persistence and sweat, but let me tell you &mdash; being introverted is <i>not</i> one of them.</p>
+<p class="big"><span class="lead">There are a number of things</span> that don't come naturally to me, and many life endeavors where I've bait-and-switched natural talent with persistence and sweat, but let me tell you &mdash; being introverted is <i>not</i> one of them.</p>
 
 I've taken more than one Meyers-Briggs test over the years, and am proud to say I consistently demolish my competition on the "happier-alone-than-at-party" questions. Whatever my errant phases, I inevitably return to earth as a sojourn-alone-into-a-desert kind of fellow.
 
