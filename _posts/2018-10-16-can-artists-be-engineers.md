@@ -24,25 +24,27 @@ This habit of mine continuously stokes a burning private question: is all that h
 
 ![byrne and eno](/assets/posts/artists/byrne_eno.jpg)
 
-From my vantage point, musicians and coders actually share the same basic challenge, and it is something like this: *take scattered gobs of technical stuff and somehow jam it together in a way that appears simple, natural, and magically human to the outside world.* During each project, we black box the swarm of causal details to keep the spotlight focused on the relevant effects. There is no avoiding this confusing swarm &mdash; our job instead is to contain them, arrange them, and point them towards what we judge to be the things that actually matter. This is what a successful musical arrangement is. This is also what a successful computer program is.
+From my vantage point, musicians and coders actually share the same basic challenge, and it is something like this: *take scattered gobs of technical stuff and somehow jam them together in a way that appears simple, natural, and magically compelling to the outside world.* During each project, we navigate the swarm of causal details to keep the spotlight focused on the relevant effects. There is no avoiding such a swarm &mdash; our job instead is to contain it, arrange it, and point it towards what we judge to be the things that actually matter, while black boxing it to stakeholders. This is what a successful musical arrangement is. This is also what a successful computer program is.
 
-It follows that there are some striking resemblances in process. Recording an album and building an app both tend to have timelines of several months or more, with discrete brainstorming, planning, execution, and launch phases. Both require persistent, committed decision-making in the face of uncertainty, at both micro and macro levels. Both are about leveraging technical things to achieve a non-technical human experience.
+It follows then that there might be some striking resemblances in process. And, there are. Recording an album and building an app both tend to have timelines of several months or more, with discrete brainstorming, planning, execution, and launch phases. Both require persistent, committed decision-making in the face of uncertainty, at both micro and macro levels. Both often require organizing and coordinating effective teams, and keeping those teams happy.
 
-Lastly, there is my favorite: what happens at the moment where we *finally get our thing to work*. This moment is a shared and cherished universal of anyone who creates; both technicians and artists all know and hunger after the vivid dopamine aftershocks from those precious occasions. We even have the same phrases to describe them:
-
-*"Then things fell into place."*
+There is one final thing, and it is my favorite: the moment where we *finally get our thing to work*. This moment is a shared and cherished universal of anyone who creates; both technicians and artists all know and hunger after the vivid dopamine aftershocks from those precious occasions. We even have the same phrases to describe them:
 
 *"Then everything came together."*
 
-For a certain kind of person, such moments are peak life experiences. A resounding *yes* shoots up through us like a wave. A deep internal smile settles in. That electric, child-like manifestor essence jumps up and down ecstatically while clapping its hands. There is scarcely anything better.
+*"Then things fell into place."*
 
-Writing this out makes me realize that *the act of creation* is the essential share-point. Whether previously as an artist, or presently as a coder, my own livelihood has been perennially rooted in the unique labors and joys of birthing new things into the world. This is the bedrock connection. Even if nowhere else, the careful, studious technician and the wild, free-spirited artist can commune with each other upon these shared holy grounds.
+*"Then everything clicked."*
+
+For a certain kind of person, such moments are peak life experiences. A resounding *yes* shoots up through us like a wave. That electric, child-like manifestor essence inside us jumps up and down ecstatically while clapping its hands. A deep internal smile settles in. There is scarcely anything better.
+
+Writing this out makes me realize that *the act of creation* is the essential share-point. Whether previously as an artist, or presently as a coder, my livelihood remains perennially rooted in the unique labors and joys of birthing new things into the world. This is the bedrock connection. Even if nowhere else, the careful, studious technician and the wild, free-spirited artist can commune with each other upon these shared holy grounds.
 
 ### <span>Disparities</span>
 
 ![die antwoord](/assets/posts/artists/dieantwoord.jpg)
 
-Formidable contrasts, however, *must* exist. I hang out with both artists and engineers and this just seems... axiomatic. Plus, without them I have no good way to explain my own lengthy and often wince-worthy [transition][1] from one to the other.
+Formidable contrasts, however, *must* exist. I hang out with both artists and engineers and this just seems... axiomatic. Plus, without such contrasts I have no good way to explain my own lengthy and often [wince-worthy transition][1] from one to the other.
 
 First the low hanging fruit. While there *are* actual technical problems in music (guitar amplifier doesn't work, etc), the real problems to solve are aesthetic. This means, how do you adjust things to make something feel more fragile, more aggressive, more like snow falling in a big city at night? Why does this one line of a vocal performance "work" while this other one does not?
 
@@ -64,7 +66,7 @@ Technical things are different. That first eureka moment is only the first leg i
 
 In my own experience, I think this is what I had to learn in order to transition meaningfully. It fits my history. I always created things with satisfying *effects*. I never missed the mark on what was *supposed* to happen. But once built, those effects often broke down. They weren't tested enough. They weren't resilient enough.
 
-#### Drug Addiction
+#### Driven by Drug Addiction
 
 I have always been an endogenous drug addict. Early in my coding career, I was driven towards the highs of those deeply satisfying eureka moments, that feeling of, *"Ah this is just, exactly right."* That feeling of *pitch-perfection*. That was my professional engine. Once achieved, I came down, packed up, and immediately moved on seeking my next high.
 
