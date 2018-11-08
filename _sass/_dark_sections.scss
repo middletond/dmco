@@ -19,6 +19,7 @@
 			position: absolute;
 			left: 0px;
 			bottom: -292px;
+			@include below($break-small) { bottom: -242px }
 			content: "";
 			background-image: url("../img/navy_paint_border.png");
 			background-repeat: no-repeat;
