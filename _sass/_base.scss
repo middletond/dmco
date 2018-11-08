@@ -144,25 +144,31 @@ h5 {
 p, ul, ol {
 	max-width: $page-text-width;
 	text-align: justify;
-	@include below($break-tiny) { text-align: left; }
+	@include below($break-small) { text-align: left; }
 }
 p, li {
 	font-family: "Merriweather", serif;
 	font-size: 20px;
 	line-height: 190%;
 	font-weight: 400;
+	letter-spacing: 0.01em;
 	@include below($break-medium) { font-size: 19px; }
 	@include below($break-small) { font-size: 18px; }
-	@include below($break-tiny) { font-size: 16px; }
+	@include below($break-tiny) { font-size: 16px; letter-spacing: -0.01em; }
 	&.big {
-		font-weight: 300;
+		font-weight: 300 !important;
 		font-size: 25px !important;
 		text-align: justify !important;
 		@include below($break-x-large) { font-size: 23px !important; }
 		@include below($break-large) { font-size: 22px !important; }
 		@include below($break-medium) { font-size: 21px !important; }
-		@include below($break-small) { font-size: 20px !important; }
-		@include below($break-tiny) { font-size: 17px !important; }
+		// Same as regular `p`
+		@include below($break-small) {
+			font-weight: 400 !important;
+			font-size: 18px !important;
+		  text-align: left !important;
+		}
+		@include below($break-tiny) { font-size: 16px !important; }
 	}
 	.lead {
 		font-family: "Source Code Pro", monospace, sans-serif;
@@ -170,7 +176,8 @@ p, li {
 		font-size: 23px;
 		text-transform: uppercase;
 		@include below($break-medium) { font-size: 21px !important; }
-		@include below($break-small) { font-size: 20px !important; }
+		@include below($break-small) { font-size: 19px !important; }
+		@include below($break-tiny) { font-size: 17px !important; }
 	}
 	a {
 		transition: 0.15s;

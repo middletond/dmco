@@ -126,4 +126,10 @@
 	section.transitional-content .content {
 		margin-top: -340px;
 	}
+	@include below($break-small) {
+		.content p.big {
+			text-align: center !important;
+			padding-bottom: 30px;
+		}
+	}
 }

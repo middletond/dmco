@@ -82,10 +82,9 @@
           font-style: normal;
           line-height: 190%;
         }
-        font-style: italic;
         @include below($break-medium) {
           margin: 20px 0px;
-          text-align: justify !important;
+          text-align: center !important;
         }
       }
       .button-block {
