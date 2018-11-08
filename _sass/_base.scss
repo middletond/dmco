@@ -198,11 +198,19 @@ p, li {
 			opacity: 0.25;
 			@include below($break-small) {
 				height: 8px;
+				content: none;
 			}
 		}
 		&:hover {
 			color: $rust;
 			&:after { bottom: 0px; height: 1px; opacity: 0.5; }
+		}
+		@include below($break-small) {
+			display: inline;
+			border-bottom: rgba(231,150,77,0.25) 8px solid;
+			&:hover {
+				border-bottom: rgba(231,150,77,0.5) 1px solid;
+			}
 		}
 	}
 }
