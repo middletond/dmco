@@ -25,12 +25,7 @@ header {
 		position: absolute;
 		top: 0;
 		right: 30px;
-		@include below($break-tiny) {
-			right: 15px;
-			// width: 100%;
-			// right: 0;
-			// @include flex_justify_content(center);
-		}
+		@include below($break-small) { right: 15px; }
 		a {
 			display: block;
 			margin: 0;
@@ -38,6 +33,7 @@ header {
 			font-family: "Montserrat", sans-serif;
 			font-weight: 900;
 			font-size: 20px;
+			@include below($break-small) { font-size: 18px; }
 		}
 	}
 }

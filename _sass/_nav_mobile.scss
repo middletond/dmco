@@ -6,8 +6,7 @@
   height: inherit;
   cursor: pointer;
   padding-left: 25px;
-  @include below($break-small) { padding-left: 20px; }
-  @include below($break-tiny) { padding-left: 15px; }
+  @include below($break-small) { padding-left: 15px; }
   .icon {
     @include flex_display();
     @include flex_direction(column);
@@ -15,7 +14,7 @@
     position: relative;
     width: 35px;
     height: 30px;
-    @include below($break-small) { height: 26px; }
+    @include below($break-small) { width: 30px; height: 24px; }
     transition: 0.2s;
     .line {
       position: relative;
@@ -35,6 +34,9 @@
       &.medium, &.long { width: 100%; }
       &.medium { transform: rotate(45deg); top: 11px; left: -5px; }
       &.long { transform: rotate(-45deg); top: 11px; left: -5px; }
+      @include below($break-small) {
+        &.medium, &.long { top: 10px; }
+      }
     }
   }
 }
