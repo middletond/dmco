@@ -7,7 +7,7 @@ tagline: "A story about introversion, computer programming, and mistakes."
 excerpt: "There are many things that don't come naturally to me, and many life endeavors where I've bait-and-switched pure talent with persistence and sweat, but let me tell you"
 
 category: editorial
-date:   2018-11-04 19:55:46 -0700
+date:   2018-11-04 00:00:00 -0700
 minutes: 10
 image_url: "/assets/posts/learning_curve/streams.jpg"
 ---

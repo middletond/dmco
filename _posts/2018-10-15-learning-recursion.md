@@ -7,7 +7,7 @@ tagline: "A practical self-help guide."
 excerpt: "For those of us who are not naturally math + science inclined, recursion can be less of a tool and more of a nemesis."
 
 category: technical
-date:   2018-10-15 19:55:46 -0700
+date:   2018-10-15 00:00:00 -0700
 minutes: 20
 image_url: "/assets/posts/recursion.jpg"
 display: portrait

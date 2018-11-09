@@ -7,8 +7,8 @@ tagline: "Nikola Tesla believed artists made the best technicians.<br /> He also
 excerpt: "In my 20s, I was a professional musician. Half of my life was spent touring the country, and the other half was spent in California recording studios producing records. I had no idea I would one day write code"
 
 category: editorial
-date:   2018-10-28 19:55:46 -0700
-minutes: 10
+date:   2018-10-28 00:00:00 -0700
+minutes: 6
 image_url: "/assets/posts/artists/beauty.jpg"
 ---
 
@@ -26,7 +26,7 @@ This habit of mine continuously stokes a burning private question: is all that h
 
 From my vantage point, musicians and coders actually share the same basic challenge, and it is something like this: *take scattered gobs of technical stuff and somehow jam them together in a way that appears simple, natural, and magically compelling to the outside world.* During each project, we navigate the swarm of causal details to keep the spotlight focused on the relevant effects. There is no avoiding such a swarm &mdash; our job instead is to contain it, arrange it, and point it towards what we judge to be the things that actually matter, while black boxing it to stakeholders. This is what a successful musical arrangement is. This is also what a successful computer program is.
 
-It follows then that there might be some striking resemblances in process. And, there are. Recording an album and building an app both tend to have timelines of several months or more, with discrete brainstorming, planning, execution, and launch phases. Both require persistent, committed decision-making in the face of uncertainty, at both micro and macro levels. Both often require organizing and coordinating effective teams, and keeping those teams happy.
+It follows then that there might be some striking resemblances in process. And, oh hey, there are. Recording an album and building an app both tend to have timelines of several months or more, with discrete brainstorming, planning, execution, and launch phases. Both require persistent, committed decision-making in the face of uncertainty, at both micro and macro levels. Both often require organizing and coordinating effective teams, and keeping those teams happy.
 
 There is one final thing, and it is my favorite: the moment where we *finally get our thing to work*. This moment is a shared and cherished universal of anyone who creates; both technicians and artists all know and hunger after the vivid dopamine aftershocks from those precious occasions. We even have the same phrases to describe them:
 
@@ -46,7 +46,7 @@ Writing this out makes me realize that *the act of creation* is the essential sh
 
 Formidable contrasts, however, *must* exist. I hang out with both artists and engineers and this just seems... axiomatic. Plus, without such contrasts I have no good way to explain my own lengthy and often [wince-worthy transition][1] from one to the other.
 
-First the low hanging fruit. While there *are* actual technical problems in music (guitar amplifier doesn't work, etc), the real problems to solve are aesthetic. This means, how do you adjust things to make something feel more fragile, more aggressive, more like snow falling in a big city at night? Why does this one line of a vocal performance "work" while this other one does not?
+First the low hanging fruit. While there *are* actual technical problems in music (guitar amplifier doesn't work, etc), the real problems to solve are aesthetic. This means, how do you adjust things to make something feel more fragile, more aggressive, more like, oh I dunno, snow falling in a big city at night? Why does this one line of a vocal performance "work" while this other one does not?
 
 To deal with these kinds of problems, you have to deal with the *gestalt*, the totality, the simultaneity of things. One takes in all aspects at once, makes subtle iterative movements toward the desired effect, and observes how those movements ripple outward to affect the whole. You take a bunch of linear elements, stack them all on top of each other, zoom waaaay out and judge the effect. In other words, your goal is to "make a good forest."
 
