@@ -3,7 +3,7 @@ layout: post
 nav: posts
 
 title:  "Do Artists Make Good Engineers?"
-tagline: "Nikola Tesla believed artists made the best technicians.<br /> He also was by some measures clinically insane."
+tagline: Both Nikola Tesla and Albert Einstein outspokenly believed artists made the best technicians. Does this belief hold up for the rest of us?
 excerpt: "In my 20s, I was a professional musician. Half of my life was spent touring the country, and the other half was spent in California recording studios producing records. I had no idea I would one day write code"
 
 category: editorial
