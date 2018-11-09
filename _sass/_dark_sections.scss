@@ -31,6 +31,9 @@
 		a {
 			&:after { background-color: $blue; opacity: 0.4; }
 			&:hover { color: $blue; }
+			@include below($break-small) {
+				border-bottom-color: rgba(64,146,198,0.4);
+			}
 		}
 		h1 {
 			color: $cream;
