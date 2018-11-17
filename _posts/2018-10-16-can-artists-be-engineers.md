@@ -12,7 +12,9 @@ minutes: 6
 image_url: "/assets/posts/artists/beauty.jpg"
 ---
 
-<p class="big"><span class="lead">In my twenties,</span> my day job was being a musician. Half of my life was spent touring the country, and the other half was spent in California recording studios producing records. I had no idea I would one day write code.</p>
+<p class="big"><span class="lead">Big transitions,</span> no matter how clean or absolute, always leave a residue.</p>
+
+<p class="big">In my twenties, my day job was being a musician. Half of my life was spent touring the country, and the other half was spent in California recording studios producing records. I had no idea I would one day write code.</p>
 
 My conception of "programming" at the time was probably something akin to data entry, but maybe in a neon-lit basement with a large bottle of Mountain Dew and the Chemical Brothers on repeat. To be honest, it sounded mostly like carpal tunnel syndrome to me and my instrumentalist's body. I had no idea that for each hour it was 58 minutes of pacing and thinking, followed by type-type-typing in three lines. I had no idea it was as creative as any fine art form.
 
@@ -24,7 +26,7 @@ This habit of mine continuously stokes a burning private question: is all that h
 
 ![byrne and eno](/assets/posts/artists/byrne_eno.jpg)
 
-From my vantage point, musicians and coders actually share the same basic challenge, and it is something like this: *take scattered gobs of technical stuff and somehow jam them together in a way that appears simple, natural, and magically compelling to the outside world.* During each project, we navigate the swarm of causal details to keep the spotlight focused on the relevant effects. There is no avoiding such a swarm &mdash; our job instead is to contain it, arrange it, and point it towards what we judge to be the things that actually matter, while black boxing it to stakeholders. This is what a successful musical arrangement is. This is also what a successful computer program is.
+From my vantage point, musicians and coders actually share the same basic challenge, and it is something like this: *take scattered gobs of technical stuff and somehow jam them together in a way that appears simple, natural, and magically compelling to the outside world.* If things go well, we navigate the swarm of causal details to keep the spotlight focused on the relevant effects. There is no avoiding such a swarm &mdash; our job instead is to contain it, arrange it, and point it towards what we judge to be the things that actually matter, while black boxing it to stakeholders. This is what a successful musical arrangement is. This is also what a successful computer program is.
 
 It follows then that there might be some striking resemblances in process. And, oh hey, there are. Recording an album and building an app both tend to have timelines of several months or more, with discrete brainstorming, planning, execution, and launch phases. Both require persistent, committed decision-making in the face of uncertainty, at both micro and macro levels. Both often require organizing and coordinating effective teams, and keeping those teams happy.
 
