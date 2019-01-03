@@ -39,6 +39,7 @@
 			position: relative; // use flex?
 			top: 18px;
 			&.fa-linkedin { font-size: 25px; } // outlier, fkn shit up
+			&.fa-medium { font-size: 23px; top: 20px; }
 			transition: 0.4s;
 		}
 		@include below($break-small) {
@@ -46,12 +47,15 @@
 			height: 52px;
 			i.fa { top: 14px; font-size: 25px !important; }
 			i.fa.fa-linkedin { top: 12px; }
+			i.fa.fa-medium { top: 14px; }
+
 		}
 		@include below($break-tiny) {
 			width: 44px;
 			height: 44px;
 			i.fa { top: 10px; }
 			i.fa.fa-linkedin { top: 9px; }
+			i.fa.fa-medium { top: 10px; }
 		}
 		&:hover {
 			background-color: lighten($steelbluedark, 5);
