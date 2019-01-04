@@ -9,21 +9,23 @@
     z-index: 1;
     margin: 0;
     padding: 20px 0 20px 0;
+    // text / image layout
     .text, .image {
       @include flex_display();
       @include flex_align_items(flex-end);
     }
-    &.left {
-        .text { order: 1; }
-        .image { order: 2; @include flex_justify_content(flex-start); }
+    .image { width: 65%; }
+    .text { width: 35%; }
+    @include below($break-headers) {
+      .image { width: 55%; }
+      .text { width: 45%; }
     }
-    &.right {
-        .text { order: 2; }
-        .image { order: 1; @include flex_justify_content(flex-end); }
+    @include below($break-large) {
+      .image { width: auto; }
+      .text { width: auto; }
     }
     .image {
       // background-color: blue;
-      width: 65%;
       margin: 0;
       padding: 80px 0; // match text bottom
       @include below($break-large) { z-index: 2; padding: 0; }
@@ -34,9 +36,7 @@
       }
     }
     .text {
-      @include flex_justify_content(center);
       // background-color: green;
-      width: 35%;
       .text-content {
         width: 325px;
         margin: 0;
@@ -47,12 +47,12 @@
       content: "";
       position: absolute;
       z-index: -1;
-      bottom: 0px;
+      bottom: 1px;
       left: 10%;
       right: 10%;
       width: 80%;
       height: 80px;
-      background-color: aqua;
+      background-color: #000;
       border-radius: 50%;
       box-shadow: 0px 0px 18px rgba(0,0,0,0.5);
     }
@@ -66,10 +66,21 @@
       right: 0;
       bottom: 0;
     }
+    @include above($break-large) {
+      &.left {
+          .text { order: 1; @include flex_justify_content(center); }
+          .image { order: 2; @include flex_justify_content(flex-start); }
+      }
+      &.right {
+          .text { order: 2; @include flex_justify_content(center); }
+          .image { order: 1; @include flex_justify_content(flex-end); }
+      }
+    }
     @include below($break-large) {
       @include flex_direction(column);
       height: initial;
       padding: 0;
+      margin: 80px 0;
       .text, .image {
         position: relative;
         bottom: initial;
@@ -78,14 +89,26 @@
         width: 100% !important;
         box-sizing: border-box;
       }
+      .image {
+        padding: 0 20px;
+        img {
+          width: 100%;
+          min-width: 0px;
+        }
+      }
     }
     @include below($break-small) {
       margin: 60px 0px;
+      .image { padding: 0 10px; }
     }
     // text details
     .text {
       .text-content {
-        @include below($break-large) { padding: 10px 70px 20px 70px !important; }
+        @include below($break-large) {
+          width: auto;
+          margin: 0 auto;
+          padding: 10px 70px 20px 70px !important;
+        }
         @include below($break-medium) {
           padding-left: 50px !important;
           padding-right: 50px !important;
@@ -107,7 +130,6 @@
           max-width: initial;
           @include below($break-large) {
             font-size: 32px;
-            letter-spacing: 0.5em;
           }
           @include below($break-small) { margin: 30px 0px; }
           @include below($break-tiny) {
@@ -150,7 +172,7 @@
 
 // Light / Dark project themes
 .dark-section .project {
-  &:before { box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.6); }
+  &:before { box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.8); }
   &:after {
     background: linear-gradient(180deg, rgba(17,38,67,0) 0%,
                                         rgba(17,38,67,0) 30%,
@@ -170,18 +192,10 @@
 
 .project-list .project:last-child {
   &:before { content: none; }
+  margin-bottom: 0px;
 }
 .project-list .project:first-child {
   margin-top: 100px;
-}
-
-@include below($break-small) {
-  .project {
-    &:after {
-      width: 1px;
-      bottom: -40px;
-    }
-  }
 }
 
 // &:after { // .decorated images have vertical center line
