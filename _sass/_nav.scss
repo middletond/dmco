@@ -40,6 +40,9 @@ nav.primary {
       		border-color: $blue;
       		font-weight: 700;
 					white-space: nowrap;
+					min-width: 120px;
+					box-sizing: border-box;
+					text-align: center;
       	}
       }
 		}

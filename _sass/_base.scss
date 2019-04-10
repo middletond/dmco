@@ -343,6 +343,7 @@ hr, .divider {
 	h3 {
 		&:before { content: none; }
 		&:after { content: none; }
+		border: none;
 		margin: 0px;
 	}
 }

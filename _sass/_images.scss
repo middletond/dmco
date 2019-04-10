@@ -63,6 +63,14 @@
 		width: 100%;
 		img { max-width: $post-text-width; }
 	}
+	&.tiny {
+		width: 100%;
+		img { max-width: 400px; }
+	}
+	&.no-margin {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 	&.with-bg {
 		padding: 40px 0px;
 		h2 {

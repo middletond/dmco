@@ -95,12 +95,12 @@
 				text-align: center;
 			}
 			h3 {
-				margin: 0px auto 10px auto;
+				margin: 0px auto 10px auto !important;
 				font-family: "Merriweather", serif;
 				font-weight: 300;
 				font-style: italic;
 				font-size: 24px;
-				text-transform: lowercase;
+				text-transform: none;
 				letter-spacing: -0.01em;
 				margin-left: 5px; // compensate for font glyphs
 			}
@@ -126,6 +126,9 @@
 					font-size: 15px;
 					margin: 23px 0px;
 					min-width: 120px;
+				}
+				a {
+					color: white;
 				}
 			}
 		}
