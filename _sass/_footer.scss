@@ -4,17 +4,22 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 	background: $navy !important;
 	position: relative;
 	z-index: 0;
-	overflow: hidden;
+	overflow: visible; // for paint platter
 	&:before { // paint spatter
 		content: "";
-		width: 397px;
+		width: 279px;
 		height: 446px;
 		position: absolute;
-		top: 40px;
-		right: -10px;
+		top: -72px;
+		right: 0px;
 		background-image: url("../img/paint.png");
 		background-repeat: no-repeat;
-		@include below($break-small) { top: 10px; }
+		@include below($break-large) { content: none; top: 10px; }
+	}
+	.palette-bar { // make navy segment stand out from dark bg
+		@include below($break-large) {
+			.segment.fifth { background-color: lighten($navy, 8); }
+		}
 	}
 	.content {
 		padding: 60px 0px;
@@ -68,7 +73,7 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 			@include above($break-medium) {
 				@include flex_direction(column);
 				width: 68px;
-				margin-left: 100px;
+				margin: 0 0 0 100px;
 				text-align: center;
 				padding: 35px 0px;
 				position: relative;

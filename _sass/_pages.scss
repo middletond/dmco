@@ -52,9 +52,9 @@
 	}
 	.paint-spatter {
 		top: -92px;
-		right: -150px;
+		right: -220px;
 		z-index: -1;
-		@include below($break-headers) { top: 0px; }
+		@include below($break-headers) { display: none; }
 	}
 	h3 { // XXX needs major refactor but just wanna get it running
 		@include below($break-xx-large) {
@@ -101,6 +101,7 @@
 		}
 	}
 }
+#helloFooter, #aboutFooter { display: none;}
 
 #homePage {
 	.dark-section {
@@ -140,7 +141,9 @@
 	@include below($break-small) {
 		.content p.big {
 			text-align: center !important;
-			padding-bottom: 30px;
 		}
 	}
+}
+#workFooter {
+	margin-top: -40px;
 }
