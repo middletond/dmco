@@ -384,6 +384,12 @@ div.highlighter-rouge {
 	}
 }
 
+span.mobile-break {
+	padding: 0;
+	display: inline;
+	@include below($break-small) { display: block }
+
+}
 
 .shown { display: block !important; }
 .hidden { display: none !important; }
