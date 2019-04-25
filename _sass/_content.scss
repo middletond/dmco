@@ -103,6 +103,11 @@
 				text-transform: none;
 				letter-spacing: -0.01em;
 				margin-left: 5px; // compensate for font glyphs
+				@include below($break-medium) {
+					font-size: 20px;
+					margin-top: 10px !important;
+				}
+				@include below($break-small) { font-size: 18px; }
 			}
 			.meta {
 				display: inline-block;

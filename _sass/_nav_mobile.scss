@@ -72,6 +72,7 @@ nav.mobile {
     li {
       margin: 0;
       padding: 24px 0px;
+      @include below($break-small) { padding: 18px 0px; }
       list-style-type: none;
       text-align: center;
       a.nav-item {
@@ -88,6 +89,7 @@ nav.mobile {
         &:after { content: none }
         &.selected { color: $magenta; }
         border: none;
+        @include below($break-small) { font-size: 20px; }
       }
     }
   }

@@ -1,7 +1,12 @@
 // Projects in `work` index page
 
 .project-list {
-  margin: -100px 0 0 0;
+  // on large screens, because of irregular whitespace above images
+  // first project should be snug with header above
+  margin: -150px 0 0 0;
+  @include below($break-headers) { margin-top: -120px; }
+  @include below($break-large) { margin-top: -40px; }
+  @include below($break-small) { margin-top: -70px; }
   .project {
     @include flex_display();
     @include flex_justify_content(space-between);
