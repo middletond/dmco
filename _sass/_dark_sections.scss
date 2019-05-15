@@ -27,6 +27,9 @@
 			height: 292px;
 		}
 	}
+	&.full {
+		padding-bottom: 75px;
+	}
 	.content {
 		a {
 			&:after { background-color: $blue; opacity: 0.4; }

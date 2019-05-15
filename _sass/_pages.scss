@@ -1,6 +1,6 @@
 // INDIVIDUAL PAGE STYLE ADJUSTMENTS
 
-#helloPage, #aboutPage {
+#helloPage {
 	.dark-section {
 		padding-top: 20px;
 		background: $navy;
@@ -101,7 +101,7 @@
 		}
 	}
 }
-#helloFooter, #aboutFooter { display: none;}
+#helloFooter { display: none;}
 
 #homePage {
 	.dark-section {
@@ -144,6 +144,6 @@
 		}
 	}
 }
-#workFooter {
+#workFooter, #vitalsFooter {
 	margin-top: -40px;
 }
