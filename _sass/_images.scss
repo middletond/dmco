@@ -66,11 +66,12 @@
 	&.tiny {
 		width: 100%;
 		img { max-width: 400px; }
-		// background-color: aqua;
-		@include below(440px) {
-			width: auto;
-			padding-left: 20px;
-			padding-right: 20px;
+		&.padded {
+			@include below(440px) {
+				width: auto;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
 		}
 	}
 	&.no-margin {
