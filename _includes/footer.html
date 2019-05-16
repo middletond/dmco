@@ -1,5 +1,4 @@
 <footer class="dark-section" id="{{ page.nav }}Footer">
-	{% unless page.nofooter %}
 
 		{% include palette_bar.html %}
 
@@ -8,17 +7,22 @@
 			<div class="grid footer-actions">
 
 				<div class="hello-form grid-item">
+
+					{% if page.nav == 'contact' %}
+					<!-- <h3>Start a conversation.</h3> -->
+					{% else %}
 					<h3>Hi. Have an idea, <span class="mobile-break tablet"></span> project, or problem? <br />I love those things. Let me help.</h3>
+					{% endif %}
 
 					<form name="hello" class="hello" action="." method="get">
 						<div class="field text">
-							<input type="email" name="email" id="email_field" placeholder="Email Address" />
+							<input type="email" name="email" id="email_field" placeholder="Your Email Address" />
 						</div>
 						<div class="field text">
-							<input type="text" name="name" id="name_field" placeholder="Name" />
+							<input type="text" name="name" id="name_field" placeholder="Your Name" />
 						</div>
 						<div class="field textarea">
-							<textarea name="message" id="message_field" placeholder="Type a message"></textarea>
+							<textarea name="message" id="message_field" placeholder="How can I help?"></textarea>
 						</div>
 						<div class="button-block right">
 							<input class="button" type="submit" value="Send Message &rarr;" />
@@ -49,13 +53,11 @@
 					<li><a href="/work/" class="nav-item {% if page.nav == 'work' %}selected{% endif %}">Work</a></li>
 					<li><a href="/vitals/" class="nav-item {% if page.nav == 'vitals' %}selected{% endif %}">Vitals</a></li>
 					<li><a href="https://github.com/middletond?tab=repositories" target="_blank" class="nav-item">Code</a></li>
-					<li><a href="/contact/" class="nav-item">Contact</a></li>
+					<li><a href="/contact/" class="nav-item {% if page.nav == 'contact' %}selected{% endif %}">Contact</a></li>
 				</ul>
 			</nav>
 
 		</div>
-
-	{% endunless %}
 
 	<!-- credits here -->
 </footer>

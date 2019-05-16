@@ -1,17 +1,29 @@
 // INDIVIDUAL PAGE STYLE ADJUSTMENTS
 
-#helloPage {
+#contactPage {
 	.dark-section {
-		padding-top: 20px;
+		// padding-top: 20px;
 		background: $navy;
 		background: linear-gradient(30deg, $navy 0%, $navy 70%, $darkblue 100%);
 	}
 	h1 {
-		color: $cream;
-	}
-	.social {
-		margin-top: 60px;
-		margin-bottom: 100px;
+			color: $cream;
+			font-family: "Montserrat", "Source Code Pro", sans-serif;
+			font-size: 70px;
+			font-weight: 700;
+			letter-spacing: -0em;
+			line-height: 1.3em;
+			text-transform: none;
+			text-align: left;
+			@include below($break-large) { font-size: 60px;}
+			// @include below($break-mobile-nav) { font-size: 35px;}
+			@include below($break-medium) { font-size: 54px; }
+			@include below($break-small) {
+				font-size: 50px;
+				margin-top: 40px;
+				margin-bottom: 50px;
+			}
+			@include below($break-tiny) {font-size: 45px;}
 	}
 	.lantern {
 		margin: 0px;
@@ -50,76 +62,32 @@
 			width: 140px;
 		}
 	}
-	.paint-spatter {
-		top: -92px;
-		right: -220px;
-		z-index: -1;
-		@include below($break-headers) { display: none; }
-	}
-	h3 { // XXX needs major refactor but just wanna get it running
-		@include below($break-xx-large) {
-			margin-left: 50px !important;
-			margin-right: 50px !important;
-		}
-		@include below($break-x-large) {
-			margin-left: 25px !important;
-			margin-right: 25px !important;
-		}
-	}
-	h3, div#contact > *, div#credentials > * {
-		@include below($break-headers) {
-			max-width: $page-text-width;
-			margin-left: 100px !important;
-		}
-		@include below($break-large) {
-			margin-left: 50px !important;
-			margin-right: 50px !important;
-		}
-		@include below($break-medium) {
-			margin-left: 30px !important;
-			margin-right: 30px !important;
-		}
-	}
-	div#contact {
-		@include below($break-headers) {
-			background: linear-gradient(90deg, rgba(17,38,67,0.0) 0%,
-																				 rgba(17,38,67,0.5) 80%,
-																				 rgba(17,38,67,0.0) 100%);
-		}
-	}
-	div#credentials {
-		@include below($break-medium) {
-			.button-block { margin-bottom: 0px; }
-			.button {
-				display: block;
-				width: initial;
+	.contact-items {
+		margin-top: 50px;
+		margin-bottom: 0px;
+		.contact-item {
+			margin: 10px 0;
+			display: block;
+			color: lighten($blue, 10);
+			font-family: "Source Code Pro", monospace, sans-serif;
+	    letter-spacing: 0.0em;
+	    text-transform: uppercase;
+			font-size: 21px;
+			transition: 0.3s;
+			&:hover {
+				color: lighten($blue, 20);
 			}
-			.social { margin-bottom: 60px; }
-		}
-		@include below($break-small) {
-			.button-block { margin-top: 20px; }
 		}
 	}
 }
-#helloFooter { display: none;}
 
-#homePage {
-	.dark-section {
-		background: $navy;
-	}
-	h2#introduction {
-		margin-top: 0px;
-		margin-bottom: 0px;
-	}
-	.image#workBundle {
-		margin-top: 40px;
-		margin-bottom: -20px;
-		img {
-			margin-left: 50px;
-			min-width: 800px;
-			@include below($break-large) { margin-top: 30px; margin-left: 10px; }
-			@include below($break-small) { margin-left: -10px; }
-		}
+#contactFooter {
+	// blend the contact footer with main content above
+	margin-top: -100px;
+	&:before { background-image: none; }
+	.palette-bar { display: none; }
+	.content {
+		padding-top: 0px;
 	}
 }
 
