@@ -10,6 +10,12 @@
 		padding-top: $header-height-large;
 		.content {
 			margin-top: 0px;
+			@include below($break-large) {
+				.heading-block {
+					&:before { content: none; }
+					margin-top: 35px;
+				}
+			}
 		}
 	}
 	&.with-transition { // might be able to just have this for all dark sections

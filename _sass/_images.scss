@@ -65,14 +65,14 @@
 	}
 	&.tiny {
 		width: 100%;
-		img { max-width: 400px; }
-		&.padded {
-			@include below(440px) {
-				width: auto;
-				padding-left: 20px;
-				padding-right: 20px;
-			}
+		img {
+			 max-width: 340px;
+			 @include below($break-small) { max-width: 200px; }
 		}
+
+			// width: auto;
+			// padding-left: 20px;
+			// padding-right: 20px;
 	}
 	&.no-margin {
 		margin-top: 0;
