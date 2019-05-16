@@ -31,7 +31,7 @@ nav.primary {
       	color: $black;
       	font-size: 14px;
       	font-weight: 600;
-            font-family: "Source Code Pro", sans-serif;
+        font-family: "Source Code Pro", monospace;
       	text-transform: uppercase;
       	border: transparent solid 3px;
 				&.selected { font-weight: bold; }
