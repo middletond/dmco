@@ -103,17 +103,6 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 			border-top: darken($darkblue, 11) solid 1px;
 		}
 		@include below($break-small) { padding: 30px 20px; }
-		.credits {
-			display: none;
-			padding: 0;
-			margin: 20px 0 0px 0;
-			font-size: 14px;
-			font-weight: 600;
-			font-family: "Source Code Pro", monospace;
-			text-transform: uppercase;
-			line-height: 1em;
-			color: $darkblue;
-		}
 		nav {
 			max-width: 868px; // combined width of .footer-action children
 			width: 100%;
@@ -126,7 +115,7 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 						color: $cream;
 						&.selected {
 							color: $lime;
-							&:after {
+							&:after { // underline
 								content: "";
 								position: absolute;
 								bottom: -0px;
@@ -147,6 +136,7 @@ footer.dark-section { // styles are similar to dark sections, saving some typing
 					li {
 						@include flex_justify_content(left);
 						a.nav-item {
+							font-size: 16px;
 							&.selected {
 								left: 10px;
 								&:after {
