@@ -14,20 +14,29 @@
 					<h3>Hi. Have an idea, <span class="mobile-break tablet"></span> project, or problem? <br />I love those things. Let me help.</h3>
 					{% endif %}
 
-					<form name="hello" class="hello" action="." method="get">
-						<div class="field text">
-							<input type="email" name="email" id="email_field" placeholder="Your Email Address" />
-						</div>
-						<div class="field text">
-							<input type="text" name="name" id="name_field" placeholder="Your Name" />
-						</div>
-						<div class="field textarea">
-							<textarea name="message" id="message_field" placeholder="How can I help?"></textarea>
-						</div>
-						<div class="button-block right">
-							<input class="button" type="submit" value="Send Message &rarr;" />
-						</div>
-					</form>
+					<form name="contact" class="contact" action="." method="get">
+			  		<div class="field text" id="email_field">
+			  			<input type="email" name="email" placeholder="Your Email Address" />
+			        <span class="status-text">This field is required.</span>
+			  		</div>
+			  		<div class="field text" id="name_field">
+			  			<input type="text" name="name" placeholder="Your Name" />
+			        <span class="status-text">This field is required.</span>
+			  		</div>
+			  		<div class="field textarea" id="message_field">
+			  			<textarea name="message" placeholder="How can we help?"></textarea>
+			        <span class="status-text">This field is required.</span>
+			  		</div>
+			      <div class="button-block right">
+			        <div class="status-text form-status">This is the status of the whole form. We should make sure it works for multiple lines.</div>
+
+			        <button type="submit" class="button" data-success-text="Message Sent!">
+			          <span class="loading">Sending...</span>
+			          <span class="with-icon not-loading">Send Message {% include icons/right_arrow.svg %}</span>
+			        </button>
+			      </div>
+			  	</form>
+
 				</div>
 
 				<div class="social grid-item">

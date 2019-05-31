@@ -21,6 +21,12 @@
 	-ms-flex-direction: $val;
 }
 
+@mixin flex_center_all() {
+	@include flex_display();
+	@include flex_justify_content(center);
+	@include flex_align_items(center);
+}
+
 @mixin placeholder() {
 	color: $white;
   padding-left: 5px;

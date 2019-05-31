@@ -1,0 +1,18 @@
+svg.icon {
+  width: 40px;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: black;
+  fill: none;
+  display: inline-block;
+  position: relative;
+  &.filled {
+    stroke: none;
+    fill: black;
+  }
+}
+.dark-section svg.icon {
+  stroke: white;
+  &.filled { fill: white; }
+}

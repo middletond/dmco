@@ -1,29 +1,118 @@
 // Forms / Fields
 
 form {
-    margin: 30px 0px;
-    @include below($break-small) { margin: 20px 0px; }
-    .field {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        @include below($break-small) {
-          margin-top: 15px;
-          margin-bottom: 15px;
-        }
+  margin: 30px 0px;
+  @include below($break-small) { margin: 20px 0px; }
+  .field {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @include below($break-small) {
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
-    .button-block {
-        margin: 0px 0px;
-        .button {
-    			margin-top: 30px;
-    			margin-bottom: 30px;
-    			@include below($break-small) {
-    				margin-top: 55px;
-    				margin-bottom: 55px;
-    			}
-        }
+  }
+  .button-block {
+    margin: 0px 0px;
+    position: relative;
+    z-index: 10;
+    .button {
+      width: 200px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			@include below($break-small) {
+				margin-top: 55px;
+				margin-bottom: 55px;
+			}
     }
+  }
+  .status-text { // for fields and form
+    position: absolute;
+    @include flex_center_all();
+    top: -25px;
+    left: -10px;
+    width: auto;
+    min-width: 100px;
+    min-height: 0;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    background-color: $blue;
+    border: $blue solid 1px;
+    box-shadow: 1px 1px 15px rgba(0,0,0,0.8);
+    border-radius: 3px;
+    font-weight: 400;
+    font-family: "Source Code Pro", monospace;
+    font-size: 14px;
+    color: white;
+    letter-spacing: -0.06em;
+    line-height: 140%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+    opacity: 0;
+    a {
+      display: inline;
+      color: black;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    &.show {
+      opacity: 1;
+    }
+    &:after { // the pointy part of tag
+      content: "";
+      background-color: $blue;
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 15px;
+      bottom: -5px;
+      z-index: -1;
+      border: $blue solid 1px;
+      border-left: none;
+      border-top: none;
+      transform: rotate(45deg);
+    }
+    &.form-status { // form only
+      top: auto;
+      bottom: 110px;
+      left: auto;
+      right: -20px;
+      width: 66%;
+      min-height: 80px;
+      padding: 20px 20px;
+      font-size: 19px;
+      &.show {
+        top: auto;
+        opacity: 1;
+      }
+      &:after {
+        left: 80%;
+        width: 12px;
+        height: 12px;
+        bottom: -7px;
+      }
+    }
+  }
+}
+// Form loading
+form {
+  opacity: 1;
+  .button {
+    .loading { display: none; }
+    .not-loading { display: inline-block; }
+  }
+  transition: 0.5s;
+}
+form.loading {
+  opacity: 0.5;
+  .button {
+    .loading { display: inline-block; }
+    .not-loading { display: none; }
+  }
 }
 
+// Base styles
 input, textarea, select {
     margin: 0;
     background: transparent;
@@ -72,13 +161,6 @@ input, textarea {
 label {
     color: $white;
     text-transform: uppercase;
-}
-
-// Form loading
-form.loading {
-  input, textarea {
-    opacity: 0.5;
-  }
 }
 
 // Select Fields

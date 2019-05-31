@@ -1,54 +1,78 @@
 // BUTTON STYLES
 
 .button-block {
-    text-align: center; // center inline-block buttons
-    margin-top: 60px;
-    margin-bottom: 60px;
-    &.right { text-align: right; }
-    &.left { text-align: left; }
-    .button { margin-top: 0; }
+  text-align: center; // center inline-block buttons
+  margin-top: 60px;
+  margin-bottom: 60px;
+  &.right { text-align: right; }
+  &.left { text-align: left; }
+  .button { margin-top: 0; }
 }
 .button, input[type="submit"], button  {
-    width: 150px;
-    padding: 16px 20px;
-    &.small {
-      width: 120px;
-    }
-    &.large {
-      padding: 24px 20px;
-      width: 300px;
-    }
-    &.long {
-      width: 250px;
-    }
-    @include below($break-small) {
-      display: block;
-      width: initial !important;
-    }
-    outline: none;
+  width: 150px;
+  padding: 16px 20px;
+  &.small {
+    width: 120px;
+  }
+  &.large {
+    padding: 24px 20px;
+    width: 300px;
+  }
+  &.long {
+    width: 250px;
+  }
+  @include below($break-small) {
+    display: block;
+    width: initial !important;
+  }
+  outline: none;
+  display: inline-block;
+  @include below($break-small) { display: block; }
+  border-radius: 1px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center !important;
+  font-family: "Source Code Pro", monospace, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: $white;
+  background-color: $magenta;
+  letter-spacing: 0.01em;
+  line-height: 1em;
+  transition: 0.3s;
+  box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.5);
+  &:hover {
+    color: $white !important;
+  	background-color: $hypermagenta;
+    box-shadow: 4px 4px 20px 0px rgba(0,0,0,0.6);
+  }
+  @include below($break-small) { font-size: 16px; }
+  span.with-icon { // pin icon to right so text lives in center
     display: inline-block;
-    @include below($break-small) { display: block; }
-    border-radius: 1px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center !important;
-    font-family: "Source Code Pro", monospace, sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    color: $white;
-    background-color: $magenta;
-    letter-spacing: 0.01em;
-    line-height: 1em;
-    transition: 0.3s;
-    box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.5);
-    &:hover {
-      color: $white !important;
-    	background-color: $hypermagenta;
-      box-shadow: 4px 4px 20px 0px rgba(0,0,0,0.6);
+    position: relative;
+    left: -10px;
+    .icon {
+      position: absolute;
+      top: 0px;
+      right: -25px;
+      transition: 0.2s;
     }
-    @include below($break-small) { font-size: 16px; }
+  }
+  .icon {
+    stroke: black;
+    stroke-width: 12px;
+    &.right-arrow {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  &:hover {
+    .icon.right-arrow {
+      right: -28px;
+    }
+  }
 }
 input[type="submit"].button {
     width: auto;

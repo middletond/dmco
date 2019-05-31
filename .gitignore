@@ -1,8 +1,14 @@
 ### Ignore SASS cache
 .sass-cache
 
+### Ignore packages dir
+node_modules
+
 ### Ignore built site
 _site
 
 ### Sorry DS_Store... ###
 .DS_Store
+
+### Ignore webpack JS build
+assets/js/main.js

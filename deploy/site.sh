@@ -5,7 +5,11 @@
 echo "Pulling latest code from repo."
 git pull
 
+echo "Updating packages."
+npm install
+
 echo "Building the site."
+npx webpack
 jekyll build
 
 echo "Restarting server."
