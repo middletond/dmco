@@ -56,13 +56,6 @@ nav.mobile {
   transition: opacity 0.2s, top 0.3s;
   padding-top: $header-height-large + $palette-bar-height;
   box-sizing: border-box;
-  // @include below($break-small) { top: $header-height-large; }
-  &.visible {
-    @include below($break-mobile-nav) { // show mobile nav
-      height: 100%;
-      opacity: 1;
-    }
-  }
   ul {
     margin: 0;
     width: inherit;
@@ -112,5 +105,11 @@ nav.mobile {
         border: none;
       }
     }
+  }
+}
+.show-mobile-nav nav.mobile {
+  @include below($break-mobile-nav) { // show mobile nav
+    height: 100%;
+    opacity: 1;
   }
 }
