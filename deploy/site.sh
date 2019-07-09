@@ -10,7 +10,7 @@ npm install
 
 echo "Building the site."
 npx webpack
-jekyll build
+npm run build
 
 echo "Restarting server."
 service nginx restart
